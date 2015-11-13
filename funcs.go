@@ -1,8 +1,8 @@
 package go_map_vs_switch
 
-var MinimalFuncs []func(int) int
+var InlineFuncs []func(int) int
 
-func Minimal0(n int) int {
+func Inline0(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -10,7 +10,7 @@ func Minimal0(n int) int {
 	}
 }
 
-func Minimal1(n int) int {
+func Inline1(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -18,7 +18,7 @@ func Minimal1(n int) int {
 	}
 }
 
-func Minimal2(n int) int {
+func Inline2(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -26,7 +26,7 @@ func Minimal2(n int) int {
 	}
 }
 
-func Minimal3(n int) int {
+func Inline3(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -34,7 +34,7 @@ func Minimal3(n int) int {
 	}
 }
 
-func Minimal4(n int) int {
+func Inline4(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -42,7 +42,7 @@ func Minimal4(n int) int {
 	}
 }
 
-func Minimal5(n int) int {
+func Inline5(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -50,7 +50,7 @@ func Minimal5(n int) int {
 	}
 }
 
-func Minimal6(n int) int {
+func Inline6(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -58,7 +58,7 @@ func Minimal6(n int) int {
 	}
 }
 
-func Minimal7(n int) int {
+func Inline7(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -66,7 +66,7 @@ func Minimal7(n int) int {
 	}
 }
 
-func Minimal8(n int) int {
+func Inline8(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -74,7 +74,7 @@ func Minimal8(n int) int {
 	}
 }
 
-func Minimal9(n int) int {
+func Inline9(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -82,7 +82,7 @@ func Minimal9(n int) int {
 	}
 }
 
-func Minimal10(n int) int {
+func Inline10(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -90,7 +90,7 @@ func Minimal10(n int) int {
 	}
 }
 
-func Minimal11(n int) int {
+func Inline11(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -98,7 +98,7 @@ func Minimal11(n int) int {
 	}
 }
 
-func Minimal12(n int) int {
+func Inline12(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -106,7 +106,7 @@ func Minimal12(n int) int {
 	}
 }
 
-func Minimal13(n int) int {
+func Inline13(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -114,7 +114,7 @@ func Minimal13(n int) int {
 	}
 }
 
-func Minimal14(n int) int {
+func Inline14(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -122,7 +122,7 @@ func Minimal14(n int) int {
 	}
 }
 
-func Minimal15(n int) int {
+func Inline15(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -130,7 +130,7 @@ func Minimal15(n int) int {
 	}
 }
 
-func Minimal16(n int) int {
+func Inline16(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -138,7 +138,7 @@ func Minimal16(n int) int {
 	}
 }
 
-func Minimal17(n int) int {
+func Inline17(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -146,7 +146,7 @@ func Minimal17(n int) int {
 	}
 }
 
-func Minimal18(n int) int {
+func Inline18(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -154,7 +154,7 @@ func Minimal18(n int) int {
 	}
 }
 
-func Minimal19(n int) int {
+func Inline19(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -162,7 +162,7 @@ func Minimal19(n int) int {
 	}
 }
 
-func Minimal20(n int) int {
+func Inline20(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -170,7 +170,7 @@ func Minimal20(n int) int {
 	}
 }
 
-func Minimal21(n int) int {
+func Inline21(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -178,7 +178,7 @@ func Minimal21(n int) int {
 	}
 }
 
-func Minimal22(n int) int {
+func Inline22(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -186,7 +186,7 @@ func Minimal22(n int) int {
 	}
 }
 
-func Minimal23(n int) int {
+func Inline23(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -194,7 +194,7 @@ func Minimal23(n int) int {
 	}
 }
 
-func Minimal24(n int) int {
+func Inline24(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -202,7 +202,7 @@ func Minimal24(n int) int {
 	}
 }
 
-func Minimal25(n int) int {
+func Inline25(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -210,7 +210,7 @@ func Minimal25(n int) int {
 	}
 }
 
-func Minimal26(n int) int {
+func Inline26(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -218,7 +218,7 @@ func Minimal26(n int) int {
 	}
 }
 
-func Minimal27(n int) int {
+func Inline27(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -226,7 +226,7 @@ func Minimal27(n int) int {
 	}
 }
 
-func Minimal28(n int) int {
+func Inline28(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -234,7 +234,7 @@ func Minimal28(n int) int {
 	}
 }
 
-func Minimal29(n int) int {
+func Inline29(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -242,7 +242,7 @@ func Minimal29(n int) int {
 	}
 }
 
-func Minimal30(n int) int {
+func Inline30(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -250,7 +250,7 @@ func Minimal30(n int) int {
 	}
 }
 
-func Minimal31(n int) int {
+func Inline31(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -258,7 +258,7 @@ func Minimal31(n int) int {
 	}
 }
 
-func Minimal32(n int) int {
+func Inline32(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -266,7 +266,7 @@ func Minimal32(n int) int {
 	}
 }
 
-func Minimal33(n int) int {
+func Inline33(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -274,7 +274,7 @@ func Minimal33(n int) int {
 	}
 }
 
-func Minimal34(n int) int {
+func Inline34(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -282,7 +282,7 @@ func Minimal34(n int) int {
 	}
 }
 
-func Minimal35(n int) int {
+func Inline35(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -290,7 +290,7 @@ func Minimal35(n int) int {
 	}
 }
 
-func Minimal36(n int) int {
+func Inline36(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -298,7 +298,7 @@ func Minimal36(n int) int {
 	}
 }
 
-func Minimal37(n int) int {
+func Inline37(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -306,7 +306,7 @@ func Minimal37(n int) int {
 	}
 }
 
-func Minimal38(n int) int {
+func Inline38(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -314,7 +314,7 @@ func Minimal38(n int) int {
 	}
 }
 
-func Minimal39(n int) int {
+func Inline39(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -322,7 +322,7 @@ func Minimal39(n int) int {
 	}
 }
 
-func Minimal40(n int) int {
+func Inline40(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -330,7 +330,7 @@ func Minimal40(n int) int {
 	}
 }
 
-func Minimal41(n int) int {
+func Inline41(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -338,7 +338,7 @@ func Minimal41(n int) int {
 	}
 }
 
-func Minimal42(n int) int {
+func Inline42(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -346,7 +346,7 @@ func Minimal42(n int) int {
 	}
 }
 
-func Minimal43(n int) int {
+func Inline43(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -354,7 +354,7 @@ func Minimal43(n int) int {
 	}
 }
 
-func Minimal44(n int) int {
+func Inline44(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -362,7 +362,7 @@ func Minimal44(n int) int {
 	}
 }
 
-func Minimal45(n int) int {
+func Inline45(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -370,7 +370,7 @@ func Minimal45(n int) int {
 	}
 }
 
-func Minimal46(n int) int {
+func Inline46(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -378,7 +378,7 @@ func Minimal46(n int) int {
 	}
 }
 
-func Minimal47(n int) int {
+func Inline47(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -386,7 +386,7 @@ func Minimal47(n int) int {
 	}
 }
 
-func Minimal48(n int) int {
+func Inline48(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -394,7 +394,7 @@ func Minimal48(n int) int {
 	}
 }
 
-func Minimal49(n int) int {
+func Inline49(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -402,7 +402,7 @@ func Minimal49(n int) int {
 	}
 }
 
-func Minimal50(n int) int {
+func Inline50(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -410,7 +410,7 @@ func Minimal50(n int) int {
 	}
 }
 
-func Minimal51(n int) int {
+func Inline51(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -418,7 +418,7 @@ func Minimal51(n int) int {
 	}
 }
 
-func Minimal52(n int) int {
+func Inline52(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -426,7 +426,7 @@ func Minimal52(n int) int {
 	}
 }
 
-func Minimal53(n int) int {
+func Inline53(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -434,7 +434,7 @@ func Minimal53(n int) int {
 	}
 }
 
-func Minimal54(n int) int {
+func Inline54(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -442,7 +442,7 @@ func Minimal54(n int) int {
 	}
 }
 
-func Minimal55(n int) int {
+func Inline55(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -450,7 +450,7 @@ func Minimal55(n int) int {
 	}
 }
 
-func Minimal56(n int) int {
+func Inline56(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -458,7 +458,7 @@ func Minimal56(n int) int {
 	}
 }
 
-func Minimal57(n int) int {
+func Inline57(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -466,7 +466,7 @@ func Minimal57(n int) int {
 	}
 }
 
-func Minimal58(n int) int {
+func Inline58(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -474,7 +474,7 @@ func Minimal58(n int) int {
 	}
 }
 
-func Minimal59(n int) int {
+func Inline59(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -482,7 +482,7 @@ func Minimal59(n int) int {
 	}
 }
 
-func Minimal60(n int) int {
+func Inline60(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -490,7 +490,7 @@ func Minimal60(n int) int {
 	}
 }
 
-func Minimal61(n int) int {
+func Inline61(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -498,7 +498,7 @@ func Minimal61(n int) int {
 	}
 }
 
-func Minimal62(n int) int {
+func Inline62(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -506,7 +506,7 @@ func Minimal62(n int) int {
 	}
 }
 
-func Minimal63(n int) int {
+func Inline63(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -514,7 +514,7 @@ func Minimal63(n int) int {
 	}
 }
 
-func Minimal64(n int) int {
+func Inline64(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -522,7 +522,7 @@ func Minimal64(n int) int {
 	}
 }
 
-func Minimal65(n int) int {
+func Inline65(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -530,7 +530,7 @@ func Minimal65(n int) int {
 	}
 }
 
-func Minimal66(n int) int {
+func Inline66(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -538,7 +538,7 @@ func Minimal66(n int) int {
 	}
 }
 
-func Minimal67(n int) int {
+func Inline67(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -546,7 +546,7 @@ func Minimal67(n int) int {
 	}
 }
 
-func Minimal68(n int) int {
+func Inline68(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -554,7 +554,7 @@ func Minimal68(n int) int {
 	}
 }
 
-func Minimal69(n int) int {
+func Inline69(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -562,7 +562,7 @@ func Minimal69(n int) int {
 	}
 }
 
-func Minimal70(n int) int {
+func Inline70(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -570,7 +570,7 @@ func Minimal70(n int) int {
 	}
 }
 
-func Minimal71(n int) int {
+func Inline71(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -578,7 +578,7 @@ func Minimal71(n int) int {
 	}
 }
 
-func Minimal72(n int) int {
+func Inline72(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -586,7 +586,7 @@ func Minimal72(n int) int {
 	}
 }
 
-func Minimal73(n int) int {
+func Inline73(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -594,7 +594,7 @@ func Minimal73(n int) int {
 	}
 }
 
-func Minimal74(n int) int {
+func Inline74(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -602,7 +602,7 @@ func Minimal74(n int) int {
 	}
 }
 
-func Minimal75(n int) int {
+func Inline75(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -610,7 +610,7 @@ func Minimal75(n int) int {
 	}
 }
 
-func Minimal76(n int) int {
+func Inline76(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -618,7 +618,7 @@ func Minimal76(n int) int {
 	}
 }
 
-func Minimal77(n int) int {
+func Inline77(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -626,7 +626,7 @@ func Minimal77(n int) int {
 	}
 }
 
-func Minimal78(n int) int {
+func Inline78(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -634,7 +634,7 @@ func Minimal78(n int) int {
 	}
 }
 
-func Minimal79(n int) int {
+func Inline79(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -642,7 +642,7 @@ func Minimal79(n int) int {
 	}
 }
 
-func Minimal80(n int) int {
+func Inline80(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -650,7 +650,7 @@ func Minimal80(n int) int {
 	}
 }
 
-func Minimal81(n int) int {
+func Inline81(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -658,7 +658,7 @@ func Minimal81(n int) int {
 	}
 }
 
-func Minimal82(n int) int {
+func Inline82(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -666,7 +666,7 @@ func Minimal82(n int) int {
 	}
 }
 
-func Minimal83(n int) int {
+func Inline83(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -674,7 +674,7 @@ func Minimal83(n int) int {
 	}
 }
 
-func Minimal84(n int) int {
+func Inline84(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -682,7 +682,7 @@ func Minimal84(n int) int {
 	}
 }
 
-func Minimal85(n int) int {
+func Inline85(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -690,7 +690,7 @@ func Minimal85(n int) int {
 	}
 }
 
-func Minimal86(n int) int {
+func Inline86(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -698,7 +698,7 @@ func Minimal86(n int) int {
 	}
 }
 
-func Minimal87(n int) int {
+func Inline87(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -706,7 +706,7 @@ func Minimal87(n int) int {
 	}
 }
 
-func Minimal88(n int) int {
+func Inline88(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -714,7 +714,7 @@ func Minimal88(n int) int {
 	}
 }
 
-func Minimal89(n int) int {
+func Inline89(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -722,7 +722,7 @@ func Minimal89(n int) int {
 	}
 }
 
-func Minimal90(n int) int {
+func Inline90(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -730,7 +730,7 @@ func Minimal90(n int) int {
 	}
 }
 
-func Minimal91(n int) int {
+func Inline91(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -738,7 +738,7 @@ func Minimal91(n int) int {
 	}
 }
 
-func Minimal92(n int) int {
+func Inline92(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -746,7 +746,7 @@ func Minimal92(n int) int {
 	}
 }
 
-func Minimal93(n int) int {
+func Inline93(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -754,7 +754,7 @@ func Minimal93(n int) int {
 	}
 }
 
-func Minimal94(n int) int {
+func Inline94(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -762,7 +762,7 @@ func Minimal94(n int) int {
 	}
 }
 
-func Minimal95(n int) int {
+func Inline95(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -770,7 +770,7 @@ func Minimal95(n int) int {
 	}
 }
 
-func Minimal96(n int) int {
+func Inline96(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -778,7 +778,7 @@ func Minimal96(n int) int {
 	}
 }
 
-func Minimal97(n int) int {
+func Inline97(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -786,7 +786,7 @@ func Minimal97(n int) int {
 	}
 }
 
-func Minimal98(n int) int {
+func Inline98(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -794,7 +794,7 @@ func Minimal98(n int) int {
 	}
 }
 
-func Minimal99(n int) int {
+func Inline99(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -802,7 +802,7 @@ func Minimal99(n int) int {
 	}
 }
 
-func Minimal100(n int) int {
+func Inline100(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -810,7 +810,7 @@ func Minimal100(n int) int {
 	}
 }
 
-func Minimal101(n int) int {
+func Inline101(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -818,7 +818,7 @@ func Minimal101(n int) int {
 	}
 }
 
-func Minimal102(n int) int {
+func Inline102(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -826,7 +826,7 @@ func Minimal102(n int) int {
 	}
 }
 
-func Minimal103(n int) int {
+func Inline103(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -834,7 +834,7 @@ func Minimal103(n int) int {
 	}
 }
 
-func Minimal104(n int) int {
+func Inline104(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -842,7 +842,7 @@ func Minimal104(n int) int {
 	}
 }
 
-func Minimal105(n int) int {
+func Inline105(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -850,7 +850,7 @@ func Minimal105(n int) int {
 	}
 }
 
-func Minimal106(n int) int {
+func Inline106(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -858,7 +858,7 @@ func Minimal106(n int) int {
 	}
 }
 
-func Minimal107(n int) int {
+func Inline107(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -866,7 +866,7 @@ func Minimal107(n int) int {
 	}
 }
 
-func Minimal108(n int) int {
+func Inline108(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -874,7 +874,7 @@ func Minimal108(n int) int {
 	}
 }
 
-func Minimal109(n int) int {
+func Inline109(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -882,7 +882,7 @@ func Minimal109(n int) int {
 	}
 }
 
-func Minimal110(n int) int {
+func Inline110(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -890,7 +890,7 @@ func Minimal110(n int) int {
 	}
 }
 
-func Minimal111(n int) int {
+func Inline111(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -898,7 +898,7 @@ func Minimal111(n int) int {
 	}
 }
 
-func Minimal112(n int) int {
+func Inline112(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -906,7 +906,7 @@ func Minimal112(n int) int {
 	}
 }
 
-func Minimal113(n int) int {
+func Inline113(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -914,7 +914,7 @@ func Minimal113(n int) int {
 	}
 }
 
-func Minimal114(n int) int {
+func Inline114(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -922,7 +922,7 @@ func Minimal114(n int) int {
 	}
 }
 
-func Minimal115(n int) int {
+func Inline115(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -930,7 +930,7 @@ func Minimal115(n int) int {
 	}
 }
 
-func Minimal116(n int) int {
+func Inline116(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -938,7 +938,7 @@ func Minimal116(n int) int {
 	}
 }
 
-func Minimal117(n int) int {
+func Inline117(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -946,7 +946,7 @@ func Minimal117(n int) int {
 	}
 }
 
-func Minimal118(n int) int {
+func Inline118(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -954,7 +954,7 @@ func Minimal118(n int) int {
 	}
 }
 
-func Minimal119(n int) int {
+func Inline119(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -962,7 +962,7 @@ func Minimal119(n int) int {
 	}
 }
 
-func Minimal120(n int) int {
+func Inline120(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -970,7 +970,7 @@ func Minimal120(n int) int {
 	}
 }
 
-func Minimal121(n int) int {
+func Inline121(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -978,7 +978,7 @@ func Minimal121(n int) int {
 	}
 }
 
-func Minimal122(n int) int {
+func Inline122(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -986,7 +986,7 @@ func Minimal122(n int) int {
 	}
 }
 
-func Minimal123(n int) int {
+func Inline123(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -994,7 +994,7 @@ func Minimal123(n int) int {
 	}
 }
 
-func Minimal124(n int) int {
+func Inline124(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1002,7 +1002,7 @@ func Minimal124(n int) int {
 	}
 }
 
-func Minimal125(n int) int {
+func Inline125(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1010,7 +1010,7 @@ func Minimal125(n int) int {
 	}
 }
 
-func Minimal126(n int) int {
+func Inline126(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1018,7 +1018,7 @@ func Minimal126(n int) int {
 	}
 }
 
-func Minimal127(n int) int {
+func Inline127(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1026,7 +1026,7 @@ func Minimal127(n int) int {
 	}
 }
 
-func Minimal128(n int) int {
+func Inline128(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1034,7 +1034,7 @@ func Minimal128(n int) int {
 	}
 }
 
-func Minimal129(n int) int {
+func Inline129(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1042,7 +1042,7 @@ func Minimal129(n int) int {
 	}
 }
 
-func Minimal130(n int) int {
+func Inline130(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1050,7 +1050,7 @@ func Minimal130(n int) int {
 	}
 }
 
-func Minimal131(n int) int {
+func Inline131(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1058,7 +1058,7 @@ func Minimal131(n int) int {
 	}
 }
 
-func Minimal132(n int) int {
+func Inline132(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1066,7 +1066,7 @@ func Minimal132(n int) int {
 	}
 }
 
-func Minimal133(n int) int {
+func Inline133(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1074,7 +1074,7 @@ func Minimal133(n int) int {
 	}
 }
 
-func Minimal134(n int) int {
+func Inline134(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1082,7 +1082,7 @@ func Minimal134(n int) int {
 	}
 }
 
-func Minimal135(n int) int {
+func Inline135(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1090,7 +1090,7 @@ func Minimal135(n int) int {
 	}
 }
 
-func Minimal136(n int) int {
+func Inline136(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1098,7 +1098,7 @@ func Minimal136(n int) int {
 	}
 }
 
-func Minimal137(n int) int {
+func Inline137(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1106,7 +1106,7 @@ func Minimal137(n int) int {
 	}
 }
 
-func Minimal138(n int) int {
+func Inline138(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1114,7 +1114,7 @@ func Minimal138(n int) int {
 	}
 }
 
-func Minimal139(n int) int {
+func Inline139(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1122,7 +1122,7 @@ func Minimal139(n int) int {
 	}
 }
 
-func Minimal140(n int) int {
+func Inline140(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1130,7 +1130,7 @@ func Minimal140(n int) int {
 	}
 }
 
-func Minimal141(n int) int {
+func Inline141(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1138,7 +1138,7 @@ func Minimal141(n int) int {
 	}
 }
 
-func Minimal142(n int) int {
+func Inline142(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1146,7 +1146,7 @@ func Minimal142(n int) int {
 	}
 }
 
-func Minimal143(n int) int {
+func Inline143(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1154,7 +1154,7 @@ func Minimal143(n int) int {
 	}
 }
 
-func Minimal144(n int) int {
+func Inline144(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1162,7 +1162,7 @@ func Minimal144(n int) int {
 	}
 }
 
-func Minimal145(n int) int {
+func Inline145(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1170,7 +1170,7 @@ func Minimal145(n int) int {
 	}
 }
 
-func Minimal146(n int) int {
+func Inline146(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1178,7 +1178,7 @@ func Minimal146(n int) int {
 	}
 }
 
-func Minimal147(n int) int {
+func Inline147(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1186,7 +1186,7 @@ func Minimal147(n int) int {
 	}
 }
 
-func Minimal148(n int) int {
+func Inline148(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1194,7 +1194,7 @@ func Minimal148(n int) int {
 	}
 }
 
-func Minimal149(n int) int {
+func Inline149(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1202,7 +1202,7 @@ func Minimal149(n int) int {
 	}
 }
 
-func Minimal150(n int) int {
+func Inline150(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1210,7 +1210,7 @@ func Minimal150(n int) int {
 	}
 }
 
-func Minimal151(n int) int {
+func Inline151(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1218,7 +1218,7 @@ func Minimal151(n int) int {
 	}
 }
 
-func Minimal152(n int) int {
+func Inline152(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1226,7 +1226,7 @@ func Minimal152(n int) int {
 	}
 }
 
-func Minimal153(n int) int {
+func Inline153(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1234,7 +1234,7 @@ func Minimal153(n int) int {
 	}
 }
 
-func Minimal154(n int) int {
+func Inline154(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1242,7 +1242,7 @@ func Minimal154(n int) int {
 	}
 }
 
-func Minimal155(n int) int {
+func Inline155(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1250,7 +1250,7 @@ func Minimal155(n int) int {
 	}
 }
 
-func Minimal156(n int) int {
+func Inline156(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1258,7 +1258,7 @@ func Minimal156(n int) int {
 	}
 }
 
-func Minimal157(n int) int {
+func Inline157(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1266,7 +1266,7 @@ func Minimal157(n int) int {
 	}
 }
 
-func Minimal158(n int) int {
+func Inline158(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1274,7 +1274,7 @@ func Minimal158(n int) int {
 	}
 }
 
-func Minimal159(n int) int {
+func Inline159(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1282,7 +1282,7 @@ func Minimal159(n int) int {
 	}
 }
 
-func Minimal160(n int) int {
+func Inline160(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1290,7 +1290,7 @@ func Minimal160(n int) int {
 	}
 }
 
-func Minimal161(n int) int {
+func Inline161(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1298,7 +1298,7 @@ func Minimal161(n int) int {
 	}
 }
 
-func Minimal162(n int) int {
+func Inline162(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1306,7 +1306,7 @@ func Minimal162(n int) int {
 	}
 }
 
-func Minimal163(n int) int {
+func Inline163(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1314,7 +1314,7 @@ func Minimal163(n int) int {
 	}
 }
 
-func Minimal164(n int) int {
+func Inline164(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1322,7 +1322,7 @@ func Minimal164(n int) int {
 	}
 }
 
-func Minimal165(n int) int {
+func Inline165(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1330,7 +1330,7 @@ func Minimal165(n int) int {
 	}
 }
 
-func Minimal166(n int) int {
+func Inline166(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1338,7 +1338,7 @@ func Minimal166(n int) int {
 	}
 }
 
-func Minimal167(n int) int {
+func Inline167(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1346,7 +1346,7 @@ func Minimal167(n int) int {
 	}
 }
 
-func Minimal168(n int) int {
+func Inline168(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1354,7 +1354,7 @@ func Minimal168(n int) int {
 	}
 }
 
-func Minimal169(n int) int {
+func Inline169(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1362,7 +1362,7 @@ func Minimal169(n int) int {
 	}
 }
 
-func Minimal170(n int) int {
+func Inline170(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1370,7 +1370,7 @@ func Minimal170(n int) int {
 	}
 }
 
-func Minimal171(n int) int {
+func Inline171(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1378,7 +1378,7 @@ func Minimal171(n int) int {
 	}
 }
 
-func Minimal172(n int) int {
+func Inline172(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1386,7 +1386,7 @@ func Minimal172(n int) int {
 	}
 }
 
-func Minimal173(n int) int {
+func Inline173(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1394,7 +1394,7 @@ func Minimal173(n int) int {
 	}
 }
 
-func Minimal174(n int) int {
+func Inline174(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1402,7 +1402,7 @@ func Minimal174(n int) int {
 	}
 }
 
-func Minimal175(n int) int {
+func Inline175(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1410,7 +1410,7 @@ func Minimal175(n int) int {
 	}
 }
 
-func Minimal176(n int) int {
+func Inline176(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1418,7 +1418,7 @@ func Minimal176(n int) int {
 	}
 }
 
-func Minimal177(n int) int {
+func Inline177(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1426,7 +1426,7 @@ func Minimal177(n int) int {
 	}
 }
 
-func Minimal178(n int) int {
+func Inline178(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1434,7 +1434,7 @@ func Minimal178(n int) int {
 	}
 }
 
-func Minimal179(n int) int {
+func Inline179(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1442,7 +1442,7 @@ func Minimal179(n int) int {
 	}
 }
 
-func Minimal180(n int) int {
+func Inline180(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1450,7 +1450,7 @@ func Minimal180(n int) int {
 	}
 }
 
-func Minimal181(n int) int {
+func Inline181(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1458,7 +1458,7 @@ func Minimal181(n int) int {
 	}
 }
 
-func Minimal182(n int) int {
+func Inline182(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1466,7 +1466,7 @@ func Minimal182(n int) int {
 	}
 }
 
-func Minimal183(n int) int {
+func Inline183(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1474,7 +1474,7 @@ func Minimal183(n int) int {
 	}
 }
 
-func Minimal184(n int) int {
+func Inline184(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1482,7 +1482,7 @@ func Minimal184(n int) int {
 	}
 }
 
-func Minimal185(n int) int {
+func Inline185(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1490,7 +1490,7 @@ func Minimal185(n int) int {
 	}
 }
 
-func Minimal186(n int) int {
+func Inline186(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1498,7 +1498,7 @@ func Minimal186(n int) int {
 	}
 }
 
-func Minimal187(n int) int {
+func Inline187(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1506,7 +1506,7 @@ func Minimal187(n int) int {
 	}
 }
 
-func Minimal188(n int) int {
+func Inline188(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1514,7 +1514,7 @@ func Minimal188(n int) int {
 	}
 }
 
-func Minimal189(n int) int {
+func Inline189(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1522,7 +1522,7 @@ func Minimal189(n int) int {
 	}
 }
 
-func Minimal190(n int) int {
+func Inline190(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1530,7 +1530,7 @@ func Minimal190(n int) int {
 	}
 }
 
-func Minimal191(n int) int {
+func Inline191(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1538,7 +1538,7 @@ func Minimal191(n int) int {
 	}
 }
 
-func Minimal192(n int) int {
+func Inline192(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1546,7 +1546,7 @@ func Minimal192(n int) int {
 	}
 }
 
-func Minimal193(n int) int {
+func Inline193(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1554,7 +1554,7 @@ func Minimal193(n int) int {
 	}
 }
 
-func Minimal194(n int) int {
+func Inline194(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1562,7 +1562,7 @@ func Minimal194(n int) int {
 	}
 }
 
-func Minimal195(n int) int {
+func Inline195(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1570,7 +1570,7 @@ func Minimal195(n int) int {
 	}
 }
 
-func Minimal196(n int) int {
+func Inline196(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1578,7 +1578,7 @@ func Minimal196(n int) int {
 	}
 }
 
-func Minimal197(n int) int {
+func Inline197(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1586,7 +1586,7 @@ func Minimal197(n int) int {
 	}
 }
 
-func Minimal198(n int) int {
+func Inline198(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1594,7 +1594,7 @@ func Minimal198(n int) int {
 	}
 }
 
-func Minimal199(n int) int {
+func Inline199(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1602,7 +1602,7 @@ func Minimal199(n int) int {
 	}
 }
 
-func Minimal200(n int) int {
+func Inline200(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1610,7 +1610,7 @@ func Minimal200(n int) int {
 	}
 }
 
-func Minimal201(n int) int {
+func Inline201(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1618,7 +1618,7 @@ func Minimal201(n int) int {
 	}
 }
 
-func Minimal202(n int) int {
+func Inline202(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1626,7 +1626,7 @@ func Minimal202(n int) int {
 	}
 }
 
-func Minimal203(n int) int {
+func Inline203(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1634,7 +1634,7 @@ func Minimal203(n int) int {
 	}
 }
 
-func Minimal204(n int) int {
+func Inline204(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1642,7 +1642,7 @@ func Minimal204(n int) int {
 	}
 }
 
-func Minimal205(n int) int {
+func Inline205(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1650,7 +1650,7 @@ func Minimal205(n int) int {
 	}
 }
 
-func Minimal206(n int) int {
+func Inline206(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1658,7 +1658,7 @@ func Minimal206(n int) int {
 	}
 }
 
-func Minimal207(n int) int {
+func Inline207(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1666,7 +1666,7 @@ func Minimal207(n int) int {
 	}
 }
 
-func Minimal208(n int) int {
+func Inline208(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1674,7 +1674,7 @@ func Minimal208(n int) int {
 	}
 }
 
-func Minimal209(n int) int {
+func Inline209(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1682,7 +1682,7 @@ func Minimal209(n int) int {
 	}
 }
 
-func Minimal210(n int) int {
+func Inline210(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1690,7 +1690,7 @@ func Minimal210(n int) int {
 	}
 }
 
-func Minimal211(n int) int {
+func Inline211(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1698,7 +1698,7 @@ func Minimal211(n int) int {
 	}
 }
 
-func Minimal212(n int) int {
+func Inline212(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1706,7 +1706,7 @@ func Minimal212(n int) int {
 	}
 }
 
-func Minimal213(n int) int {
+func Inline213(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1714,7 +1714,7 @@ func Minimal213(n int) int {
 	}
 }
 
-func Minimal214(n int) int {
+func Inline214(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1722,7 +1722,7 @@ func Minimal214(n int) int {
 	}
 }
 
-func Minimal215(n int) int {
+func Inline215(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1730,7 +1730,7 @@ func Minimal215(n int) int {
 	}
 }
 
-func Minimal216(n int) int {
+func Inline216(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1738,7 +1738,7 @@ func Minimal216(n int) int {
 	}
 }
 
-func Minimal217(n int) int {
+func Inline217(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1746,7 +1746,7 @@ func Minimal217(n int) int {
 	}
 }
 
-func Minimal218(n int) int {
+func Inline218(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1754,7 +1754,7 @@ func Minimal218(n int) int {
 	}
 }
 
-func Minimal219(n int) int {
+func Inline219(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1762,7 +1762,7 @@ func Minimal219(n int) int {
 	}
 }
 
-func Minimal220(n int) int {
+func Inline220(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1770,7 +1770,7 @@ func Minimal220(n int) int {
 	}
 }
 
-func Minimal221(n int) int {
+func Inline221(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1778,7 +1778,7 @@ func Minimal221(n int) int {
 	}
 }
 
-func Minimal222(n int) int {
+func Inline222(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1786,7 +1786,7 @@ func Minimal222(n int) int {
 	}
 }
 
-func Minimal223(n int) int {
+func Inline223(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1794,7 +1794,7 @@ func Minimal223(n int) int {
 	}
 }
 
-func Minimal224(n int) int {
+func Inline224(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1802,7 +1802,7 @@ func Minimal224(n int) int {
 	}
 }
 
-func Minimal225(n int) int {
+func Inline225(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1810,7 +1810,7 @@ func Minimal225(n int) int {
 	}
 }
 
-func Minimal226(n int) int {
+func Inline226(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1818,7 +1818,7 @@ func Minimal226(n int) int {
 	}
 }
 
-func Minimal227(n int) int {
+func Inline227(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1826,7 +1826,7 @@ func Minimal227(n int) int {
 	}
 }
 
-func Minimal228(n int) int {
+func Inline228(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1834,7 +1834,7 @@ func Minimal228(n int) int {
 	}
 }
 
-func Minimal229(n int) int {
+func Inline229(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1842,7 +1842,7 @@ func Minimal229(n int) int {
 	}
 }
 
-func Minimal230(n int) int {
+func Inline230(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1850,7 +1850,7 @@ func Minimal230(n int) int {
 	}
 }
 
-func Minimal231(n int) int {
+func Inline231(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1858,7 +1858,7 @@ func Minimal231(n int) int {
 	}
 }
 
-func Minimal232(n int) int {
+func Inline232(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1866,7 +1866,7 @@ func Minimal232(n int) int {
 	}
 }
 
-func Minimal233(n int) int {
+func Inline233(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1874,7 +1874,7 @@ func Minimal233(n int) int {
 	}
 }
 
-func Minimal234(n int) int {
+func Inline234(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1882,7 +1882,7 @@ func Minimal234(n int) int {
 	}
 }
 
-func Minimal235(n int) int {
+func Inline235(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1890,7 +1890,7 @@ func Minimal235(n int) int {
 	}
 }
 
-func Minimal236(n int) int {
+func Inline236(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1898,7 +1898,7 @@ func Minimal236(n int) int {
 	}
 }
 
-func Minimal237(n int) int {
+func Inline237(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1906,7 +1906,7 @@ func Minimal237(n int) int {
 	}
 }
 
-func Minimal238(n int) int {
+func Inline238(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1914,7 +1914,7 @@ func Minimal238(n int) int {
 	}
 }
 
-func Minimal239(n int) int {
+func Inline239(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1922,7 +1922,7 @@ func Minimal239(n int) int {
 	}
 }
 
-func Minimal240(n int) int {
+func Inline240(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1930,7 +1930,7 @@ func Minimal240(n int) int {
 	}
 }
 
-func Minimal241(n int) int {
+func Inline241(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1938,7 +1938,7 @@ func Minimal241(n int) int {
 	}
 }
 
-func Minimal242(n int) int {
+func Inline242(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1946,7 +1946,7 @@ func Minimal242(n int) int {
 	}
 }
 
-func Minimal243(n int) int {
+func Inline243(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1954,7 +1954,7 @@ func Minimal243(n int) int {
 	}
 }
 
-func Minimal244(n int) int {
+func Inline244(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1962,7 +1962,7 @@ func Minimal244(n int) int {
 	}
 }
 
-func Minimal245(n int) int {
+func Inline245(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1970,7 +1970,7 @@ func Minimal245(n int) int {
 	}
 }
 
-func Minimal246(n int) int {
+func Inline246(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1978,7 +1978,7 @@ func Minimal246(n int) int {
 	}
 }
 
-func Minimal247(n int) int {
+func Inline247(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1986,7 +1986,7 @@ func Minimal247(n int) int {
 	}
 }
 
-func Minimal248(n int) int {
+func Inline248(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -1994,7 +1994,7 @@ func Minimal248(n int) int {
 	}
 }
 
-func Minimal249(n int) int {
+func Inline249(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2002,7 +2002,7 @@ func Minimal249(n int) int {
 	}
 }
 
-func Minimal250(n int) int {
+func Inline250(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2010,7 +2010,7 @@ func Minimal250(n int) int {
 	}
 }
 
-func Minimal251(n int) int {
+func Inline251(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2018,7 +2018,7 @@ func Minimal251(n int) int {
 	}
 }
 
-func Minimal252(n int) int {
+func Inline252(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2026,7 +2026,7 @@ func Minimal252(n int) int {
 	}
 }
 
-func Minimal253(n int) int {
+func Inline253(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2034,7 +2034,7 @@ func Minimal253(n int) int {
 	}
 }
 
-func Minimal254(n int) int {
+func Inline254(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2042,7 +2042,7 @@ func Minimal254(n int) int {
 	}
 }
 
-func Minimal255(n int) int {
+func Inline255(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2050,7 +2050,7 @@ func Minimal255(n int) int {
 	}
 }
 
-func Minimal256(n int) int {
+func Inline256(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2058,7 +2058,7 @@ func Minimal256(n int) int {
 	}
 }
 
-func Minimal257(n int) int {
+func Inline257(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2066,7 +2066,7 @@ func Minimal257(n int) int {
 	}
 }
 
-func Minimal258(n int) int {
+func Inline258(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2074,7 +2074,7 @@ func Minimal258(n int) int {
 	}
 }
 
-func Minimal259(n int) int {
+func Inline259(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2082,7 +2082,7 @@ func Minimal259(n int) int {
 	}
 }
 
-func Minimal260(n int) int {
+func Inline260(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2090,7 +2090,7 @@ func Minimal260(n int) int {
 	}
 }
 
-func Minimal261(n int) int {
+func Inline261(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2098,7 +2098,7 @@ func Minimal261(n int) int {
 	}
 }
 
-func Minimal262(n int) int {
+func Inline262(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2106,7 +2106,7 @@ func Minimal262(n int) int {
 	}
 }
 
-func Minimal263(n int) int {
+func Inline263(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2114,7 +2114,7 @@ func Minimal263(n int) int {
 	}
 }
 
-func Minimal264(n int) int {
+func Inline264(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2122,7 +2122,7 @@ func Minimal264(n int) int {
 	}
 }
 
-func Minimal265(n int) int {
+func Inline265(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2130,7 +2130,7 @@ func Minimal265(n int) int {
 	}
 }
 
-func Minimal266(n int) int {
+func Inline266(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2138,7 +2138,7 @@ func Minimal266(n int) int {
 	}
 }
 
-func Minimal267(n int) int {
+func Inline267(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2146,7 +2146,7 @@ func Minimal267(n int) int {
 	}
 }
 
-func Minimal268(n int) int {
+func Inline268(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2154,7 +2154,7 @@ func Minimal268(n int) int {
 	}
 }
 
-func Minimal269(n int) int {
+func Inline269(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2162,7 +2162,7 @@ func Minimal269(n int) int {
 	}
 }
 
-func Minimal270(n int) int {
+func Inline270(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2170,7 +2170,7 @@ func Minimal270(n int) int {
 	}
 }
 
-func Minimal271(n int) int {
+func Inline271(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2178,7 +2178,7 @@ func Minimal271(n int) int {
 	}
 }
 
-func Minimal272(n int) int {
+func Inline272(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2186,7 +2186,7 @@ func Minimal272(n int) int {
 	}
 }
 
-func Minimal273(n int) int {
+func Inline273(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2194,7 +2194,7 @@ func Minimal273(n int) int {
 	}
 }
 
-func Minimal274(n int) int {
+func Inline274(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2202,7 +2202,7 @@ func Minimal274(n int) int {
 	}
 }
 
-func Minimal275(n int) int {
+func Inline275(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2210,7 +2210,7 @@ func Minimal275(n int) int {
 	}
 }
 
-func Minimal276(n int) int {
+func Inline276(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2218,7 +2218,7 @@ func Minimal276(n int) int {
 	}
 }
 
-func Minimal277(n int) int {
+func Inline277(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2226,7 +2226,7 @@ func Minimal277(n int) int {
 	}
 }
 
-func Minimal278(n int) int {
+func Inline278(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2234,7 +2234,7 @@ func Minimal278(n int) int {
 	}
 }
 
-func Minimal279(n int) int {
+func Inline279(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2242,7 +2242,7 @@ func Minimal279(n int) int {
 	}
 }
 
-func Minimal280(n int) int {
+func Inline280(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2250,7 +2250,7 @@ func Minimal280(n int) int {
 	}
 }
 
-func Minimal281(n int) int {
+func Inline281(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2258,7 +2258,7 @@ func Minimal281(n int) int {
 	}
 }
 
-func Minimal282(n int) int {
+func Inline282(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2266,7 +2266,7 @@ func Minimal282(n int) int {
 	}
 }
 
-func Minimal283(n int) int {
+func Inline283(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2274,7 +2274,7 @@ func Minimal283(n int) int {
 	}
 }
 
-func Minimal284(n int) int {
+func Inline284(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2282,7 +2282,7 @@ func Minimal284(n int) int {
 	}
 }
 
-func Minimal285(n int) int {
+func Inline285(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2290,7 +2290,7 @@ func Minimal285(n int) int {
 	}
 }
 
-func Minimal286(n int) int {
+func Inline286(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2298,7 +2298,7 @@ func Minimal286(n int) int {
 	}
 }
 
-func Minimal287(n int) int {
+func Inline287(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2306,7 +2306,7 @@ func Minimal287(n int) int {
 	}
 }
 
-func Minimal288(n int) int {
+func Inline288(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2314,7 +2314,7 @@ func Minimal288(n int) int {
 	}
 }
 
-func Minimal289(n int) int {
+func Inline289(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2322,7 +2322,7 @@ func Minimal289(n int) int {
 	}
 }
 
-func Minimal290(n int) int {
+func Inline290(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2330,7 +2330,7 @@ func Minimal290(n int) int {
 	}
 }
 
-func Minimal291(n int) int {
+func Inline291(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2338,7 +2338,7 @@ func Minimal291(n int) int {
 	}
 }
 
-func Minimal292(n int) int {
+func Inline292(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2346,7 +2346,7 @@ func Minimal292(n int) int {
 	}
 }
 
-func Minimal293(n int) int {
+func Inline293(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2354,7 +2354,7 @@ func Minimal293(n int) int {
 	}
 }
 
-func Minimal294(n int) int {
+func Inline294(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2362,7 +2362,7 @@ func Minimal294(n int) int {
 	}
 }
 
-func Minimal295(n int) int {
+func Inline295(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2370,7 +2370,7 @@ func Minimal295(n int) int {
 	}
 }
 
-func Minimal296(n int) int {
+func Inline296(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2378,7 +2378,7 @@ func Minimal296(n int) int {
 	}
 }
 
-func Minimal297(n int) int {
+func Inline297(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2386,7 +2386,7 @@ func Minimal297(n int) int {
 	}
 }
 
-func Minimal298(n int) int {
+func Inline298(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2394,7 +2394,7 @@ func Minimal298(n int) int {
 	}
 }
 
-func Minimal299(n int) int {
+func Inline299(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2402,7 +2402,7 @@ func Minimal299(n int) int {
 	}
 }
 
-func Minimal300(n int) int {
+func Inline300(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2410,7 +2410,7 @@ func Minimal300(n int) int {
 	}
 }
 
-func Minimal301(n int) int {
+func Inline301(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2418,7 +2418,7 @@ func Minimal301(n int) int {
 	}
 }
 
-func Minimal302(n int) int {
+func Inline302(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2426,7 +2426,7 @@ func Minimal302(n int) int {
 	}
 }
 
-func Minimal303(n int) int {
+func Inline303(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2434,7 +2434,7 @@ func Minimal303(n int) int {
 	}
 }
 
-func Minimal304(n int) int {
+func Inline304(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2442,7 +2442,7 @@ func Minimal304(n int) int {
 	}
 }
 
-func Minimal305(n int) int {
+func Inline305(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2450,7 +2450,7 @@ func Minimal305(n int) int {
 	}
 }
 
-func Minimal306(n int) int {
+func Inline306(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2458,7 +2458,7 @@ func Minimal306(n int) int {
 	}
 }
 
-func Minimal307(n int) int {
+func Inline307(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2466,7 +2466,7 @@ func Minimal307(n int) int {
 	}
 }
 
-func Minimal308(n int) int {
+func Inline308(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2474,7 +2474,7 @@ func Minimal308(n int) int {
 	}
 }
 
-func Minimal309(n int) int {
+func Inline309(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2482,7 +2482,7 @@ func Minimal309(n int) int {
 	}
 }
 
-func Minimal310(n int) int {
+func Inline310(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2490,7 +2490,7 @@ func Minimal310(n int) int {
 	}
 }
 
-func Minimal311(n int) int {
+func Inline311(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2498,7 +2498,7 @@ func Minimal311(n int) int {
 	}
 }
 
-func Minimal312(n int) int {
+func Inline312(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2506,7 +2506,7 @@ func Minimal312(n int) int {
 	}
 }
 
-func Minimal313(n int) int {
+func Inline313(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2514,7 +2514,7 @@ func Minimal313(n int) int {
 	}
 }
 
-func Minimal314(n int) int {
+func Inline314(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2522,7 +2522,7 @@ func Minimal314(n int) int {
 	}
 }
 
-func Minimal315(n int) int {
+func Inline315(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2530,7 +2530,7 @@ func Minimal315(n int) int {
 	}
 }
 
-func Minimal316(n int) int {
+func Inline316(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2538,7 +2538,7 @@ func Minimal316(n int) int {
 	}
 }
 
-func Minimal317(n int) int {
+func Inline317(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2546,7 +2546,7 @@ func Minimal317(n int) int {
 	}
 }
 
-func Minimal318(n int) int {
+func Inline318(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2554,7 +2554,7 @@ func Minimal318(n int) int {
 	}
 }
 
-func Minimal319(n int) int {
+func Inline319(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2562,7 +2562,7 @@ func Minimal319(n int) int {
 	}
 }
 
-func Minimal320(n int) int {
+func Inline320(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2570,7 +2570,7 @@ func Minimal320(n int) int {
 	}
 }
 
-func Minimal321(n int) int {
+func Inline321(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2578,7 +2578,7 @@ func Minimal321(n int) int {
 	}
 }
 
-func Minimal322(n int) int {
+func Inline322(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2586,7 +2586,7 @@ func Minimal322(n int) int {
 	}
 }
 
-func Minimal323(n int) int {
+func Inline323(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2594,7 +2594,7 @@ func Minimal323(n int) int {
 	}
 }
 
-func Minimal324(n int) int {
+func Inline324(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2602,7 +2602,7 @@ func Minimal324(n int) int {
 	}
 }
 
-func Minimal325(n int) int {
+func Inline325(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2610,7 +2610,7 @@ func Minimal325(n int) int {
 	}
 }
 
-func Minimal326(n int) int {
+func Inline326(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2618,7 +2618,7 @@ func Minimal326(n int) int {
 	}
 }
 
-func Minimal327(n int) int {
+func Inline327(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2626,7 +2626,7 @@ func Minimal327(n int) int {
 	}
 }
 
-func Minimal328(n int) int {
+func Inline328(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2634,7 +2634,7 @@ func Minimal328(n int) int {
 	}
 }
 
-func Minimal329(n int) int {
+func Inline329(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2642,7 +2642,7 @@ func Minimal329(n int) int {
 	}
 }
 
-func Minimal330(n int) int {
+func Inline330(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2650,7 +2650,7 @@ func Minimal330(n int) int {
 	}
 }
 
-func Minimal331(n int) int {
+func Inline331(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2658,7 +2658,7 @@ func Minimal331(n int) int {
 	}
 }
 
-func Minimal332(n int) int {
+func Inline332(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2666,7 +2666,7 @@ func Minimal332(n int) int {
 	}
 }
 
-func Minimal333(n int) int {
+func Inline333(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2674,7 +2674,7 @@ func Minimal333(n int) int {
 	}
 }
 
-func Minimal334(n int) int {
+func Inline334(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2682,7 +2682,7 @@ func Minimal334(n int) int {
 	}
 }
 
-func Minimal335(n int) int {
+func Inline335(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2690,7 +2690,7 @@ func Minimal335(n int) int {
 	}
 }
 
-func Minimal336(n int) int {
+func Inline336(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2698,7 +2698,7 @@ func Minimal336(n int) int {
 	}
 }
 
-func Minimal337(n int) int {
+func Inline337(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2706,7 +2706,7 @@ func Minimal337(n int) int {
 	}
 }
 
-func Minimal338(n int) int {
+func Inline338(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2714,7 +2714,7 @@ func Minimal338(n int) int {
 	}
 }
 
-func Minimal339(n int) int {
+func Inline339(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2722,7 +2722,7 @@ func Minimal339(n int) int {
 	}
 }
 
-func Minimal340(n int) int {
+func Inline340(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2730,7 +2730,7 @@ func Minimal340(n int) int {
 	}
 }
 
-func Minimal341(n int) int {
+func Inline341(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2738,7 +2738,7 @@ func Minimal341(n int) int {
 	}
 }
 
-func Minimal342(n int) int {
+func Inline342(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2746,7 +2746,7 @@ func Minimal342(n int) int {
 	}
 }
 
-func Minimal343(n int) int {
+func Inline343(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2754,7 +2754,7 @@ func Minimal343(n int) int {
 	}
 }
 
-func Minimal344(n int) int {
+func Inline344(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2762,7 +2762,7 @@ func Minimal344(n int) int {
 	}
 }
 
-func Minimal345(n int) int {
+func Inline345(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2770,7 +2770,7 @@ func Minimal345(n int) int {
 	}
 }
 
-func Minimal346(n int) int {
+func Inline346(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2778,7 +2778,7 @@ func Minimal346(n int) int {
 	}
 }
 
-func Minimal347(n int) int {
+func Inline347(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2786,7 +2786,7 @@ func Minimal347(n int) int {
 	}
 }
 
-func Minimal348(n int) int {
+func Inline348(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2794,7 +2794,7 @@ func Minimal348(n int) int {
 	}
 }
 
-func Minimal349(n int) int {
+func Inline349(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2802,7 +2802,7 @@ func Minimal349(n int) int {
 	}
 }
 
-func Minimal350(n int) int {
+func Inline350(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2810,7 +2810,7 @@ func Minimal350(n int) int {
 	}
 }
 
-func Minimal351(n int) int {
+func Inline351(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2818,7 +2818,7 @@ func Minimal351(n int) int {
 	}
 }
 
-func Minimal352(n int) int {
+func Inline352(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2826,7 +2826,7 @@ func Minimal352(n int) int {
 	}
 }
 
-func Minimal353(n int) int {
+func Inline353(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2834,7 +2834,7 @@ func Minimal353(n int) int {
 	}
 }
 
-func Minimal354(n int) int {
+func Inline354(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2842,7 +2842,7 @@ func Minimal354(n int) int {
 	}
 }
 
-func Minimal355(n int) int {
+func Inline355(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2850,7 +2850,7 @@ func Minimal355(n int) int {
 	}
 }
 
-func Minimal356(n int) int {
+func Inline356(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2858,7 +2858,7 @@ func Minimal356(n int) int {
 	}
 }
 
-func Minimal357(n int) int {
+func Inline357(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2866,7 +2866,7 @@ func Minimal357(n int) int {
 	}
 }
 
-func Minimal358(n int) int {
+func Inline358(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2874,7 +2874,7 @@ func Minimal358(n int) int {
 	}
 }
 
-func Minimal359(n int) int {
+func Inline359(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2882,7 +2882,7 @@ func Minimal359(n int) int {
 	}
 }
 
-func Minimal360(n int) int {
+func Inline360(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2890,7 +2890,7 @@ func Minimal360(n int) int {
 	}
 }
 
-func Minimal361(n int) int {
+func Inline361(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2898,7 +2898,7 @@ func Minimal361(n int) int {
 	}
 }
 
-func Minimal362(n int) int {
+func Inline362(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2906,7 +2906,7 @@ func Minimal362(n int) int {
 	}
 }
 
-func Minimal363(n int) int {
+func Inline363(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2914,7 +2914,7 @@ func Minimal363(n int) int {
 	}
 }
 
-func Minimal364(n int) int {
+func Inline364(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2922,7 +2922,7 @@ func Minimal364(n int) int {
 	}
 }
 
-func Minimal365(n int) int {
+func Inline365(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2930,7 +2930,7 @@ func Minimal365(n int) int {
 	}
 }
 
-func Minimal366(n int) int {
+func Inline366(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2938,7 +2938,7 @@ func Minimal366(n int) int {
 	}
 }
 
-func Minimal367(n int) int {
+func Inline367(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2946,7 +2946,7 @@ func Minimal367(n int) int {
 	}
 }
 
-func Minimal368(n int) int {
+func Inline368(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2954,7 +2954,7 @@ func Minimal368(n int) int {
 	}
 }
 
-func Minimal369(n int) int {
+func Inline369(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2962,7 +2962,7 @@ func Minimal369(n int) int {
 	}
 }
 
-func Minimal370(n int) int {
+func Inline370(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2970,7 +2970,7 @@ func Minimal370(n int) int {
 	}
 }
 
-func Minimal371(n int) int {
+func Inline371(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2978,7 +2978,7 @@ func Minimal371(n int) int {
 	}
 }
 
-func Minimal372(n int) int {
+func Inline372(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2986,7 +2986,7 @@ func Minimal372(n int) int {
 	}
 }
 
-func Minimal373(n int) int {
+func Inline373(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -2994,7 +2994,7 @@ func Minimal373(n int) int {
 	}
 }
 
-func Minimal374(n int) int {
+func Inline374(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3002,7 +3002,7 @@ func Minimal374(n int) int {
 	}
 }
 
-func Minimal375(n int) int {
+func Inline375(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3010,7 +3010,7 @@ func Minimal375(n int) int {
 	}
 }
 
-func Minimal376(n int) int {
+func Inline376(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3018,7 +3018,7 @@ func Minimal376(n int) int {
 	}
 }
 
-func Minimal377(n int) int {
+func Inline377(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3026,7 +3026,7 @@ func Minimal377(n int) int {
 	}
 }
 
-func Minimal378(n int) int {
+func Inline378(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3034,7 +3034,7 @@ func Minimal378(n int) int {
 	}
 }
 
-func Minimal379(n int) int {
+func Inline379(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3042,7 +3042,7 @@ func Minimal379(n int) int {
 	}
 }
 
-func Minimal380(n int) int {
+func Inline380(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3050,7 +3050,7 @@ func Minimal380(n int) int {
 	}
 }
 
-func Minimal381(n int) int {
+func Inline381(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3058,7 +3058,7 @@ func Minimal381(n int) int {
 	}
 }
 
-func Minimal382(n int) int {
+func Inline382(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3066,7 +3066,7 @@ func Minimal382(n int) int {
 	}
 }
 
-func Minimal383(n int) int {
+func Inline383(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3074,7 +3074,7 @@ func Minimal383(n int) int {
 	}
 }
 
-func Minimal384(n int) int {
+func Inline384(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3082,7 +3082,7 @@ func Minimal384(n int) int {
 	}
 }
 
-func Minimal385(n int) int {
+func Inline385(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3090,7 +3090,7 @@ func Minimal385(n int) int {
 	}
 }
 
-func Minimal386(n int) int {
+func Inline386(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3098,7 +3098,7 @@ func Minimal386(n int) int {
 	}
 }
 
-func Minimal387(n int) int {
+func Inline387(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3106,7 +3106,7 @@ func Minimal387(n int) int {
 	}
 }
 
-func Minimal388(n int) int {
+func Inline388(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3114,7 +3114,7 @@ func Minimal388(n int) int {
 	}
 }
 
-func Minimal389(n int) int {
+func Inline389(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3122,7 +3122,7 @@ func Minimal389(n int) int {
 	}
 }
 
-func Minimal390(n int) int {
+func Inline390(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3130,7 +3130,7 @@ func Minimal390(n int) int {
 	}
 }
 
-func Minimal391(n int) int {
+func Inline391(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3138,7 +3138,7 @@ func Minimal391(n int) int {
 	}
 }
 
-func Minimal392(n int) int {
+func Inline392(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3146,7 +3146,7 @@ func Minimal392(n int) int {
 	}
 }
 
-func Minimal393(n int) int {
+func Inline393(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3154,7 +3154,7 @@ func Minimal393(n int) int {
 	}
 }
 
-func Minimal394(n int) int {
+func Inline394(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3162,7 +3162,7 @@ func Minimal394(n int) int {
 	}
 }
 
-func Minimal395(n int) int {
+func Inline395(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3170,7 +3170,7 @@ func Minimal395(n int) int {
 	}
 }
 
-func Minimal396(n int) int {
+func Inline396(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3178,7 +3178,7 @@ func Minimal396(n int) int {
 	}
 }
 
-func Minimal397(n int) int {
+func Inline397(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3186,7 +3186,7 @@ func Minimal397(n int) int {
 	}
 }
 
-func Minimal398(n int) int {
+func Inline398(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3194,7 +3194,7 @@ func Minimal398(n int) int {
 	}
 }
 
-func Minimal399(n int) int {
+func Inline399(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3202,7 +3202,7 @@ func Minimal399(n int) int {
 	}
 }
 
-func Minimal400(n int) int {
+func Inline400(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3210,7 +3210,7 @@ func Minimal400(n int) int {
 	}
 }
 
-func Minimal401(n int) int {
+func Inline401(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3218,7 +3218,7 @@ func Minimal401(n int) int {
 	}
 }
 
-func Minimal402(n int) int {
+func Inline402(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3226,7 +3226,7 @@ func Minimal402(n int) int {
 	}
 }
 
-func Minimal403(n int) int {
+func Inline403(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3234,7 +3234,7 @@ func Minimal403(n int) int {
 	}
 }
 
-func Minimal404(n int) int {
+func Inline404(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3242,7 +3242,7 @@ func Minimal404(n int) int {
 	}
 }
 
-func Minimal405(n int) int {
+func Inline405(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3250,7 +3250,7 @@ func Minimal405(n int) int {
 	}
 }
 
-func Minimal406(n int) int {
+func Inline406(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3258,7 +3258,7 @@ func Minimal406(n int) int {
 	}
 }
 
-func Minimal407(n int) int {
+func Inline407(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3266,7 +3266,7 @@ func Minimal407(n int) int {
 	}
 }
 
-func Minimal408(n int) int {
+func Inline408(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3274,7 +3274,7 @@ func Minimal408(n int) int {
 	}
 }
 
-func Minimal409(n int) int {
+func Inline409(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3282,7 +3282,7 @@ func Minimal409(n int) int {
 	}
 }
 
-func Minimal410(n int) int {
+func Inline410(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3290,7 +3290,7 @@ func Minimal410(n int) int {
 	}
 }
 
-func Minimal411(n int) int {
+func Inline411(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3298,7 +3298,7 @@ func Minimal411(n int) int {
 	}
 }
 
-func Minimal412(n int) int {
+func Inline412(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3306,7 +3306,7 @@ func Minimal412(n int) int {
 	}
 }
 
-func Minimal413(n int) int {
+func Inline413(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3314,7 +3314,7 @@ func Minimal413(n int) int {
 	}
 }
 
-func Minimal414(n int) int {
+func Inline414(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3322,7 +3322,7 @@ func Minimal414(n int) int {
 	}
 }
 
-func Minimal415(n int) int {
+func Inline415(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3330,7 +3330,7 @@ func Minimal415(n int) int {
 	}
 }
 
-func Minimal416(n int) int {
+func Inline416(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3338,7 +3338,7 @@ func Minimal416(n int) int {
 	}
 }
 
-func Minimal417(n int) int {
+func Inline417(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3346,7 +3346,7 @@ func Minimal417(n int) int {
 	}
 }
 
-func Minimal418(n int) int {
+func Inline418(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3354,7 +3354,7 @@ func Minimal418(n int) int {
 	}
 }
 
-func Minimal419(n int) int {
+func Inline419(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3362,7 +3362,7 @@ func Minimal419(n int) int {
 	}
 }
 
-func Minimal420(n int) int {
+func Inline420(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3370,7 +3370,7 @@ func Minimal420(n int) int {
 	}
 }
 
-func Minimal421(n int) int {
+func Inline421(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3378,7 +3378,7 @@ func Minimal421(n int) int {
 	}
 }
 
-func Minimal422(n int) int {
+func Inline422(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3386,7 +3386,7 @@ func Minimal422(n int) int {
 	}
 }
 
-func Minimal423(n int) int {
+func Inline423(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3394,7 +3394,7 @@ func Minimal423(n int) int {
 	}
 }
 
-func Minimal424(n int) int {
+func Inline424(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3402,7 +3402,7 @@ func Minimal424(n int) int {
 	}
 }
 
-func Minimal425(n int) int {
+func Inline425(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3410,7 +3410,7 @@ func Minimal425(n int) int {
 	}
 }
 
-func Minimal426(n int) int {
+func Inline426(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3418,7 +3418,7 @@ func Minimal426(n int) int {
 	}
 }
 
-func Minimal427(n int) int {
+func Inline427(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3426,7 +3426,7 @@ func Minimal427(n int) int {
 	}
 }
 
-func Minimal428(n int) int {
+func Inline428(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3434,7 +3434,7 @@ func Minimal428(n int) int {
 	}
 }
 
-func Minimal429(n int) int {
+func Inline429(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3442,7 +3442,7 @@ func Minimal429(n int) int {
 	}
 }
 
-func Minimal430(n int) int {
+func Inline430(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3450,7 +3450,7 @@ func Minimal430(n int) int {
 	}
 }
 
-func Minimal431(n int) int {
+func Inline431(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3458,7 +3458,7 @@ func Minimal431(n int) int {
 	}
 }
 
-func Minimal432(n int) int {
+func Inline432(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3466,7 +3466,7 @@ func Minimal432(n int) int {
 	}
 }
 
-func Minimal433(n int) int {
+func Inline433(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3474,7 +3474,7 @@ func Minimal433(n int) int {
 	}
 }
 
-func Minimal434(n int) int {
+func Inline434(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3482,7 +3482,7 @@ func Minimal434(n int) int {
 	}
 }
 
-func Minimal435(n int) int {
+func Inline435(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3490,7 +3490,7 @@ func Minimal435(n int) int {
 	}
 }
 
-func Minimal436(n int) int {
+func Inline436(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3498,7 +3498,7 @@ func Minimal436(n int) int {
 	}
 }
 
-func Minimal437(n int) int {
+func Inline437(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3506,7 +3506,7 @@ func Minimal437(n int) int {
 	}
 }
 
-func Minimal438(n int) int {
+func Inline438(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3514,7 +3514,7 @@ func Minimal438(n int) int {
 	}
 }
 
-func Minimal439(n int) int {
+func Inline439(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3522,7 +3522,7 @@ func Minimal439(n int) int {
 	}
 }
 
-func Minimal440(n int) int {
+func Inline440(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3530,7 +3530,7 @@ func Minimal440(n int) int {
 	}
 }
 
-func Minimal441(n int) int {
+func Inline441(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3538,7 +3538,7 @@ func Minimal441(n int) int {
 	}
 }
 
-func Minimal442(n int) int {
+func Inline442(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3546,7 +3546,7 @@ func Minimal442(n int) int {
 	}
 }
 
-func Minimal443(n int) int {
+func Inline443(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3554,7 +3554,7 @@ func Minimal443(n int) int {
 	}
 }
 
-func Minimal444(n int) int {
+func Inline444(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3562,7 +3562,7 @@ func Minimal444(n int) int {
 	}
 }
 
-func Minimal445(n int) int {
+func Inline445(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3570,7 +3570,7 @@ func Minimal445(n int) int {
 	}
 }
 
-func Minimal446(n int) int {
+func Inline446(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3578,7 +3578,7 @@ func Minimal446(n int) int {
 	}
 }
 
-func Minimal447(n int) int {
+func Inline447(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3586,7 +3586,7 @@ func Minimal447(n int) int {
 	}
 }
 
-func Minimal448(n int) int {
+func Inline448(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3594,7 +3594,7 @@ func Minimal448(n int) int {
 	}
 }
 
-func Minimal449(n int) int {
+func Inline449(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3602,7 +3602,7 @@ func Minimal449(n int) int {
 	}
 }
 
-func Minimal450(n int) int {
+func Inline450(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3610,7 +3610,7 @@ func Minimal450(n int) int {
 	}
 }
 
-func Minimal451(n int) int {
+func Inline451(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3618,7 +3618,7 @@ func Minimal451(n int) int {
 	}
 }
 
-func Minimal452(n int) int {
+func Inline452(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3626,7 +3626,7 @@ func Minimal452(n int) int {
 	}
 }
 
-func Minimal453(n int) int {
+func Inline453(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3634,7 +3634,7 @@ func Minimal453(n int) int {
 	}
 }
 
-func Minimal454(n int) int {
+func Inline454(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3642,7 +3642,7 @@ func Minimal454(n int) int {
 	}
 }
 
-func Minimal455(n int) int {
+func Inline455(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3650,7 +3650,7 @@ func Minimal455(n int) int {
 	}
 }
 
-func Minimal456(n int) int {
+func Inline456(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3658,7 +3658,7 @@ func Minimal456(n int) int {
 	}
 }
 
-func Minimal457(n int) int {
+func Inline457(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3666,7 +3666,7 @@ func Minimal457(n int) int {
 	}
 }
 
-func Minimal458(n int) int {
+func Inline458(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3674,7 +3674,7 @@ func Minimal458(n int) int {
 	}
 }
 
-func Minimal459(n int) int {
+func Inline459(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3682,7 +3682,7 @@ func Minimal459(n int) int {
 	}
 }
 
-func Minimal460(n int) int {
+func Inline460(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3690,7 +3690,7 @@ func Minimal460(n int) int {
 	}
 }
 
-func Minimal461(n int) int {
+func Inline461(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3698,7 +3698,7 @@ func Minimal461(n int) int {
 	}
 }
 
-func Minimal462(n int) int {
+func Inline462(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3706,7 +3706,7 @@ func Minimal462(n int) int {
 	}
 }
 
-func Minimal463(n int) int {
+func Inline463(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3714,7 +3714,7 @@ func Minimal463(n int) int {
 	}
 }
 
-func Minimal464(n int) int {
+func Inline464(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3722,7 +3722,7 @@ func Minimal464(n int) int {
 	}
 }
 
-func Minimal465(n int) int {
+func Inline465(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3730,7 +3730,7 @@ func Minimal465(n int) int {
 	}
 }
 
-func Minimal466(n int) int {
+func Inline466(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3738,7 +3738,7 @@ func Minimal466(n int) int {
 	}
 }
 
-func Minimal467(n int) int {
+func Inline467(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3746,7 +3746,7 @@ func Minimal467(n int) int {
 	}
 }
 
-func Minimal468(n int) int {
+func Inline468(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3754,7 +3754,7 @@ func Minimal468(n int) int {
 	}
 }
 
-func Minimal469(n int) int {
+func Inline469(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3762,7 +3762,7 @@ func Minimal469(n int) int {
 	}
 }
 
-func Minimal470(n int) int {
+func Inline470(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3770,7 +3770,7 @@ func Minimal470(n int) int {
 	}
 }
 
-func Minimal471(n int) int {
+func Inline471(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3778,7 +3778,7 @@ func Minimal471(n int) int {
 	}
 }
 
-func Minimal472(n int) int {
+func Inline472(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3786,7 +3786,7 @@ func Minimal472(n int) int {
 	}
 }
 
-func Minimal473(n int) int {
+func Inline473(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3794,7 +3794,7 @@ func Minimal473(n int) int {
 	}
 }
 
-func Minimal474(n int) int {
+func Inline474(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3802,7 +3802,7 @@ func Minimal474(n int) int {
 	}
 }
 
-func Minimal475(n int) int {
+func Inline475(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3810,7 +3810,7 @@ func Minimal475(n int) int {
 	}
 }
 
-func Minimal476(n int) int {
+func Inline476(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3818,7 +3818,7 @@ func Minimal476(n int) int {
 	}
 }
 
-func Minimal477(n int) int {
+func Inline477(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3826,7 +3826,7 @@ func Minimal477(n int) int {
 	}
 }
 
-func Minimal478(n int) int {
+func Inline478(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3834,7 +3834,7 @@ func Minimal478(n int) int {
 	}
 }
 
-func Minimal479(n int) int {
+func Inline479(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3842,7 +3842,7 @@ func Minimal479(n int) int {
 	}
 }
 
-func Minimal480(n int) int {
+func Inline480(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3850,7 +3850,7 @@ func Minimal480(n int) int {
 	}
 }
 
-func Minimal481(n int) int {
+func Inline481(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3858,7 +3858,7 @@ func Minimal481(n int) int {
 	}
 }
 
-func Minimal482(n int) int {
+func Inline482(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3866,7 +3866,7 @@ func Minimal482(n int) int {
 	}
 }
 
-func Minimal483(n int) int {
+func Inline483(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3874,7 +3874,7 @@ func Minimal483(n int) int {
 	}
 }
 
-func Minimal484(n int) int {
+func Inline484(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3882,7 +3882,7 @@ func Minimal484(n int) int {
 	}
 }
 
-func Minimal485(n int) int {
+func Inline485(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3890,7 +3890,7 @@ func Minimal485(n int) int {
 	}
 }
 
-func Minimal486(n int) int {
+func Inline486(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3898,7 +3898,7 @@ func Minimal486(n int) int {
 	}
 }
 
-func Minimal487(n int) int {
+func Inline487(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3906,7 +3906,7 @@ func Minimal487(n int) int {
 	}
 }
 
-func Minimal488(n int) int {
+func Inline488(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3914,7 +3914,7 @@ func Minimal488(n int) int {
 	}
 }
 
-func Minimal489(n int) int {
+func Inline489(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3922,7 +3922,7 @@ func Minimal489(n int) int {
 	}
 }
 
-func Minimal490(n int) int {
+func Inline490(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3930,7 +3930,7 @@ func Minimal490(n int) int {
 	}
 }
 
-func Minimal491(n int) int {
+func Inline491(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3938,7 +3938,7 @@ func Minimal491(n int) int {
 	}
 }
 
-func Minimal492(n int) int {
+func Inline492(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3946,7 +3946,7 @@ func Minimal492(n int) int {
 	}
 }
 
-func Minimal493(n int) int {
+func Inline493(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3954,7 +3954,7 @@ func Minimal493(n int) int {
 	}
 }
 
-func Minimal494(n int) int {
+func Inline494(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3962,7 +3962,7 @@ func Minimal494(n int) int {
 	}
 }
 
-func Minimal495(n int) int {
+func Inline495(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3970,7 +3970,7 @@ func Minimal495(n int) int {
 	}
 }
 
-func Minimal496(n int) int {
+func Inline496(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3978,7 +3978,7 @@ func Minimal496(n int) int {
 	}
 }
 
-func Minimal497(n int) int {
+func Inline497(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3986,7 +3986,7 @@ func Minimal497(n int) int {
 	}
 }
 
-func Minimal498(n int) int {
+func Inline498(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -3994,7 +3994,7 @@ func Minimal498(n int) int {
 	}
 }
 
-func Minimal499(n int) int {
+func Inline499(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4002,7 +4002,7 @@ func Minimal499(n int) int {
 	}
 }
 
-func Minimal500(n int) int {
+func Inline500(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4010,7 +4010,7 @@ func Minimal500(n int) int {
 	}
 }
 
-func Minimal501(n int) int {
+func Inline501(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4018,7 +4018,7 @@ func Minimal501(n int) int {
 	}
 }
 
-func Minimal502(n int) int {
+func Inline502(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4026,7 +4026,7 @@ func Minimal502(n int) int {
 	}
 }
 
-func Minimal503(n int) int {
+func Inline503(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4034,7 +4034,7 @@ func Minimal503(n int) int {
 	}
 }
 
-func Minimal504(n int) int {
+func Inline504(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4042,7 +4042,7 @@ func Minimal504(n int) int {
 	}
 }
 
-func Minimal505(n int) int {
+func Inline505(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4050,7 +4050,7 @@ func Minimal505(n int) int {
 	}
 }
 
-func Minimal506(n int) int {
+func Inline506(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4058,7 +4058,7 @@ func Minimal506(n int) int {
 	}
 }
 
-func Minimal507(n int) int {
+func Inline507(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4066,7 +4066,7 @@ func Minimal507(n int) int {
 	}
 }
 
-func Minimal508(n int) int {
+func Inline508(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4074,7 +4074,7 @@ func Minimal508(n int) int {
 	}
 }
 
-func Minimal509(n int) int {
+func Inline509(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4082,7 +4082,7 @@ func Minimal509(n int) int {
 	}
 }
 
-func Minimal510(n int) int {
+func Inline510(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -4090,7 +4090,7 @@ func Minimal510(n int) int {
 	}
 }
 
-func Minimal511(n int) int {
+func Inline511(n int) int {
 	if n%2 == 0 {
 		return n
 	} else {
@@ -9221,518 +9221,518 @@ func NoInline511(n int) int {
 }
 
 func init() {
-	MinimalFuncs = append(MinimalFuncs, Minimal0)
-	MinimalFuncs = append(MinimalFuncs, Minimal1)
-	MinimalFuncs = append(MinimalFuncs, Minimal2)
-	MinimalFuncs = append(MinimalFuncs, Minimal3)
-	MinimalFuncs = append(MinimalFuncs, Minimal4)
-	MinimalFuncs = append(MinimalFuncs, Minimal5)
-	MinimalFuncs = append(MinimalFuncs, Minimal6)
-	MinimalFuncs = append(MinimalFuncs, Minimal7)
-	MinimalFuncs = append(MinimalFuncs, Minimal8)
-	MinimalFuncs = append(MinimalFuncs, Minimal9)
-	MinimalFuncs = append(MinimalFuncs, Minimal10)
-	MinimalFuncs = append(MinimalFuncs, Minimal11)
-	MinimalFuncs = append(MinimalFuncs, Minimal12)
-	MinimalFuncs = append(MinimalFuncs, Minimal13)
-	MinimalFuncs = append(MinimalFuncs, Minimal14)
-	MinimalFuncs = append(MinimalFuncs, Minimal15)
-	MinimalFuncs = append(MinimalFuncs, Minimal16)
-	MinimalFuncs = append(MinimalFuncs, Minimal17)
-	MinimalFuncs = append(MinimalFuncs, Minimal18)
-	MinimalFuncs = append(MinimalFuncs, Minimal19)
-	MinimalFuncs = append(MinimalFuncs, Minimal20)
-	MinimalFuncs = append(MinimalFuncs, Minimal21)
-	MinimalFuncs = append(MinimalFuncs, Minimal22)
-	MinimalFuncs = append(MinimalFuncs, Minimal23)
-	MinimalFuncs = append(MinimalFuncs, Minimal24)
-	MinimalFuncs = append(MinimalFuncs, Minimal25)
-	MinimalFuncs = append(MinimalFuncs, Minimal26)
-	MinimalFuncs = append(MinimalFuncs, Minimal27)
-	MinimalFuncs = append(MinimalFuncs, Minimal28)
-	MinimalFuncs = append(MinimalFuncs, Minimal29)
-	MinimalFuncs = append(MinimalFuncs, Minimal30)
-	MinimalFuncs = append(MinimalFuncs, Minimal31)
-	MinimalFuncs = append(MinimalFuncs, Minimal32)
-	MinimalFuncs = append(MinimalFuncs, Minimal33)
-	MinimalFuncs = append(MinimalFuncs, Minimal34)
-	MinimalFuncs = append(MinimalFuncs, Minimal35)
-	MinimalFuncs = append(MinimalFuncs, Minimal36)
-	MinimalFuncs = append(MinimalFuncs, Minimal37)
-	MinimalFuncs = append(MinimalFuncs, Minimal38)
-	MinimalFuncs = append(MinimalFuncs, Minimal39)
-	MinimalFuncs = append(MinimalFuncs, Minimal40)
-	MinimalFuncs = append(MinimalFuncs, Minimal41)
-	MinimalFuncs = append(MinimalFuncs, Minimal42)
-	MinimalFuncs = append(MinimalFuncs, Minimal43)
-	MinimalFuncs = append(MinimalFuncs, Minimal44)
-	MinimalFuncs = append(MinimalFuncs, Minimal45)
-	MinimalFuncs = append(MinimalFuncs, Minimal46)
-	MinimalFuncs = append(MinimalFuncs, Minimal47)
-	MinimalFuncs = append(MinimalFuncs, Minimal48)
-	MinimalFuncs = append(MinimalFuncs, Minimal49)
-	MinimalFuncs = append(MinimalFuncs, Minimal50)
-	MinimalFuncs = append(MinimalFuncs, Minimal51)
-	MinimalFuncs = append(MinimalFuncs, Minimal52)
-	MinimalFuncs = append(MinimalFuncs, Minimal53)
-	MinimalFuncs = append(MinimalFuncs, Minimal54)
-	MinimalFuncs = append(MinimalFuncs, Minimal55)
-	MinimalFuncs = append(MinimalFuncs, Minimal56)
-	MinimalFuncs = append(MinimalFuncs, Minimal57)
-	MinimalFuncs = append(MinimalFuncs, Minimal58)
-	MinimalFuncs = append(MinimalFuncs, Minimal59)
-	MinimalFuncs = append(MinimalFuncs, Minimal60)
-	MinimalFuncs = append(MinimalFuncs, Minimal61)
-	MinimalFuncs = append(MinimalFuncs, Minimal62)
-	MinimalFuncs = append(MinimalFuncs, Minimal63)
-	MinimalFuncs = append(MinimalFuncs, Minimal64)
-	MinimalFuncs = append(MinimalFuncs, Minimal65)
-	MinimalFuncs = append(MinimalFuncs, Minimal66)
-	MinimalFuncs = append(MinimalFuncs, Minimal67)
-	MinimalFuncs = append(MinimalFuncs, Minimal68)
-	MinimalFuncs = append(MinimalFuncs, Minimal69)
-	MinimalFuncs = append(MinimalFuncs, Minimal70)
-	MinimalFuncs = append(MinimalFuncs, Minimal71)
-	MinimalFuncs = append(MinimalFuncs, Minimal72)
-	MinimalFuncs = append(MinimalFuncs, Minimal73)
-	MinimalFuncs = append(MinimalFuncs, Minimal74)
-	MinimalFuncs = append(MinimalFuncs, Minimal75)
-	MinimalFuncs = append(MinimalFuncs, Minimal76)
-	MinimalFuncs = append(MinimalFuncs, Minimal77)
-	MinimalFuncs = append(MinimalFuncs, Minimal78)
-	MinimalFuncs = append(MinimalFuncs, Minimal79)
-	MinimalFuncs = append(MinimalFuncs, Minimal80)
-	MinimalFuncs = append(MinimalFuncs, Minimal81)
-	MinimalFuncs = append(MinimalFuncs, Minimal82)
-	MinimalFuncs = append(MinimalFuncs, Minimal83)
-	MinimalFuncs = append(MinimalFuncs, Minimal84)
-	MinimalFuncs = append(MinimalFuncs, Minimal85)
-	MinimalFuncs = append(MinimalFuncs, Minimal86)
-	MinimalFuncs = append(MinimalFuncs, Minimal87)
-	MinimalFuncs = append(MinimalFuncs, Minimal88)
-	MinimalFuncs = append(MinimalFuncs, Minimal89)
-	MinimalFuncs = append(MinimalFuncs, Minimal90)
-	MinimalFuncs = append(MinimalFuncs, Minimal91)
-	MinimalFuncs = append(MinimalFuncs, Minimal92)
-	MinimalFuncs = append(MinimalFuncs, Minimal93)
-	MinimalFuncs = append(MinimalFuncs, Minimal94)
-	MinimalFuncs = append(MinimalFuncs, Minimal95)
-	MinimalFuncs = append(MinimalFuncs, Minimal96)
-	MinimalFuncs = append(MinimalFuncs, Minimal97)
-	MinimalFuncs = append(MinimalFuncs, Minimal98)
-	MinimalFuncs = append(MinimalFuncs, Minimal99)
-	MinimalFuncs = append(MinimalFuncs, Minimal100)
-	MinimalFuncs = append(MinimalFuncs, Minimal101)
-	MinimalFuncs = append(MinimalFuncs, Minimal102)
-	MinimalFuncs = append(MinimalFuncs, Minimal103)
-	MinimalFuncs = append(MinimalFuncs, Minimal104)
-	MinimalFuncs = append(MinimalFuncs, Minimal105)
-	MinimalFuncs = append(MinimalFuncs, Minimal106)
-	MinimalFuncs = append(MinimalFuncs, Minimal107)
-	MinimalFuncs = append(MinimalFuncs, Minimal108)
-	MinimalFuncs = append(MinimalFuncs, Minimal109)
-	MinimalFuncs = append(MinimalFuncs, Minimal110)
-	MinimalFuncs = append(MinimalFuncs, Minimal111)
-	MinimalFuncs = append(MinimalFuncs, Minimal112)
-	MinimalFuncs = append(MinimalFuncs, Minimal113)
-	MinimalFuncs = append(MinimalFuncs, Minimal114)
-	MinimalFuncs = append(MinimalFuncs, Minimal115)
-	MinimalFuncs = append(MinimalFuncs, Minimal116)
-	MinimalFuncs = append(MinimalFuncs, Minimal117)
-	MinimalFuncs = append(MinimalFuncs, Minimal118)
-	MinimalFuncs = append(MinimalFuncs, Minimal119)
-	MinimalFuncs = append(MinimalFuncs, Minimal120)
-	MinimalFuncs = append(MinimalFuncs, Minimal121)
-	MinimalFuncs = append(MinimalFuncs, Minimal122)
-	MinimalFuncs = append(MinimalFuncs, Minimal123)
-	MinimalFuncs = append(MinimalFuncs, Minimal124)
-	MinimalFuncs = append(MinimalFuncs, Minimal125)
-	MinimalFuncs = append(MinimalFuncs, Minimal126)
-	MinimalFuncs = append(MinimalFuncs, Minimal127)
-	MinimalFuncs = append(MinimalFuncs, Minimal128)
-	MinimalFuncs = append(MinimalFuncs, Minimal129)
-	MinimalFuncs = append(MinimalFuncs, Minimal130)
-	MinimalFuncs = append(MinimalFuncs, Minimal131)
-	MinimalFuncs = append(MinimalFuncs, Minimal132)
-	MinimalFuncs = append(MinimalFuncs, Minimal133)
-	MinimalFuncs = append(MinimalFuncs, Minimal134)
-	MinimalFuncs = append(MinimalFuncs, Minimal135)
-	MinimalFuncs = append(MinimalFuncs, Minimal136)
-	MinimalFuncs = append(MinimalFuncs, Minimal137)
-	MinimalFuncs = append(MinimalFuncs, Minimal138)
-	MinimalFuncs = append(MinimalFuncs, Minimal139)
-	MinimalFuncs = append(MinimalFuncs, Minimal140)
-	MinimalFuncs = append(MinimalFuncs, Minimal141)
-	MinimalFuncs = append(MinimalFuncs, Minimal142)
-	MinimalFuncs = append(MinimalFuncs, Minimal143)
-	MinimalFuncs = append(MinimalFuncs, Minimal144)
-	MinimalFuncs = append(MinimalFuncs, Minimal145)
-	MinimalFuncs = append(MinimalFuncs, Minimal146)
-	MinimalFuncs = append(MinimalFuncs, Minimal147)
-	MinimalFuncs = append(MinimalFuncs, Minimal148)
-	MinimalFuncs = append(MinimalFuncs, Minimal149)
-	MinimalFuncs = append(MinimalFuncs, Minimal150)
-	MinimalFuncs = append(MinimalFuncs, Minimal151)
-	MinimalFuncs = append(MinimalFuncs, Minimal152)
-	MinimalFuncs = append(MinimalFuncs, Minimal153)
-	MinimalFuncs = append(MinimalFuncs, Minimal154)
-	MinimalFuncs = append(MinimalFuncs, Minimal155)
-	MinimalFuncs = append(MinimalFuncs, Minimal156)
-	MinimalFuncs = append(MinimalFuncs, Minimal157)
-	MinimalFuncs = append(MinimalFuncs, Minimal158)
-	MinimalFuncs = append(MinimalFuncs, Minimal159)
-	MinimalFuncs = append(MinimalFuncs, Minimal160)
-	MinimalFuncs = append(MinimalFuncs, Minimal161)
-	MinimalFuncs = append(MinimalFuncs, Minimal162)
-	MinimalFuncs = append(MinimalFuncs, Minimal163)
-	MinimalFuncs = append(MinimalFuncs, Minimal164)
-	MinimalFuncs = append(MinimalFuncs, Minimal165)
-	MinimalFuncs = append(MinimalFuncs, Minimal166)
-	MinimalFuncs = append(MinimalFuncs, Minimal167)
-	MinimalFuncs = append(MinimalFuncs, Minimal168)
-	MinimalFuncs = append(MinimalFuncs, Minimal169)
-	MinimalFuncs = append(MinimalFuncs, Minimal170)
-	MinimalFuncs = append(MinimalFuncs, Minimal171)
-	MinimalFuncs = append(MinimalFuncs, Minimal172)
-	MinimalFuncs = append(MinimalFuncs, Minimal173)
-	MinimalFuncs = append(MinimalFuncs, Minimal174)
-	MinimalFuncs = append(MinimalFuncs, Minimal175)
-	MinimalFuncs = append(MinimalFuncs, Minimal176)
-	MinimalFuncs = append(MinimalFuncs, Minimal177)
-	MinimalFuncs = append(MinimalFuncs, Minimal178)
-	MinimalFuncs = append(MinimalFuncs, Minimal179)
-	MinimalFuncs = append(MinimalFuncs, Minimal180)
-	MinimalFuncs = append(MinimalFuncs, Minimal181)
-	MinimalFuncs = append(MinimalFuncs, Minimal182)
-	MinimalFuncs = append(MinimalFuncs, Minimal183)
-	MinimalFuncs = append(MinimalFuncs, Minimal184)
-	MinimalFuncs = append(MinimalFuncs, Minimal185)
-	MinimalFuncs = append(MinimalFuncs, Minimal186)
-	MinimalFuncs = append(MinimalFuncs, Minimal187)
-	MinimalFuncs = append(MinimalFuncs, Minimal188)
-	MinimalFuncs = append(MinimalFuncs, Minimal189)
-	MinimalFuncs = append(MinimalFuncs, Minimal190)
-	MinimalFuncs = append(MinimalFuncs, Minimal191)
-	MinimalFuncs = append(MinimalFuncs, Minimal192)
-	MinimalFuncs = append(MinimalFuncs, Minimal193)
-	MinimalFuncs = append(MinimalFuncs, Minimal194)
-	MinimalFuncs = append(MinimalFuncs, Minimal195)
-	MinimalFuncs = append(MinimalFuncs, Minimal196)
-	MinimalFuncs = append(MinimalFuncs, Minimal197)
-	MinimalFuncs = append(MinimalFuncs, Minimal198)
-	MinimalFuncs = append(MinimalFuncs, Minimal199)
-	MinimalFuncs = append(MinimalFuncs, Minimal200)
-	MinimalFuncs = append(MinimalFuncs, Minimal201)
-	MinimalFuncs = append(MinimalFuncs, Minimal202)
-	MinimalFuncs = append(MinimalFuncs, Minimal203)
-	MinimalFuncs = append(MinimalFuncs, Minimal204)
-	MinimalFuncs = append(MinimalFuncs, Minimal205)
-	MinimalFuncs = append(MinimalFuncs, Minimal206)
-	MinimalFuncs = append(MinimalFuncs, Minimal207)
-	MinimalFuncs = append(MinimalFuncs, Minimal208)
-	MinimalFuncs = append(MinimalFuncs, Minimal209)
-	MinimalFuncs = append(MinimalFuncs, Minimal210)
-	MinimalFuncs = append(MinimalFuncs, Minimal211)
-	MinimalFuncs = append(MinimalFuncs, Minimal212)
-	MinimalFuncs = append(MinimalFuncs, Minimal213)
-	MinimalFuncs = append(MinimalFuncs, Minimal214)
-	MinimalFuncs = append(MinimalFuncs, Minimal215)
-	MinimalFuncs = append(MinimalFuncs, Minimal216)
-	MinimalFuncs = append(MinimalFuncs, Minimal217)
-	MinimalFuncs = append(MinimalFuncs, Minimal218)
-	MinimalFuncs = append(MinimalFuncs, Minimal219)
-	MinimalFuncs = append(MinimalFuncs, Minimal220)
-	MinimalFuncs = append(MinimalFuncs, Minimal221)
-	MinimalFuncs = append(MinimalFuncs, Minimal222)
-	MinimalFuncs = append(MinimalFuncs, Minimal223)
-	MinimalFuncs = append(MinimalFuncs, Minimal224)
-	MinimalFuncs = append(MinimalFuncs, Minimal225)
-	MinimalFuncs = append(MinimalFuncs, Minimal226)
-	MinimalFuncs = append(MinimalFuncs, Minimal227)
-	MinimalFuncs = append(MinimalFuncs, Minimal228)
-	MinimalFuncs = append(MinimalFuncs, Minimal229)
-	MinimalFuncs = append(MinimalFuncs, Minimal230)
-	MinimalFuncs = append(MinimalFuncs, Minimal231)
-	MinimalFuncs = append(MinimalFuncs, Minimal232)
-	MinimalFuncs = append(MinimalFuncs, Minimal233)
-	MinimalFuncs = append(MinimalFuncs, Minimal234)
-	MinimalFuncs = append(MinimalFuncs, Minimal235)
-	MinimalFuncs = append(MinimalFuncs, Minimal236)
-	MinimalFuncs = append(MinimalFuncs, Minimal237)
-	MinimalFuncs = append(MinimalFuncs, Minimal238)
-	MinimalFuncs = append(MinimalFuncs, Minimal239)
-	MinimalFuncs = append(MinimalFuncs, Minimal240)
-	MinimalFuncs = append(MinimalFuncs, Minimal241)
-	MinimalFuncs = append(MinimalFuncs, Minimal242)
-	MinimalFuncs = append(MinimalFuncs, Minimal243)
-	MinimalFuncs = append(MinimalFuncs, Minimal244)
-	MinimalFuncs = append(MinimalFuncs, Minimal245)
-	MinimalFuncs = append(MinimalFuncs, Minimal246)
-	MinimalFuncs = append(MinimalFuncs, Minimal247)
-	MinimalFuncs = append(MinimalFuncs, Minimal248)
-	MinimalFuncs = append(MinimalFuncs, Minimal249)
-	MinimalFuncs = append(MinimalFuncs, Minimal250)
-	MinimalFuncs = append(MinimalFuncs, Minimal251)
-	MinimalFuncs = append(MinimalFuncs, Minimal252)
-	MinimalFuncs = append(MinimalFuncs, Minimal253)
-	MinimalFuncs = append(MinimalFuncs, Minimal254)
-	MinimalFuncs = append(MinimalFuncs, Minimal255)
-	MinimalFuncs = append(MinimalFuncs, Minimal256)
-	MinimalFuncs = append(MinimalFuncs, Minimal257)
-	MinimalFuncs = append(MinimalFuncs, Minimal258)
-	MinimalFuncs = append(MinimalFuncs, Minimal259)
-	MinimalFuncs = append(MinimalFuncs, Minimal260)
-	MinimalFuncs = append(MinimalFuncs, Minimal261)
-	MinimalFuncs = append(MinimalFuncs, Minimal262)
-	MinimalFuncs = append(MinimalFuncs, Minimal263)
-	MinimalFuncs = append(MinimalFuncs, Minimal264)
-	MinimalFuncs = append(MinimalFuncs, Minimal265)
-	MinimalFuncs = append(MinimalFuncs, Minimal266)
-	MinimalFuncs = append(MinimalFuncs, Minimal267)
-	MinimalFuncs = append(MinimalFuncs, Minimal268)
-	MinimalFuncs = append(MinimalFuncs, Minimal269)
-	MinimalFuncs = append(MinimalFuncs, Minimal270)
-	MinimalFuncs = append(MinimalFuncs, Minimal271)
-	MinimalFuncs = append(MinimalFuncs, Minimal272)
-	MinimalFuncs = append(MinimalFuncs, Minimal273)
-	MinimalFuncs = append(MinimalFuncs, Minimal274)
-	MinimalFuncs = append(MinimalFuncs, Minimal275)
-	MinimalFuncs = append(MinimalFuncs, Minimal276)
-	MinimalFuncs = append(MinimalFuncs, Minimal277)
-	MinimalFuncs = append(MinimalFuncs, Minimal278)
-	MinimalFuncs = append(MinimalFuncs, Minimal279)
-	MinimalFuncs = append(MinimalFuncs, Minimal280)
-	MinimalFuncs = append(MinimalFuncs, Minimal281)
-	MinimalFuncs = append(MinimalFuncs, Minimal282)
-	MinimalFuncs = append(MinimalFuncs, Minimal283)
-	MinimalFuncs = append(MinimalFuncs, Minimal284)
-	MinimalFuncs = append(MinimalFuncs, Minimal285)
-	MinimalFuncs = append(MinimalFuncs, Minimal286)
-	MinimalFuncs = append(MinimalFuncs, Minimal287)
-	MinimalFuncs = append(MinimalFuncs, Minimal288)
-	MinimalFuncs = append(MinimalFuncs, Minimal289)
-	MinimalFuncs = append(MinimalFuncs, Minimal290)
-	MinimalFuncs = append(MinimalFuncs, Minimal291)
-	MinimalFuncs = append(MinimalFuncs, Minimal292)
-	MinimalFuncs = append(MinimalFuncs, Minimal293)
-	MinimalFuncs = append(MinimalFuncs, Minimal294)
-	MinimalFuncs = append(MinimalFuncs, Minimal295)
-	MinimalFuncs = append(MinimalFuncs, Minimal296)
-	MinimalFuncs = append(MinimalFuncs, Minimal297)
-	MinimalFuncs = append(MinimalFuncs, Minimal298)
-	MinimalFuncs = append(MinimalFuncs, Minimal299)
-	MinimalFuncs = append(MinimalFuncs, Minimal300)
-	MinimalFuncs = append(MinimalFuncs, Minimal301)
-	MinimalFuncs = append(MinimalFuncs, Minimal302)
-	MinimalFuncs = append(MinimalFuncs, Minimal303)
-	MinimalFuncs = append(MinimalFuncs, Minimal304)
-	MinimalFuncs = append(MinimalFuncs, Minimal305)
-	MinimalFuncs = append(MinimalFuncs, Minimal306)
-	MinimalFuncs = append(MinimalFuncs, Minimal307)
-	MinimalFuncs = append(MinimalFuncs, Minimal308)
-	MinimalFuncs = append(MinimalFuncs, Minimal309)
-	MinimalFuncs = append(MinimalFuncs, Minimal310)
-	MinimalFuncs = append(MinimalFuncs, Minimal311)
-	MinimalFuncs = append(MinimalFuncs, Minimal312)
-	MinimalFuncs = append(MinimalFuncs, Minimal313)
-	MinimalFuncs = append(MinimalFuncs, Minimal314)
-	MinimalFuncs = append(MinimalFuncs, Minimal315)
-	MinimalFuncs = append(MinimalFuncs, Minimal316)
-	MinimalFuncs = append(MinimalFuncs, Minimal317)
-	MinimalFuncs = append(MinimalFuncs, Minimal318)
-	MinimalFuncs = append(MinimalFuncs, Minimal319)
-	MinimalFuncs = append(MinimalFuncs, Minimal320)
-	MinimalFuncs = append(MinimalFuncs, Minimal321)
-	MinimalFuncs = append(MinimalFuncs, Minimal322)
-	MinimalFuncs = append(MinimalFuncs, Minimal323)
-	MinimalFuncs = append(MinimalFuncs, Minimal324)
-	MinimalFuncs = append(MinimalFuncs, Minimal325)
-	MinimalFuncs = append(MinimalFuncs, Minimal326)
-	MinimalFuncs = append(MinimalFuncs, Minimal327)
-	MinimalFuncs = append(MinimalFuncs, Minimal328)
-	MinimalFuncs = append(MinimalFuncs, Minimal329)
-	MinimalFuncs = append(MinimalFuncs, Minimal330)
-	MinimalFuncs = append(MinimalFuncs, Minimal331)
-	MinimalFuncs = append(MinimalFuncs, Minimal332)
-	MinimalFuncs = append(MinimalFuncs, Minimal333)
-	MinimalFuncs = append(MinimalFuncs, Minimal334)
-	MinimalFuncs = append(MinimalFuncs, Minimal335)
-	MinimalFuncs = append(MinimalFuncs, Minimal336)
-	MinimalFuncs = append(MinimalFuncs, Minimal337)
-	MinimalFuncs = append(MinimalFuncs, Minimal338)
-	MinimalFuncs = append(MinimalFuncs, Minimal339)
-	MinimalFuncs = append(MinimalFuncs, Minimal340)
-	MinimalFuncs = append(MinimalFuncs, Minimal341)
-	MinimalFuncs = append(MinimalFuncs, Minimal342)
-	MinimalFuncs = append(MinimalFuncs, Minimal343)
-	MinimalFuncs = append(MinimalFuncs, Minimal344)
-	MinimalFuncs = append(MinimalFuncs, Minimal345)
-	MinimalFuncs = append(MinimalFuncs, Minimal346)
-	MinimalFuncs = append(MinimalFuncs, Minimal347)
-	MinimalFuncs = append(MinimalFuncs, Minimal348)
-	MinimalFuncs = append(MinimalFuncs, Minimal349)
-	MinimalFuncs = append(MinimalFuncs, Minimal350)
-	MinimalFuncs = append(MinimalFuncs, Minimal351)
-	MinimalFuncs = append(MinimalFuncs, Minimal352)
-	MinimalFuncs = append(MinimalFuncs, Minimal353)
-	MinimalFuncs = append(MinimalFuncs, Minimal354)
-	MinimalFuncs = append(MinimalFuncs, Minimal355)
-	MinimalFuncs = append(MinimalFuncs, Minimal356)
-	MinimalFuncs = append(MinimalFuncs, Minimal357)
-	MinimalFuncs = append(MinimalFuncs, Minimal358)
-	MinimalFuncs = append(MinimalFuncs, Minimal359)
-	MinimalFuncs = append(MinimalFuncs, Minimal360)
-	MinimalFuncs = append(MinimalFuncs, Minimal361)
-	MinimalFuncs = append(MinimalFuncs, Minimal362)
-	MinimalFuncs = append(MinimalFuncs, Minimal363)
-	MinimalFuncs = append(MinimalFuncs, Minimal364)
-	MinimalFuncs = append(MinimalFuncs, Minimal365)
-	MinimalFuncs = append(MinimalFuncs, Minimal366)
-	MinimalFuncs = append(MinimalFuncs, Minimal367)
-	MinimalFuncs = append(MinimalFuncs, Minimal368)
-	MinimalFuncs = append(MinimalFuncs, Minimal369)
-	MinimalFuncs = append(MinimalFuncs, Minimal370)
-	MinimalFuncs = append(MinimalFuncs, Minimal371)
-	MinimalFuncs = append(MinimalFuncs, Minimal372)
-	MinimalFuncs = append(MinimalFuncs, Minimal373)
-	MinimalFuncs = append(MinimalFuncs, Minimal374)
-	MinimalFuncs = append(MinimalFuncs, Minimal375)
-	MinimalFuncs = append(MinimalFuncs, Minimal376)
-	MinimalFuncs = append(MinimalFuncs, Minimal377)
-	MinimalFuncs = append(MinimalFuncs, Minimal378)
-	MinimalFuncs = append(MinimalFuncs, Minimal379)
-	MinimalFuncs = append(MinimalFuncs, Minimal380)
-	MinimalFuncs = append(MinimalFuncs, Minimal381)
-	MinimalFuncs = append(MinimalFuncs, Minimal382)
-	MinimalFuncs = append(MinimalFuncs, Minimal383)
-	MinimalFuncs = append(MinimalFuncs, Minimal384)
-	MinimalFuncs = append(MinimalFuncs, Minimal385)
-	MinimalFuncs = append(MinimalFuncs, Minimal386)
-	MinimalFuncs = append(MinimalFuncs, Minimal387)
-	MinimalFuncs = append(MinimalFuncs, Minimal388)
-	MinimalFuncs = append(MinimalFuncs, Minimal389)
-	MinimalFuncs = append(MinimalFuncs, Minimal390)
-	MinimalFuncs = append(MinimalFuncs, Minimal391)
-	MinimalFuncs = append(MinimalFuncs, Minimal392)
-	MinimalFuncs = append(MinimalFuncs, Minimal393)
-	MinimalFuncs = append(MinimalFuncs, Minimal394)
-	MinimalFuncs = append(MinimalFuncs, Minimal395)
-	MinimalFuncs = append(MinimalFuncs, Minimal396)
-	MinimalFuncs = append(MinimalFuncs, Minimal397)
-	MinimalFuncs = append(MinimalFuncs, Minimal398)
-	MinimalFuncs = append(MinimalFuncs, Minimal399)
-	MinimalFuncs = append(MinimalFuncs, Minimal400)
-	MinimalFuncs = append(MinimalFuncs, Minimal401)
-	MinimalFuncs = append(MinimalFuncs, Minimal402)
-	MinimalFuncs = append(MinimalFuncs, Minimal403)
-	MinimalFuncs = append(MinimalFuncs, Minimal404)
-	MinimalFuncs = append(MinimalFuncs, Minimal405)
-	MinimalFuncs = append(MinimalFuncs, Minimal406)
-	MinimalFuncs = append(MinimalFuncs, Minimal407)
-	MinimalFuncs = append(MinimalFuncs, Minimal408)
-	MinimalFuncs = append(MinimalFuncs, Minimal409)
-	MinimalFuncs = append(MinimalFuncs, Minimal410)
-	MinimalFuncs = append(MinimalFuncs, Minimal411)
-	MinimalFuncs = append(MinimalFuncs, Minimal412)
-	MinimalFuncs = append(MinimalFuncs, Minimal413)
-	MinimalFuncs = append(MinimalFuncs, Minimal414)
-	MinimalFuncs = append(MinimalFuncs, Minimal415)
-	MinimalFuncs = append(MinimalFuncs, Minimal416)
-	MinimalFuncs = append(MinimalFuncs, Minimal417)
-	MinimalFuncs = append(MinimalFuncs, Minimal418)
-	MinimalFuncs = append(MinimalFuncs, Minimal419)
-	MinimalFuncs = append(MinimalFuncs, Minimal420)
-	MinimalFuncs = append(MinimalFuncs, Minimal421)
-	MinimalFuncs = append(MinimalFuncs, Minimal422)
-	MinimalFuncs = append(MinimalFuncs, Minimal423)
-	MinimalFuncs = append(MinimalFuncs, Minimal424)
-	MinimalFuncs = append(MinimalFuncs, Minimal425)
-	MinimalFuncs = append(MinimalFuncs, Minimal426)
-	MinimalFuncs = append(MinimalFuncs, Minimal427)
-	MinimalFuncs = append(MinimalFuncs, Minimal428)
-	MinimalFuncs = append(MinimalFuncs, Minimal429)
-	MinimalFuncs = append(MinimalFuncs, Minimal430)
-	MinimalFuncs = append(MinimalFuncs, Minimal431)
-	MinimalFuncs = append(MinimalFuncs, Minimal432)
-	MinimalFuncs = append(MinimalFuncs, Minimal433)
-	MinimalFuncs = append(MinimalFuncs, Minimal434)
-	MinimalFuncs = append(MinimalFuncs, Minimal435)
-	MinimalFuncs = append(MinimalFuncs, Minimal436)
-	MinimalFuncs = append(MinimalFuncs, Minimal437)
-	MinimalFuncs = append(MinimalFuncs, Minimal438)
-	MinimalFuncs = append(MinimalFuncs, Minimal439)
-	MinimalFuncs = append(MinimalFuncs, Minimal440)
-	MinimalFuncs = append(MinimalFuncs, Minimal441)
-	MinimalFuncs = append(MinimalFuncs, Minimal442)
-	MinimalFuncs = append(MinimalFuncs, Minimal443)
-	MinimalFuncs = append(MinimalFuncs, Minimal444)
-	MinimalFuncs = append(MinimalFuncs, Minimal445)
-	MinimalFuncs = append(MinimalFuncs, Minimal446)
-	MinimalFuncs = append(MinimalFuncs, Minimal447)
-	MinimalFuncs = append(MinimalFuncs, Minimal448)
-	MinimalFuncs = append(MinimalFuncs, Minimal449)
-	MinimalFuncs = append(MinimalFuncs, Minimal450)
-	MinimalFuncs = append(MinimalFuncs, Minimal451)
-	MinimalFuncs = append(MinimalFuncs, Minimal452)
-	MinimalFuncs = append(MinimalFuncs, Minimal453)
-	MinimalFuncs = append(MinimalFuncs, Minimal454)
-	MinimalFuncs = append(MinimalFuncs, Minimal455)
-	MinimalFuncs = append(MinimalFuncs, Minimal456)
-	MinimalFuncs = append(MinimalFuncs, Minimal457)
-	MinimalFuncs = append(MinimalFuncs, Minimal458)
-	MinimalFuncs = append(MinimalFuncs, Minimal459)
-	MinimalFuncs = append(MinimalFuncs, Minimal460)
-	MinimalFuncs = append(MinimalFuncs, Minimal461)
-	MinimalFuncs = append(MinimalFuncs, Minimal462)
-	MinimalFuncs = append(MinimalFuncs, Minimal463)
-	MinimalFuncs = append(MinimalFuncs, Minimal464)
-	MinimalFuncs = append(MinimalFuncs, Minimal465)
-	MinimalFuncs = append(MinimalFuncs, Minimal466)
-	MinimalFuncs = append(MinimalFuncs, Minimal467)
-	MinimalFuncs = append(MinimalFuncs, Minimal468)
-	MinimalFuncs = append(MinimalFuncs, Minimal469)
-	MinimalFuncs = append(MinimalFuncs, Minimal470)
-	MinimalFuncs = append(MinimalFuncs, Minimal471)
-	MinimalFuncs = append(MinimalFuncs, Minimal472)
-	MinimalFuncs = append(MinimalFuncs, Minimal473)
-	MinimalFuncs = append(MinimalFuncs, Minimal474)
-	MinimalFuncs = append(MinimalFuncs, Minimal475)
-	MinimalFuncs = append(MinimalFuncs, Minimal476)
-	MinimalFuncs = append(MinimalFuncs, Minimal477)
-	MinimalFuncs = append(MinimalFuncs, Minimal478)
-	MinimalFuncs = append(MinimalFuncs, Minimal479)
-	MinimalFuncs = append(MinimalFuncs, Minimal480)
-	MinimalFuncs = append(MinimalFuncs, Minimal481)
-	MinimalFuncs = append(MinimalFuncs, Minimal482)
-	MinimalFuncs = append(MinimalFuncs, Minimal483)
-	MinimalFuncs = append(MinimalFuncs, Minimal484)
-	MinimalFuncs = append(MinimalFuncs, Minimal485)
-	MinimalFuncs = append(MinimalFuncs, Minimal486)
-	MinimalFuncs = append(MinimalFuncs, Minimal487)
-	MinimalFuncs = append(MinimalFuncs, Minimal488)
-	MinimalFuncs = append(MinimalFuncs, Minimal489)
-	MinimalFuncs = append(MinimalFuncs, Minimal490)
-	MinimalFuncs = append(MinimalFuncs, Minimal491)
-	MinimalFuncs = append(MinimalFuncs, Minimal492)
-	MinimalFuncs = append(MinimalFuncs, Minimal493)
-	MinimalFuncs = append(MinimalFuncs, Minimal494)
-	MinimalFuncs = append(MinimalFuncs, Minimal495)
-	MinimalFuncs = append(MinimalFuncs, Minimal496)
-	MinimalFuncs = append(MinimalFuncs, Minimal497)
-	MinimalFuncs = append(MinimalFuncs, Minimal498)
-	MinimalFuncs = append(MinimalFuncs, Minimal499)
-	MinimalFuncs = append(MinimalFuncs, Minimal500)
-	MinimalFuncs = append(MinimalFuncs, Minimal501)
-	MinimalFuncs = append(MinimalFuncs, Minimal502)
-	MinimalFuncs = append(MinimalFuncs, Minimal503)
-	MinimalFuncs = append(MinimalFuncs, Minimal504)
-	MinimalFuncs = append(MinimalFuncs, Minimal505)
-	MinimalFuncs = append(MinimalFuncs, Minimal506)
-	MinimalFuncs = append(MinimalFuncs, Minimal507)
-	MinimalFuncs = append(MinimalFuncs, Minimal508)
-	MinimalFuncs = append(MinimalFuncs, Minimal509)
-	MinimalFuncs = append(MinimalFuncs, Minimal510)
-	MinimalFuncs = append(MinimalFuncs, Minimal511)
+	InlineFuncs = append(InlineFuncs, Inline0)
+	InlineFuncs = append(InlineFuncs, Inline1)
+	InlineFuncs = append(InlineFuncs, Inline2)
+	InlineFuncs = append(InlineFuncs, Inline3)
+	InlineFuncs = append(InlineFuncs, Inline4)
+	InlineFuncs = append(InlineFuncs, Inline5)
+	InlineFuncs = append(InlineFuncs, Inline6)
+	InlineFuncs = append(InlineFuncs, Inline7)
+	InlineFuncs = append(InlineFuncs, Inline8)
+	InlineFuncs = append(InlineFuncs, Inline9)
+	InlineFuncs = append(InlineFuncs, Inline10)
+	InlineFuncs = append(InlineFuncs, Inline11)
+	InlineFuncs = append(InlineFuncs, Inline12)
+	InlineFuncs = append(InlineFuncs, Inline13)
+	InlineFuncs = append(InlineFuncs, Inline14)
+	InlineFuncs = append(InlineFuncs, Inline15)
+	InlineFuncs = append(InlineFuncs, Inline16)
+	InlineFuncs = append(InlineFuncs, Inline17)
+	InlineFuncs = append(InlineFuncs, Inline18)
+	InlineFuncs = append(InlineFuncs, Inline19)
+	InlineFuncs = append(InlineFuncs, Inline20)
+	InlineFuncs = append(InlineFuncs, Inline21)
+	InlineFuncs = append(InlineFuncs, Inline22)
+	InlineFuncs = append(InlineFuncs, Inline23)
+	InlineFuncs = append(InlineFuncs, Inline24)
+	InlineFuncs = append(InlineFuncs, Inline25)
+	InlineFuncs = append(InlineFuncs, Inline26)
+	InlineFuncs = append(InlineFuncs, Inline27)
+	InlineFuncs = append(InlineFuncs, Inline28)
+	InlineFuncs = append(InlineFuncs, Inline29)
+	InlineFuncs = append(InlineFuncs, Inline30)
+	InlineFuncs = append(InlineFuncs, Inline31)
+	InlineFuncs = append(InlineFuncs, Inline32)
+	InlineFuncs = append(InlineFuncs, Inline33)
+	InlineFuncs = append(InlineFuncs, Inline34)
+	InlineFuncs = append(InlineFuncs, Inline35)
+	InlineFuncs = append(InlineFuncs, Inline36)
+	InlineFuncs = append(InlineFuncs, Inline37)
+	InlineFuncs = append(InlineFuncs, Inline38)
+	InlineFuncs = append(InlineFuncs, Inline39)
+	InlineFuncs = append(InlineFuncs, Inline40)
+	InlineFuncs = append(InlineFuncs, Inline41)
+	InlineFuncs = append(InlineFuncs, Inline42)
+	InlineFuncs = append(InlineFuncs, Inline43)
+	InlineFuncs = append(InlineFuncs, Inline44)
+	InlineFuncs = append(InlineFuncs, Inline45)
+	InlineFuncs = append(InlineFuncs, Inline46)
+	InlineFuncs = append(InlineFuncs, Inline47)
+	InlineFuncs = append(InlineFuncs, Inline48)
+	InlineFuncs = append(InlineFuncs, Inline49)
+	InlineFuncs = append(InlineFuncs, Inline50)
+	InlineFuncs = append(InlineFuncs, Inline51)
+	InlineFuncs = append(InlineFuncs, Inline52)
+	InlineFuncs = append(InlineFuncs, Inline53)
+	InlineFuncs = append(InlineFuncs, Inline54)
+	InlineFuncs = append(InlineFuncs, Inline55)
+	InlineFuncs = append(InlineFuncs, Inline56)
+	InlineFuncs = append(InlineFuncs, Inline57)
+	InlineFuncs = append(InlineFuncs, Inline58)
+	InlineFuncs = append(InlineFuncs, Inline59)
+	InlineFuncs = append(InlineFuncs, Inline60)
+	InlineFuncs = append(InlineFuncs, Inline61)
+	InlineFuncs = append(InlineFuncs, Inline62)
+	InlineFuncs = append(InlineFuncs, Inline63)
+	InlineFuncs = append(InlineFuncs, Inline64)
+	InlineFuncs = append(InlineFuncs, Inline65)
+	InlineFuncs = append(InlineFuncs, Inline66)
+	InlineFuncs = append(InlineFuncs, Inline67)
+	InlineFuncs = append(InlineFuncs, Inline68)
+	InlineFuncs = append(InlineFuncs, Inline69)
+	InlineFuncs = append(InlineFuncs, Inline70)
+	InlineFuncs = append(InlineFuncs, Inline71)
+	InlineFuncs = append(InlineFuncs, Inline72)
+	InlineFuncs = append(InlineFuncs, Inline73)
+	InlineFuncs = append(InlineFuncs, Inline74)
+	InlineFuncs = append(InlineFuncs, Inline75)
+	InlineFuncs = append(InlineFuncs, Inline76)
+	InlineFuncs = append(InlineFuncs, Inline77)
+	InlineFuncs = append(InlineFuncs, Inline78)
+	InlineFuncs = append(InlineFuncs, Inline79)
+	InlineFuncs = append(InlineFuncs, Inline80)
+	InlineFuncs = append(InlineFuncs, Inline81)
+	InlineFuncs = append(InlineFuncs, Inline82)
+	InlineFuncs = append(InlineFuncs, Inline83)
+	InlineFuncs = append(InlineFuncs, Inline84)
+	InlineFuncs = append(InlineFuncs, Inline85)
+	InlineFuncs = append(InlineFuncs, Inline86)
+	InlineFuncs = append(InlineFuncs, Inline87)
+	InlineFuncs = append(InlineFuncs, Inline88)
+	InlineFuncs = append(InlineFuncs, Inline89)
+	InlineFuncs = append(InlineFuncs, Inline90)
+	InlineFuncs = append(InlineFuncs, Inline91)
+	InlineFuncs = append(InlineFuncs, Inline92)
+	InlineFuncs = append(InlineFuncs, Inline93)
+	InlineFuncs = append(InlineFuncs, Inline94)
+	InlineFuncs = append(InlineFuncs, Inline95)
+	InlineFuncs = append(InlineFuncs, Inline96)
+	InlineFuncs = append(InlineFuncs, Inline97)
+	InlineFuncs = append(InlineFuncs, Inline98)
+	InlineFuncs = append(InlineFuncs, Inline99)
+	InlineFuncs = append(InlineFuncs, Inline100)
+	InlineFuncs = append(InlineFuncs, Inline101)
+	InlineFuncs = append(InlineFuncs, Inline102)
+	InlineFuncs = append(InlineFuncs, Inline103)
+	InlineFuncs = append(InlineFuncs, Inline104)
+	InlineFuncs = append(InlineFuncs, Inline105)
+	InlineFuncs = append(InlineFuncs, Inline106)
+	InlineFuncs = append(InlineFuncs, Inline107)
+	InlineFuncs = append(InlineFuncs, Inline108)
+	InlineFuncs = append(InlineFuncs, Inline109)
+	InlineFuncs = append(InlineFuncs, Inline110)
+	InlineFuncs = append(InlineFuncs, Inline111)
+	InlineFuncs = append(InlineFuncs, Inline112)
+	InlineFuncs = append(InlineFuncs, Inline113)
+	InlineFuncs = append(InlineFuncs, Inline114)
+	InlineFuncs = append(InlineFuncs, Inline115)
+	InlineFuncs = append(InlineFuncs, Inline116)
+	InlineFuncs = append(InlineFuncs, Inline117)
+	InlineFuncs = append(InlineFuncs, Inline118)
+	InlineFuncs = append(InlineFuncs, Inline119)
+	InlineFuncs = append(InlineFuncs, Inline120)
+	InlineFuncs = append(InlineFuncs, Inline121)
+	InlineFuncs = append(InlineFuncs, Inline122)
+	InlineFuncs = append(InlineFuncs, Inline123)
+	InlineFuncs = append(InlineFuncs, Inline124)
+	InlineFuncs = append(InlineFuncs, Inline125)
+	InlineFuncs = append(InlineFuncs, Inline126)
+	InlineFuncs = append(InlineFuncs, Inline127)
+	InlineFuncs = append(InlineFuncs, Inline128)
+	InlineFuncs = append(InlineFuncs, Inline129)
+	InlineFuncs = append(InlineFuncs, Inline130)
+	InlineFuncs = append(InlineFuncs, Inline131)
+	InlineFuncs = append(InlineFuncs, Inline132)
+	InlineFuncs = append(InlineFuncs, Inline133)
+	InlineFuncs = append(InlineFuncs, Inline134)
+	InlineFuncs = append(InlineFuncs, Inline135)
+	InlineFuncs = append(InlineFuncs, Inline136)
+	InlineFuncs = append(InlineFuncs, Inline137)
+	InlineFuncs = append(InlineFuncs, Inline138)
+	InlineFuncs = append(InlineFuncs, Inline139)
+	InlineFuncs = append(InlineFuncs, Inline140)
+	InlineFuncs = append(InlineFuncs, Inline141)
+	InlineFuncs = append(InlineFuncs, Inline142)
+	InlineFuncs = append(InlineFuncs, Inline143)
+	InlineFuncs = append(InlineFuncs, Inline144)
+	InlineFuncs = append(InlineFuncs, Inline145)
+	InlineFuncs = append(InlineFuncs, Inline146)
+	InlineFuncs = append(InlineFuncs, Inline147)
+	InlineFuncs = append(InlineFuncs, Inline148)
+	InlineFuncs = append(InlineFuncs, Inline149)
+	InlineFuncs = append(InlineFuncs, Inline150)
+	InlineFuncs = append(InlineFuncs, Inline151)
+	InlineFuncs = append(InlineFuncs, Inline152)
+	InlineFuncs = append(InlineFuncs, Inline153)
+	InlineFuncs = append(InlineFuncs, Inline154)
+	InlineFuncs = append(InlineFuncs, Inline155)
+	InlineFuncs = append(InlineFuncs, Inline156)
+	InlineFuncs = append(InlineFuncs, Inline157)
+	InlineFuncs = append(InlineFuncs, Inline158)
+	InlineFuncs = append(InlineFuncs, Inline159)
+	InlineFuncs = append(InlineFuncs, Inline160)
+	InlineFuncs = append(InlineFuncs, Inline161)
+	InlineFuncs = append(InlineFuncs, Inline162)
+	InlineFuncs = append(InlineFuncs, Inline163)
+	InlineFuncs = append(InlineFuncs, Inline164)
+	InlineFuncs = append(InlineFuncs, Inline165)
+	InlineFuncs = append(InlineFuncs, Inline166)
+	InlineFuncs = append(InlineFuncs, Inline167)
+	InlineFuncs = append(InlineFuncs, Inline168)
+	InlineFuncs = append(InlineFuncs, Inline169)
+	InlineFuncs = append(InlineFuncs, Inline170)
+	InlineFuncs = append(InlineFuncs, Inline171)
+	InlineFuncs = append(InlineFuncs, Inline172)
+	InlineFuncs = append(InlineFuncs, Inline173)
+	InlineFuncs = append(InlineFuncs, Inline174)
+	InlineFuncs = append(InlineFuncs, Inline175)
+	InlineFuncs = append(InlineFuncs, Inline176)
+	InlineFuncs = append(InlineFuncs, Inline177)
+	InlineFuncs = append(InlineFuncs, Inline178)
+	InlineFuncs = append(InlineFuncs, Inline179)
+	InlineFuncs = append(InlineFuncs, Inline180)
+	InlineFuncs = append(InlineFuncs, Inline181)
+	InlineFuncs = append(InlineFuncs, Inline182)
+	InlineFuncs = append(InlineFuncs, Inline183)
+	InlineFuncs = append(InlineFuncs, Inline184)
+	InlineFuncs = append(InlineFuncs, Inline185)
+	InlineFuncs = append(InlineFuncs, Inline186)
+	InlineFuncs = append(InlineFuncs, Inline187)
+	InlineFuncs = append(InlineFuncs, Inline188)
+	InlineFuncs = append(InlineFuncs, Inline189)
+	InlineFuncs = append(InlineFuncs, Inline190)
+	InlineFuncs = append(InlineFuncs, Inline191)
+	InlineFuncs = append(InlineFuncs, Inline192)
+	InlineFuncs = append(InlineFuncs, Inline193)
+	InlineFuncs = append(InlineFuncs, Inline194)
+	InlineFuncs = append(InlineFuncs, Inline195)
+	InlineFuncs = append(InlineFuncs, Inline196)
+	InlineFuncs = append(InlineFuncs, Inline197)
+	InlineFuncs = append(InlineFuncs, Inline198)
+	InlineFuncs = append(InlineFuncs, Inline199)
+	InlineFuncs = append(InlineFuncs, Inline200)
+	InlineFuncs = append(InlineFuncs, Inline201)
+	InlineFuncs = append(InlineFuncs, Inline202)
+	InlineFuncs = append(InlineFuncs, Inline203)
+	InlineFuncs = append(InlineFuncs, Inline204)
+	InlineFuncs = append(InlineFuncs, Inline205)
+	InlineFuncs = append(InlineFuncs, Inline206)
+	InlineFuncs = append(InlineFuncs, Inline207)
+	InlineFuncs = append(InlineFuncs, Inline208)
+	InlineFuncs = append(InlineFuncs, Inline209)
+	InlineFuncs = append(InlineFuncs, Inline210)
+	InlineFuncs = append(InlineFuncs, Inline211)
+	InlineFuncs = append(InlineFuncs, Inline212)
+	InlineFuncs = append(InlineFuncs, Inline213)
+	InlineFuncs = append(InlineFuncs, Inline214)
+	InlineFuncs = append(InlineFuncs, Inline215)
+	InlineFuncs = append(InlineFuncs, Inline216)
+	InlineFuncs = append(InlineFuncs, Inline217)
+	InlineFuncs = append(InlineFuncs, Inline218)
+	InlineFuncs = append(InlineFuncs, Inline219)
+	InlineFuncs = append(InlineFuncs, Inline220)
+	InlineFuncs = append(InlineFuncs, Inline221)
+	InlineFuncs = append(InlineFuncs, Inline222)
+	InlineFuncs = append(InlineFuncs, Inline223)
+	InlineFuncs = append(InlineFuncs, Inline224)
+	InlineFuncs = append(InlineFuncs, Inline225)
+	InlineFuncs = append(InlineFuncs, Inline226)
+	InlineFuncs = append(InlineFuncs, Inline227)
+	InlineFuncs = append(InlineFuncs, Inline228)
+	InlineFuncs = append(InlineFuncs, Inline229)
+	InlineFuncs = append(InlineFuncs, Inline230)
+	InlineFuncs = append(InlineFuncs, Inline231)
+	InlineFuncs = append(InlineFuncs, Inline232)
+	InlineFuncs = append(InlineFuncs, Inline233)
+	InlineFuncs = append(InlineFuncs, Inline234)
+	InlineFuncs = append(InlineFuncs, Inline235)
+	InlineFuncs = append(InlineFuncs, Inline236)
+	InlineFuncs = append(InlineFuncs, Inline237)
+	InlineFuncs = append(InlineFuncs, Inline238)
+	InlineFuncs = append(InlineFuncs, Inline239)
+	InlineFuncs = append(InlineFuncs, Inline240)
+	InlineFuncs = append(InlineFuncs, Inline241)
+	InlineFuncs = append(InlineFuncs, Inline242)
+	InlineFuncs = append(InlineFuncs, Inline243)
+	InlineFuncs = append(InlineFuncs, Inline244)
+	InlineFuncs = append(InlineFuncs, Inline245)
+	InlineFuncs = append(InlineFuncs, Inline246)
+	InlineFuncs = append(InlineFuncs, Inline247)
+	InlineFuncs = append(InlineFuncs, Inline248)
+	InlineFuncs = append(InlineFuncs, Inline249)
+	InlineFuncs = append(InlineFuncs, Inline250)
+	InlineFuncs = append(InlineFuncs, Inline251)
+	InlineFuncs = append(InlineFuncs, Inline252)
+	InlineFuncs = append(InlineFuncs, Inline253)
+	InlineFuncs = append(InlineFuncs, Inline254)
+	InlineFuncs = append(InlineFuncs, Inline255)
+	InlineFuncs = append(InlineFuncs, Inline256)
+	InlineFuncs = append(InlineFuncs, Inline257)
+	InlineFuncs = append(InlineFuncs, Inline258)
+	InlineFuncs = append(InlineFuncs, Inline259)
+	InlineFuncs = append(InlineFuncs, Inline260)
+	InlineFuncs = append(InlineFuncs, Inline261)
+	InlineFuncs = append(InlineFuncs, Inline262)
+	InlineFuncs = append(InlineFuncs, Inline263)
+	InlineFuncs = append(InlineFuncs, Inline264)
+	InlineFuncs = append(InlineFuncs, Inline265)
+	InlineFuncs = append(InlineFuncs, Inline266)
+	InlineFuncs = append(InlineFuncs, Inline267)
+	InlineFuncs = append(InlineFuncs, Inline268)
+	InlineFuncs = append(InlineFuncs, Inline269)
+	InlineFuncs = append(InlineFuncs, Inline270)
+	InlineFuncs = append(InlineFuncs, Inline271)
+	InlineFuncs = append(InlineFuncs, Inline272)
+	InlineFuncs = append(InlineFuncs, Inline273)
+	InlineFuncs = append(InlineFuncs, Inline274)
+	InlineFuncs = append(InlineFuncs, Inline275)
+	InlineFuncs = append(InlineFuncs, Inline276)
+	InlineFuncs = append(InlineFuncs, Inline277)
+	InlineFuncs = append(InlineFuncs, Inline278)
+	InlineFuncs = append(InlineFuncs, Inline279)
+	InlineFuncs = append(InlineFuncs, Inline280)
+	InlineFuncs = append(InlineFuncs, Inline281)
+	InlineFuncs = append(InlineFuncs, Inline282)
+	InlineFuncs = append(InlineFuncs, Inline283)
+	InlineFuncs = append(InlineFuncs, Inline284)
+	InlineFuncs = append(InlineFuncs, Inline285)
+	InlineFuncs = append(InlineFuncs, Inline286)
+	InlineFuncs = append(InlineFuncs, Inline287)
+	InlineFuncs = append(InlineFuncs, Inline288)
+	InlineFuncs = append(InlineFuncs, Inline289)
+	InlineFuncs = append(InlineFuncs, Inline290)
+	InlineFuncs = append(InlineFuncs, Inline291)
+	InlineFuncs = append(InlineFuncs, Inline292)
+	InlineFuncs = append(InlineFuncs, Inline293)
+	InlineFuncs = append(InlineFuncs, Inline294)
+	InlineFuncs = append(InlineFuncs, Inline295)
+	InlineFuncs = append(InlineFuncs, Inline296)
+	InlineFuncs = append(InlineFuncs, Inline297)
+	InlineFuncs = append(InlineFuncs, Inline298)
+	InlineFuncs = append(InlineFuncs, Inline299)
+	InlineFuncs = append(InlineFuncs, Inline300)
+	InlineFuncs = append(InlineFuncs, Inline301)
+	InlineFuncs = append(InlineFuncs, Inline302)
+	InlineFuncs = append(InlineFuncs, Inline303)
+	InlineFuncs = append(InlineFuncs, Inline304)
+	InlineFuncs = append(InlineFuncs, Inline305)
+	InlineFuncs = append(InlineFuncs, Inline306)
+	InlineFuncs = append(InlineFuncs, Inline307)
+	InlineFuncs = append(InlineFuncs, Inline308)
+	InlineFuncs = append(InlineFuncs, Inline309)
+	InlineFuncs = append(InlineFuncs, Inline310)
+	InlineFuncs = append(InlineFuncs, Inline311)
+	InlineFuncs = append(InlineFuncs, Inline312)
+	InlineFuncs = append(InlineFuncs, Inline313)
+	InlineFuncs = append(InlineFuncs, Inline314)
+	InlineFuncs = append(InlineFuncs, Inline315)
+	InlineFuncs = append(InlineFuncs, Inline316)
+	InlineFuncs = append(InlineFuncs, Inline317)
+	InlineFuncs = append(InlineFuncs, Inline318)
+	InlineFuncs = append(InlineFuncs, Inline319)
+	InlineFuncs = append(InlineFuncs, Inline320)
+	InlineFuncs = append(InlineFuncs, Inline321)
+	InlineFuncs = append(InlineFuncs, Inline322)
+	InlineFuncs = append(InlineFuncs, Inline323)
+	InlineFuncs = append(InlineFuncs, Inline324)
+	InlineFuncs = append(InlineFuncs, Inline325)
+	InlineFuncs = append(InlineFuncs, Inline326)
+	InlineFuncs = append(InlineFuncs, Inline327)
+	InlineFuncs = append(InlineFuncs, Inline328)
+	InlineFuncs = append(InlineFuncs, Inline329)
+	InlineFuncs = append(InlineFuncs, Inline330)
+	InlineFuncs = append(InlineFuncs, Inline331)
+	InlineFuncs = append(InlineFuncs, Inline332)
+	InlineFuncs = append(InlineFuncs, Inline333)
+	InlineFuncs = append(InlineFuncs, Inline334)
+	InlineFuncs = append(InlineFuncs, Inline335)
+	InlineFuncs = append(InlineFuncs, Inline336)
+	InlineFuncs = append(InlineFuncs, Inline337)
+	InlineFuncs = append(InlineFuncs, Inline338)
+	InlineFuncs = append(InlineFuncs, Inline339)
+	InlineFuncs = append(InlineFuncs, Inline340)
+	InlineFuncs = append(InlineFuncs, Inline341)
+	InlineFuncs = append(InlineFuncs, Inline342)
+	InlineFuncs = append(InlineFuncs, Inline343)
+	InlineFuncs = append(InlineFuncs, Inline344)
+	InlineFuncs = append(InlineFuncs, Inline345)
+	InlineFuncs = append(InlineFuncs, Inline346)
+	InlineFuncs = append(InlineFuncs, Inline347)
+	InlineFuncs = append(InlineFuncs, Inline348)
+	InlineFuncs = append(InlineFuncs, Inline349)
+	InlineFuncs = append(InlineFuncs, Inline350)
+	InlineFuncs = append(InlineFuncs, Inline351)
+	InlineFuncs = append(InlineFuncs, Inline352)
+	InlineFuncs = append(InlineFuncs, Inline353)
+	InlineFuncs = append(InlineFuncs, Inline354)
+	InlineFuncs = append(InlineFuncs, Inline355)
+	InlineFuncs = append(InlineFuncs, Inline356)
+	InlineFuncs = append(InlineFuncs, Inline357)
+	InlineFuncs = append(InlineFuncs, Inline358)
+	InlineFuncs = append(InlineFuncs, Inline359)
+	InlineFuncs = append(InlineFuncs, Inline360)
+	InlineFuncs = append(InlineFuncs, Inline361)
+	InlineFuncs = append(InlineFuncs, Inline362)
+	InlineFuncs = append(InlineFuncs, Inline363)
+	InlineFuncs = append(InlineFuncs, Inline364)
+	InlineFuncs = append(InlineFuncs, Inline365)
+	InlineFuncs = append(InlineFuncs, Inline366)
+	InlineFuncs = append(InlineFuncs, Inline367)
+	InlineFuncs = append(InlineFuncs, Inline368)
+	InlineFuncs = append(InlineFuncs, Inline369)
+	InlineFuncs = append(InlineFuncs, Inline370)
+	InlineFuncs = append(InlineFuncs, Inline371)
+	InlineFuncs = append(InlineFuncs, Inline372)
+	InlineFuncs = append(InlineFuncs, Inline373)
+	InlineFuncs = append(InlineFuncs, Inline374)
+	InlineFuncs = append(InlineFuncs, Inline375)
+	InlineFuncs = append(InlineFuncs, Inline376)
+	InlineFuncs = append(InlineFuncs, Inline377)
+	InlineFuncs = append(InlineFuncs, Inline378)
+	InlineFuncs = append(InlineFuncs, Inline379)
+	InlineFuncs = append(InlineFuncs, Inline380)
+	InlineFuncs = append(InlineFuncs, Inline381)
+	InlineFuncs = append(InlineFuncs, Inline382)
+	InlineFuncs = append(InlineFuncs, Inline383)
+	InlineFuncs = append(InlineFuncs, Inline384)
+	InlineFuncs = append(InlineFuncs, Inline385)
+	InlineFuncs = append(InlineFuncs, Inline386)
+	InlineFuncs = append(InlineFuncs, Inline387)
+	InlineFuncs = append(InlineFuncs, Inline388)
+	InlineFuncs = append(InlineFuncs, Inline389)
+	InlineFuncs = append(InlineFuncs, Inline390)
+	InlineFuncs = append(InlineFuncs, Inline391)
+	InlineFuncs = append(InlineFuncs, Inline392)
+	InlineFuncs = append(InlineFuncs, Inline393)
+	InlineFuncs = append(InlineFuncs, Inline394)
+	InlineFuncs = append(InlineFuncs, Inline395)
+	InlineFuncs = append(InlineFuncs, Inline396)
+	InlineFuncs = append(InlineFuncs, Inline397)
+	InlineFuncs = append(InlineFuncs, Inline398)
+	InlineFuncs = append(InlineFuncs, Inline399)
+	InlineFuncs = append(InlineFuncs, Inline400)
+	InlineFuncs = append(InlineFuncs, Inline401)
+	InlineFuncs = append(InlineFuncs, Inline402)
+	InlineFuncs = append(InlineFuncs, Inline403)
+	InlineFuncs = append(InlineFuncs, Inline404)
+	InlineFuncs = append(InlineFuncs, Inline405)
+	InlineFuncs = append(InlineFuncs, Inline406)
+	InlineFuncs = append(InlineFuncs, Inline407)
+	InlineFuncs = append(InlineFuncs, Inline408)
+	InlineFuncs = append(InlineFuncs, Inline409)
+	InlineFuncs = append(InlineFuncs, Inline410)
+	InlineFuncs = append(InlineFuncs, Inline411)
+	InlineFuncs = append(InlineFuncs, Inline412)
+	InlineFuncs = append(InlineFuncs, Inline413)
+	InlineFuncs = append(InlineFuncs, Inline414)
+	InlineFuncs = append(InlineFuncs, Inline415)
+	InlineFuncs = append(InlineFuncs, Inline416)
+	InlineFuncs = append(InlineFuncs, Inline417)
+	InlineFuncs = append(InlineFuncs, Inline418)
+	InlineFuncs = append(InlineFuncs, Inline419)
+	InlineFuncs = append(InlineFuncs, Inline420)
+	InlineFuncs = append(InlineFuncs, Inline421)
+	InlineFuncs = append(InlineFuncs, Inline422)
+	InlineFuncs = append(InlineFuncs, Inline423)
+	InlineFuncs = append(InlineFuncs, Inline424)
+	InlineFuncs = append(InlineFuncs, Inline425)
+	InlineFuncs = append(InlineFuncs, Inline426)
+	InlineFuncs = append(InlineFuncs, Inline427)
+	InlineFuncs = append(InlineFuncs, Inline428)
+	InlineFuncs = append(InlineFuncs, Inline429)
+	InlineFuncs = append(InlineFuncs, Inline430)
+	InlineFuncs = append(InlineFuncs, Inline431)
+	InlineFuncs = append(InlineFuncs, Inline432)
+	InlineFuncs = append(InlineFuncs, Inline433)
+	InlineFuncs = append(InlineFuncs, Inline434)
+	InlineFuncs = append(InlineFuncs, Inline435)
+	InlineFuncs = append(InlineFuncs, Inline436)
+	InlineFuncs = append(InlineFuncs, Inline437)
+	InlineFuncs = append(InlineFuncs, Inline438)
+	InlineFuncs = append(InlineFuncs, Inline439)
+	InlineFuncs = append(InlineFuncs, Inline440)
+	InlineFuncs = append(InlineFuncs, Inline441)
+	InlineFuncs = append(InlineFuncs, Inline442)
+	InlineFuncs = append(InlineFuncs, Inline443)
+	InlineFuncs = append(InlineFuncs, Inline444)
+	InlineFuncs = append(InlineFuncs, Inline445)
+	InlineFuncs = append(InlineFuncs, Inline446)
+	InlineFuncs = append(InlineFuncs, Inline447)
+	InlineFuncs = append(InlineFuncs, Inline448)
+	InlineFuncs = append(InlineFuncs, Inline449)
+	InlineFuncs = append(InlineFuncs, Inline450)
+	InlineFuncs = append(InlineFuncs, Inline451)
+	InlineFuncs = append(InlineFuncs, Inline452)
+	InlineFuncs = append(InlineFuncs, Inline453)
+	InlineFuncs = append(InlineFuncs, Inline454)
+	InlineFuncs = append(InlineFuncs, Inline455)
+	InlineFuncs = append(InlineFuncs, Inline456)
+	InlineFuncs = append(InlineFuncs, Inline457)
+	InlineFuncs = append(InlineFuncs, Inline458)
+	InlineFuncs = append(InlineFuncs, Inline459)
+	InlineFuncs = append(InlineFuncs, Inline460)
+	InlineFuncs = append(InlineFuncs, Inline461)
+	InlineFuncs = append(InlineFuncs, Inline462)
+	InlineFuncs = append(InlineFuncs, Inline463)
+	InlineFuncs = append(InlineFuncs, Inline464)
+	InlineFuncs = append(InlineFuncs, Inline465)
+	InlineFuncs = append(InlineFuncs, Inline466)
+	InlineFuncs = append(InlineFuncs, Inline467)
+	InlineFuncs = append(InlineFuncs, Inline468)
+	InlineFuncs = append(InlineFuncs, Inline469)
+	InlineFuncs = append(InlineFuncs, Inline470)
+	InlineFuncs = append(InlineFuncs, Inline471)
+	InlineFuncs = append(InlineFuncs, Inline472)
+	InlineFuncs = append(InlineFuncs, Inline473)
+	InlineFuncs = append(InlineFuncs, Inline474)
+	InlineFuncs = append(InlineFuncs, Inline475)
+	InlineFuncs = append(InlineFuncs, Inline476)
+	InlineFuncs = append(InlineFuncs, Inline477)
+	InlineFuncs = append(InlineFuncs, Inline478)
+	InlineFuncs = append(InlineFuncs, Inline479)
+	InlineFuncs = append(InlineFuncs, Inline480)
+	InlineFuncs = append(InlineFuncs, Inline481)
+	InlineFuncs = append(InlineFuncs, Inline482)
+	InlineFuncs = append(InlineFuncs, Inline483)
+	InlineFuncs = append(InlineFuncs, Inline484)
+	InlineFuncs = append(InlineFuncs, Inline485)
+	InlineFuncs = append(InlineFuncs, Inline486)
+	InlineFuncs = append(InlineFuncs, Inline487)
+	InlineFuncs = append(InlineFuncs, Inline488)
+	InlineFuncs = append(InlineFuncs, Inline489)
+	InlineFuncs = append(InlineFuncs, Inline490)
+	InlineFuncs = append(InlineFuncs, Inline491)
+	InlineFuncs = append(InlineFuncs, Inline492)
+	InlineFuncs = append(InlineFuncs, Inline493)
+	InlineFuncs = append(InlineFuncs, Inline494)
+	InlineFuncs = append(InlineFuncs, Inline495)
+	InlineFuncs = append(InlineFuncs, Inline496)
+	InlineFuncs = append(InlineFuncs, Inline497)
+	InlineFuncs = append(InlineFuncs, Inline498)
+	InlineFuncs = append(InlineFuncs, Inline499)
+	InlineFuncs = append(InlineFuncs, Inline500)
+	InlineFuncs = append(InlineFuncs, Inline501)
+	InlineFuncs = append(InlineFuncs, Inline502)
+	InlineFuncs = append(InlineFuncs, Inline503)
+	InlineFuncs = append(InlineFuncs, Inline504)
+	InlineFuncs = append(InlineFuncs, Inline505)
+	InlineFuncs = append(InlineFuncs, Inline506)
+	InlineFuncs = append(InlineFuncs, Inline507)
+	InlineFuncs = append(InlineFuncs, Inline508)
+	InlineFuncs = append(InlineFuncs, Inline509)
+	InlineFuncs = append(InlineFuncs, Inline510)
+	InlineFuncs = append(InlineFuncs, Inline511)
 
 	NoInlineFuncs = append(NoInlineFuncs, NoInline0)
 	NoInlineFuncs = append(NoInlineFuncs, NoInline1)

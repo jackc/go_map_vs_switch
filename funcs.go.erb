@@ -1,8 +1,8 @@
 package go_map_vs_switch
 
-var MinimalFuncs []func(int) int
+var InlineFuncs []func(int) int
 <% 512.times do |n| %>
-func Minimal<%= n %>(n int) int {
+func Inline<%= n %>(n int) int {
   if n % 2 == 0 {
     return n
   } else {
@@ -26,7 +26,7 @@ func NoInline<%= n %>(n int) int {
 
 func init() {
   <% 512.times do |n| -%>
-    MinimalFuncs = append(MinimalFuncs, Minimal<%= n %>)
+    InlineFuncs = append(InlineFuncs, Inline<%= n %>)
   <% end -%>
 
   <% 512.times do |n| -%>

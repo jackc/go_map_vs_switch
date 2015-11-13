@@ -22,7 +22,7 @@ func TestMain(m *testing.M) {
 }
 
 <% [4, 8, 16, 32, 64, 128, 256, 512].each do |erbN| %>
-  <% ["Minimal", "NoInline"].each do |fn| %>
+  <% ["Inline", "NoInline"].each do |fn| %>
     <% [
       ["Optimal", "i % #{erbN}"],
       ["Moderate", "ascInputs[i % len(ascInputs)] % #{erbN}"],

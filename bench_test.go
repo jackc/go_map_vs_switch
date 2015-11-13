@@ -21,19 +21,19 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 4 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		}
 	}
 
@@ -43,11 +43,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc4(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%4](i)
+		n += InlineFuncs[i%4](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -56,19 +56,19 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 4 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		}
 	}
 
@@ -78,11 +78,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc4(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%4](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%4](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -91,19 +91,19 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 4 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		}
 	}
 
@@ -113,11 +113,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc4(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%4](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%4](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -231,27 +231,27 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 8 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		}
 	}
 
@@ -261,11 +261,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc8(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%8](i)
+		n += InlineFuncs[i%8](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -274,27 +274,27 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 8 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		}
 	}
 
@@ -304,11 +304,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc8(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%8](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%8](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -317,27 +317,27 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 8 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		}
 	}
 
@@ -347,11 +347,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc8(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%8](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%8](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -489,43 +489,43 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 16 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		}
 	}
 
@@ -535,11 +535,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc16(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%16](i)
+		n += InlineFuncs[i%16](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -548,43 +548,43 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 16 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		}
 	}
 
@@ -594,11 +594,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc16(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%16](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%16](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -607,43 +607,43 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 16 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		}
 	}
 
@@ -653,11 +653,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc16(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%16](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%16](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -843,75 +843,75 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 32 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		}
 	}
 
@@ -921,11 +921,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc32(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%32](i)
+		n += InlineFuncs[i%32](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -934,75 +934,75 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 32 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		}
 	}
 
@@ -1012,11 +1012,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc32(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%32](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%32](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -1025,75 +1025,75 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 32 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		}
 	}
 
@@ -1103,11 +1103,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc32(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%32](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%32](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -1389,139 +1389,139 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 64 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		}
 	}
 
@@ -1531,11 +1531,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc64(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%64](i)
+		n += InlineFuncs[i%64](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -1544,139 +1544,139 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 64 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		}
 	}
 
@@ -1686,11 +1686,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc64(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%64](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%64](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -1699,139 +1699,139 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 64 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		}
 	}
 
@@ -1841,11 +1841,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc64(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%64](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%64](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -2319,267 +2319,267 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 128 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		}
 	}
 
@@ -2589,11 +2589,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc128(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%128](i)
+		n += InlineFuncs[i%128](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -2602,267 +2602,267 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 128 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		}
 	}
 
@@ -2872,11 +2872,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc128(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%128](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%128](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -2885,267 +2885,267 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 128 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		}
 	}
 
@@ -3155,11 +3155,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc128(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%128](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%128](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -4017,523 +4017,523 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 256 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		}
 	}
 
@@ -4543,11 +4543,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc256(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%256](i)
+		n += InlineFuncs[i%256](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -4556,523 +4556,523 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 256 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		}
 	}
 
@@ -5082,11 +5082,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc256(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%256](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%256](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -5095,523 +5095,523 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 256 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		}
 	}
 
@@ -5621,11 +5621,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc256(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%256](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%256](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -7251,1035 +7251,1035 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch i % 512 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		case 256:
-			n += Minimal256(i)
+			n += Inline256(i)
 		case 257:
-			n += Minimal257(i)
+			n += Inline257(i)
 		case 258:
-			n += Minimal258(i)
+			n += Inline258(i)
 		case 259:
-			n += Minimal259(i)
+			n += Inline259(i)
 		case 260:
-			n += Minimal260(i)
+			n += Inline260(i)
 		case 261:
-			n += Minimal261(i)
+			n += Inline261(i)
 		case 262:
-			n += Minimal262(i)
+			n += Inline262(i)
 		case 263:
-			n += Minimal263(i)
+			n += Inline263(i)
 		case 264:
-			n += Minimal264(i)
+			n += Inline264(i)
 		case 265:
-			n += Minimal265(i)
+			n += Inline265(i)
 		case 266:
-			n += Minimal266(i)
+			n += Inline266(i)
 		case 267:
-			n += Minimal267(i)
+			n += Inline267(i)
 		case 268:
-			n += Minimal268(i)
+			n += Inline268(i)
 		case 269:
-			n += Minimal269(i)
+			n += Inline269(i)
 		case 270:
-			n += Minimal270(i)
+			n += Inline270(i)
 		case 271:
-			n += Minimal271(i)
+			n += Inline271(i)
 		case 272:
-			n += Minimal272(i)
+			n += Inline272(i)
 		case 273:
-			n += Minimal273(i)
+			n += Inline273(i)
 		case 274:
-			n += Minimal274(i)
+			n += Inline274(i)
 		case 275:
-			n += Minimal275(i)
+			n += Inline275(i)
 		case 276:
-			n += Minimal276(i)
+			n += Inline276(i)
 		case 277:
-			n += Minimal277(i)
+			n += Inline277(i)
 		case 278:
-			n += Minimal278(i)
+			n += Inline278(i)
 		case 279:
-			n += Minimal279(i)
+			n += Inline279(i)
 		case 280:
-			n += Minimal280(i)
+			n += Inline280(i)
 		case 281:
-			n += Minimal281(i)
+			n += Inline281(i)
 		case 282:
-			n += Minimal282(i)
+			n += Inline282(i)
 		case 283:
-			n += Minimal283(i)
+			n += Inline283(i)
 		case 284:
-			n += Minimal284(i)
+			n += Inline284(i)
 		case 285:
-			n += Minimal285(i)
+			n += Inline285(i)
 		case 286:
-			n += Minimal286(i)
+			n += Inline286(i)
 		case 287:
-			n += Minimal287(i)
+			n += Inline287(i)
 		case 288:
-			n += Minimal288(i)
+			n += Inline288(i)
 		case 289:
-			n += Minimal289(i)
+			n += Inline289(i)
 		case 290:
-			n += Minimal290(i)
+			n += Inline290(i)
 		case 291:
-			n += Minimal291(i)
+			n += Inline291(i)
 		case 292:
-			n += Minimal292(i)
+			n += Inline292(i)
 		case 293:
-			n += Minimal293(i)
+			n += Inline293(i)
 		case 294:
-			n += Minimal294(i)
+			n += Inline294(i)
 		case 295:
-			n += Minimal295(i)
+			n += Inline295(i)
 		case 296:
-			n += Minimal296(i)
+			n += Inline296(i)
 		case 297:
-			n += Minimal297(i)
+			n += Inline297(i)
 		case 298:
-			n += Minimal298(i)
+			n += Inline298(i)
 		case 299:
-			n += Minimal299(i)
+			n += Inline299(i)
 		case 300:
-			n += Minimal300(i)
+			n += Inline300(i)
 		case 301:
-			n += Minimal301(i)
+			n += Inline301(i)
 		case 302:
-			n += Minimal302(i)
+			n += Inline302(i)
 		case 303:
-			n += Minimal303(i)
+			n += Inline303(i)
 		case 304:
-			n += Minimal304(i)
+			n += Inline304(i)
 		case 305:
-			n += Minimal305(i)
+			n += Inline305(i)
 		case 306:
-			n += Minimal306(i)
+			n += Inline306(i)
 		case 307:
-			n += Minimal307(i)
+			n += Inline307(i)
 		case 308:
-			n += Minimal308(i)
+			n += Inline308(i)
 		case 309:
-			n += Minimal309(i)
+			n += Inline309(i)
 		case 310:
-			n += Minimal310(i)
+			n += Inline310(i)
 		case 311:
-			n += Minimal311(i)
+			n += Inline311(i)
 		case 312:
-			n += Minimal312(i)
+			n += Inline312(i)
 		case 313:
-			n += Minimal313(i)
+			n += Inline313(i)
 		case 314:
-			n += Minimal314(i)
+			n += Inline314(i)
 		case 315:
-			n += Minimal315(i)
+			n += Inline315(i)
 		case 316:
-			n += Minimal316(i)
+			n += Inline316(i)
 		case 317:
-			n += Minimal317(i)
+			n += Inline317(i)
 		case 318:
-			n += Minimal318(i)
+			n += Inline318(i)
 		case 319:
-			n += Minimal319(i)
+			n += Inline319(i)
 		case 320:
-			n += Minimal320(i)
+			n += Inline320(i)
 		case 321:
-			n += Minimal321(i)
+			n += Inline321(i)
 		case 322:
-			n += Minimal322(i)
+			n += Inline322(i)
 		case 323:
-			n += Minimal323(i)
+			n += Inline323(i)
 		case 324:
-			n += Minimal324(i)
+			n += Inline324(i)
 		case 325:
-			n += Minimal325(i)
+			n += Inline325(i)
 		case 326:
-			n += Minimal326(i)
+			n += Inline326(i)
 		case 327:
-			n += Minimal327(i)
+			n += Inline327(i)
 		case 328:
-			n += Minimal328(i)
+			n += Inline328(i)
 		case 329:
-			n += Minimal329(i)
+			n += Inline329(i)
 		case 330:
-			n += Minimal330(i)
+			n += Inline330(i)
 		case 331:
-			n += Minimal331(i)
+			n += Inline331(i)
 		case 332:
-			n += Minimal332(i)
+			n += Inline332(i)
 		case 333:
-			n += Minimal333(i)
+			n += Inline333(i)
 		case 334:
-			n += Minimal334(i)
+			n += Inline334(i)
 		case 335:
-			n += Minimal335(i)
+			n += Inline335(i)
 		case 336:
-			n += Minimal336(i)
+			n += Inline336(i)
 		case 337:
-			n += Minimal337(i)
+			n += Inline337(i)
 		case 338:
-			n += Minimal338(i)
+			n += Inline338(i)
 		case 339:
-			n += Minimal339(i)
+			n += Inline339(i)
 		case 340:
-			n += Minimal340(i)
+			n += Inline340(i)
 		case 341:
-			n += Minimal341(i)
+			n += Inline341(i)
 		case 342:
-			n += Minimal342(i)
+			n += Inline342(i)
 		case 343:
-			n += Minimal343(i)
+			n += Inline343(i)
 		case 344:
-			n += Minimal344(i)
+			n += Inline344(i)
 		case 345:
-			n += Minimal345(i)
+			n += Inline345(i)
 		case 346:
-			n += Minimal346(i)
+			n += Inline346(i)
 		case 347:
-			n += Minimal347(i)
+			n += Inline347(i)
 		case 348:
-			n += Minimal348(i)
+			n += Inline348(i)
 		case 349:
-			n += Minimal349(i)
+			n += Inline349(i)
 		case 350:
-			n += Minimal350(i)
+			n += Inline350(i)
 		case 351:
-			n += Minimal351(i)
+			n += Inline351(i)
 		case 352:
-			n += Minimal352(i)
+			n += Inline352(i)
 		case 353:
-			n += Minimal353(i)
+			n += Inline353(i)
 		case 354:
-			n += Minimal354(i)
+			n += Inline354(i)
 		case 355:
-			n += Minimal355(i)
+			n += Inline355(i)
 		case 356:
-			n += Minimal356(i)
+			n += Inline356(i)
 		case 357:
-			n += Minimal357(i)
+			n += Inline357(i)
 		case 358:
-			n += Minimal358(i)
+			n += Inline358(i)
 		case 359:
-			n += Minimal359(i)
+			n += Inline359(i)
 		case 360:
-			n += Minimal360(i)
+			n += Inline360(i)
 		case 361:
-			n += Minimal361(i)
+			n += Inline361(i)
 		case 362:
-			n += Minimal362(i)
+			n += Inline362(i)
 		case 363:
-			n += Minimal363(i)
+			n += Inline363(i)
 		case 364:
-			n += Minimal364(i)
+			n += Inline364(i)
 		case 365:
-			n += Minimal365(i)
+			n += Inline365(i)
 		case 366:
-			n += Minimal366(i)
+			n += Inline366(i)
 		case 367:
-			n += Minimal367(i)
+			n += Inline367(i)
 		case 368:
-			n += Minimal368(i)
+			n += Inline368(i)
 		case 369:
-			n += Minimal369(i)
+			n += Inline369(i)
 		case 370:
-			n += Minimal370(i)
+			n += Inline370(i)
 		case 371:
-			n += Minimal371(i)
+			n += Inline371(i)
 		case 372:
-			n += Minimal372(i)
+			n += Inline372(i)
 		case 373:
-			n += Minimal373(i)
+			n += Inline373(i)
 		case 374:
-			n += Minimal374(i)
+			n += Inline374(i)
 		case 375:
-			n += Minimal375(i)
+			n += Inline375(i)
 		case 376:
-			n += Minimal376(i)
+			n += Inline376(i)
 		case 377:
-			n += Minimal377(i)
+			n += Inline377(i)
 		case 378:
-			n += Minimal378(i)
+			n += Inline378(i)
 		case 379:
-			n += Minimal379(i)
+			n += Inline379(i)
 		case 380:
-			n += Minimal380(i)
+			n += Inline380(i)
 		case 381:
-			n += Minimal381(i)
+			n += Inline381(i)
 		case 382:
-			n += Minimal382(i)
+			n += Inline382(i)
 		case 383:
-			n += Minimal383(i)
+			n += Inline383(i)
 		case 384:
-			n += Minimal384(i)
+			n += Inline384(i)
 		case 385:
-			n += Minimal385(i)
+			n += Inline385(i)
 		case 386:
-			n += Minimal386(i)
+			n += Inline386(i)
 		case 387:
-			n += Minimal387(i)
+			n += Inline387(i)
 		case 388:
-			n += Minimal388(i)
+			n += Inline388(i)
 		case 389:
-			n += Minimal389(i)
+			n += Inline389(i)
 		case 390:
-			n += Minimal390(i)
+			n += Inline390(i)
 		case 391:
-			n += Minimal391(i)
+			n += Inline391(i)
 		case 392:
-			n += Minimal392(i)
+			n += Inline392(i)
 		case 393:
-			n += Minimal393(i)
+			n += Inline393(i)
 		case 394:
-			n += Minimal394(i)
+			n += Inline394(i)
 		case 395:
-			n += Minimal395(i)
+			n += Inline395(i)
 		case 396:
-			n += Minimal396(i)
+			n += Inline396(i)
 		case 397:
-			n += Minimal397(i)
+			n += Inline397(i)
 		case 398:
-			n += Minimal398(i)
+			n += Inline398(i)
 		case 399:
-			n += Minimal399(i)
+			n += Inline399(i)
 		case 400:
-			n += Minimal400(i)
+			n += Inline400(i)
 		case 401:
-			n += Minimal401(i)
+			n += Inline401(i)
 		case 402:
-			n += Minimal402(i)
+			n += Inline402(i)
 		case 403:
-			n += Minimal403(i)
+			n += Inline403(i)
 		case 404:
-			n += Minimal404(i)
+			n += Inline404(i)
 		case 405:
-			n += Minimal405(i)
+			n += Inline405(i)
 		case 406:
-			n += Minimal406(i)
+			n += Inline406(i)
 		case 407:
-			n += Minimal407(i)
+			n += Inline407(i)
 		case 408:
-			n += Minimal408(i)
+			n += Inline408(i)
 		case 409:
-			n += Minimal409(i)
+			n += Inline409(i)
 		case 410:
-			n += Minimal410(i)
+			n += Inline410(i)
 		case 411:
-			n += Minimal411(i)
+			n += Inline411(i)
 		case 412:
-			n += Minimal412(i)
+			n += Inline412(i)
 		case 413:
-			n += Minimal413(i)
+			n += Inline413(i)
 		case 414:
-			n += Minimal414(i)
+			n += Inline414(i)
 		case 415:
-			n += Minimal415(i)
+			n += Inline415(i)
 		case 416:
-			n += Minimal416(i)
+			n += Inline416(i)
 		case 417:
-			n += Minimal417(i)
+			n += Inline417(i)
 		case 418:
-			n += Minimal418(i)
+			n += Inline418(i)
 		case 419:
-			n += Minimal419(i)
+			n += Inline419(i)
 		case 420:
-			n += Minimal420(i)
+			n += Inline420(i)
 		case 421:
-			n += Minimal421(i)
+			n += Inline421(i)
 		case 422:
-			n += Minimal422(i)
+			n += Inline422(i)
 		case 423:
-			n += Minimal423(i)
+			n += Inline423(i)
 		case 424:
-			n += Minimal424(i)
+			n += Inline424(i)
 		case 425:
-			n += Minimal425(i)
+			n += Inline425(i)
 		case 426:
-			n += Minimal426(i)
+			n += Inline426(i)
 		case 427:
-			n += Minimal427(i)
+			n += Inline427(i)
 		case 428:
-			n += Minimal428(i)
+			n += Inline428(i)
 		case 429:
-			n += Minimal429(i)
+			n += Inline429(i)
 		case 430:
-			n += Minimal430(i)
+			n += Inline430(i)
 		case 431:
-			n += Minimal431(i)
+			n += Inline431(i)
 		case 432:
-			n += Minimal432(i)
+			n += Inline432(i)
 		case 433:
-			n += Minimal433(i)
+			n += Inline433(i)
 		case 434:
-			n += Minimal434(i)
+			n += Inline434(i)
 		case 435:
-			n += Minimal435(i)
+			n += Inline435(i)
 		case 436:
-			n += Minimal436(i)
+			n += Inline436(i)
 		case 437:
-			n += Minimal437(i)
+			n += Inline437(i)
 		case 438:
-			n += Minimal438(i)
+			n += Inline438(i)
 		case 439:
-			n += Minimal439(i)
+			n += Inline439(i)
 		case 440:
-			n += Minimal440(i)
+			n += Inline440(i)
 		case 441:
-			n += Minimal441(i)
+			n += Inline441(i)
 		case 442:
-			n += Minimal442(i)
+			n += Inline442(i)
 		case 443:
-			n += Minimal443(i)
+			n += Inline443(i)
 		case 444:
-			n += Minimal444(i)
+			n += Inline444(i)
 		case 445:
-			n += Minimal445(i)
+			n += Inline445(i)
 		case 446:
-			n += Minimal446(i)
+			n += Inline446(i)
 		case 447:
-			n += Minimal447(i)
+			n += Inline447(i)
 		case 448:
-			n += Minimal448(i)
+			n += Inline448(i)
 		case 449:
-			n += Minimal449(i)
+			n += Inline449(i)
 		case 450:
-			n += Minimal450(i)
+			n += Inline450(i)
 		case 451:
-			n += Minimal451(i)
+			n += Inline451(i)
 		case 452:
-			n += Minimal452(i)
+			n += Inline452(i)
 		case 453:
-			n += Minimal453(i)
+			n += Inline453(i)
 		case 454:
-			n += Minimal454(i)
+			n += Inline454(i)
 		case 455:
-			n += Minimal455(i)
+			n += Inline455(i)
 		case 456:
-			n += Minimal456(i)
+			n += Inline456(i)
 		case 457:
-			n += Minimal457(i)
+			n += Inline457(i)
 		case 458:
-			n += Minimal458(i)
+			n += Inline458(i)
 		case 459:
-			n += Minimal459(i)
+			n += Inline459(i)
 		case 460:
-			n += Minimal460(i)
+			n += Inline460(i)
 		case 461:
-			n += Minimal461(i)
+			n += Inline461(i)
 		case 462:
-			n += Minimal462(i)
+			n += Inline462(i)
 		case 463:
-			n += Minimal463(i)
+			n += Inline463(i)
 		case 464:
-			n += Minimal464(i)
+			n += Inline464(i)
 		case 465:
-			n += Minimal465(i)
+			n += Inline465(i)
 		case 466:
-			n += Minimal466(i)
+			n += Inline466(i)
 		case 467:
-			n += Minimal467(i)
+			n += Inline467(i)
 		case 468:
-			n += Minimal468(i)
+			n += Inline468(i)
 		case 469:
-			n += Minimal469(i)
+			n += Inline469(i)
 		case 470:
-			n += Minimal470(i)
+			n += Inline470(i)
 		case 471:
-			n += Minimal471(i)
+			n += Inline471(i)
 		case 472:
-			n += Minimal472(i)
+			n += Inline472(i)
 		case 473:
-			n += Minimal473(i)
+			n += Inline473(i)
 		case 474:
-			n += Minimal474(i)
+			n += Inline474(i)
 		case 475:
-			n += Minimal475(i)
+			n += Inline475(i)
 		case 476:
-			n += Minimal476(i)
+			n += Inline476(i)
 		case 477:
-			n += Minimal477(i)
+			n += Inline477(i)
 		case 478:
-			n += Minimal478(i)
+			n += Inline478(i)
 		case 479:
-			n += Minimal479(i)
+			n += Inline479(i)
 		case 480:
-			n += Minimal480(i)
+			n += Inline480(i)
 		case 481:
-			n += Minimal481(i)
+			n += Inline481(i)
 		case 482:
-			n += Minimal482(i)
+			n += Inline482(i)
 		case 483:
-			n += Minimal483(i)
+			n += Inline483(i)
 		case 484:
-			n += Minimal484(i)
+			n += Inline484(i)
 		case 485:
-			n += Minimal485(i)
+			n += Inline485(i)
 		case 486:
-			n += Minimal486(i)
+			n += Inline486(i)
 		case 487:
-			n += Minimal487(i)
+			n += Inline487(i)
 		case 488:
-			n += Minimal488(i)
+			n += Inline488(i)
 		case 489:
-			n += Minimal489(i)
+			n += Inline489(i)
 		case 490:
-			n += Minimal490(i)
+			n += Inline490(i)
 		case 491:
-			n += Minimal491(i)
+			n += Inline491(i)
 		case 492:
-			n += Minimal492(i)
+			n += Inline492(i)
 		case 493:
-			n += Minimal493(i)
+			n += Inline493(i)
 		case 494:
-			n += Minimal494(i)
+			n += Inline494(i)
 		case 495:
-			n += Minimal495(i)
+			n += Inline495(i)
 		case 496:
-			n += Minimal496(i)
+			n += Inline496(i)
 		case 497:
-			n += Minimal497(i)
+			n += Inline497(i)
 		case 498:
-			n += Minimal498(i)
+			n += Inline498(i)
 		case 499:
-			n += Minimal499(i)
+			n += Inline499(i)
 		case 500:
-			n += Minimal500(i)
+			n += Inline500(i)
 		case 501:
-			n += Minimal501(i)
+			n += Inline501(i)
 		case 502:
-			n += Minimal502(i)
+			n += Inline502(i)
 		case 503:
-			n += Minimal503(i)
+			n += Inline503(i)
 		case 504:
-			n += Minimal504(i)
+			n += Inline504(i)
 		case 505:
-			n += Minimal505(i)
+			n += Inline505(i)
 		case 506:
-			n += Minimal506(i)
+			n += Inline506(i)
 		case 507:
-			n += Minimal507(i)
+			n += Inline507(i)
 		case 508:
-			n += Minimal508(i)
+			n += Inline508(i)
 		case 509:
-			n += Minimal509(i)
+			n += Inline509(i)
 		case 510:
-			n += Minimal510(i)
+			n += Inline510(i)
 		case 511:
-			n += Minimal511(i)
+			n += Inline511(i)
 		}
 	}
 
@@ -8289,11 +8289,11 @@ func BenchmarkOptimalCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapMinimalFunc512(b *testing.B) {
+func BenchmarkOptimalCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[i%512](i)
+		n += InlineFuncs[i%512](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -8302,1035 +8302,1035 @@ func BenchmarkOptimalCacheFriendlinessMapMinimalFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch ascInputs[i%len(ascInputs)] % 512 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		case 256:
-			n += Minimal256(i)
+			n += Inline256(i)
 		case 257:
-			n += Minimal257(i)
+			n += Inline257(i)
 		case 258:
-			n += Minimal258(i)
+			n += Inline258(i)
 		case 259:
-			n += Minimal259(i)
+			n += Inline259(i)
 		case 260:
-			n += Minimal260(i)
+			n += Inline260(i)
 		case 261:
-			n += Minimal261(i)
+			n += Inline261(i)
 		case 262:
-			n += Minimal262(i)
+			n += Inline262(i)
 		case 263:
-			n += Minimal263(i)
+			n += Inline263(i)
 		case 264:
-			n += Minimal264(i)
+			n += Inline264(i)
 		case 265:
-			n += Minimal265(i)
+			n += Inline265(i)
 		case 266:
-			n += Minimal266(i)
+			n += Inline266(i)
 		case 267:
-			n += Minimal267(i)
+			n += Inline267(i)
 		case 268:
-			n += Minimal268(i)
+			n += Inline268(i)
 		case 269:
-			n += Minimal269(i)
+			n += Inline269(i)
 		case 270:
-			n += Minimal270(i)
+			n += Inline270(i)
 		case 271:
-			n += Minimal271(i)
+			n += Inline271(i)
 		case 272:
-			n += Minimal272(i)
+			n += Inline272(i)
 		case 273:
-			n += Minimal273(i)
+			n += Inline273(i)
 		case 274:
-			n += Minimal274(i)
+			n += Inline274(i)
 		case 275:
-			n += Minimal275(i)
+			n += Inline275(i)
 		case 276:
-			n += Minimal276(i)
+			n += Inline276(i)
 		case 277:
-			n += Minimal277(i)
+			n += Inline277(i)
 		case 278:
-			n += Minimal278(i)
+			n += Inline278(i)
 		case 279:
-			n += Minimal279(i)
+			n += Inline279(i)
 		case 280:
-			n += Minimal280(i)
+			n += Inline280(i)
 		case 281:
-			n += Minimal281(i)
+			n += Inline281(i)
 		case 282:
-			n += Minimal282(i)
+			n += Inline282(i)
 		case 283:
-			n += Minimal283(i)
+			n += Inline283(i)
 		case 284:
-			n += Minimal284(i)
+			n += Inline284(i)
 		case 285:
-			n += Minimal285(i)
+			n += Inline285(i)
 		case 286:
-			n += Minimal286(i)
+			n += Inline286(i)
 		case 287:
-			n += Minimal287(i)
+			n += Inline287(i)
 		case 288:
-			n += Minimal288(i)
+			n += Inline288(i)
 		case 289:
-			n += Minimal289(i)
+			n += Inline289(i)
 		case 290:
-			n += Minimal290(i)
+			n += Inline290(i)
 		case 291:
-			n += Minimal291(i)
+			n += Inline291(i)
 		case 292:
-			n += Minimal292(i)
+			n += Inline292(i)
 		case 293:
-			n += Minimal293(i)
+			n += Inline293(i)
 		case 294:
-			n += Minimal294(i)
+			n += Inline294(i)
 		case 295:
-			n += Minimal295(i)
+			n += Inline295(i)
 		case 296:
-			n += Minimal296(i)
+			n += Inline296(i)
 		case 297:
-			n += Minimal297(i)
+			n += Inline297(i)
 		case 298:
-			n += Minimal298(i)
+			n += Inline298(i)
 		case 299:
-			n += Minimal299(i)
+			n += Inline299(i)
 		case 300:
-			n += Minimal300(i)
+			n += Inline300(i)
 		case 301:
-			n += Minimal301(i)
+			n += Inline301(i)
 		case 302:
-			n += Minimal302(i)
+			n += Inline302(i)
 		case 303:
-			n += Minimal303(i)
+			n += Inline303(i)
 		case 304:
-			n += Minimal304(i)
+			n += Inline304(i)
 		case 305:
-			n += Minimal305(i)
+			n += Inline305(i)
 		case 306:
-			n += Minimal306(i)
+			n += Inline306(i)
 		case 307:
-			n += Minimal307(i)
+			n += Inline307(i)
 		case 308:
-			n += Minimal308(i)
+			n += Inline308(i)
 		case 309:
-			n += Minimal309(i)
+			n += Inline309(i)
 		case 310:
-			n += Minimal310(i)
+			n += Inline310(i)
 		case 311:
-			n += Minimal311(i)
+			n += Inline311(i)
 		case 312:
-			n += Minimal312(i)
+			n += Inline312(i)
 		case 313:
-			n += Minimal313(i)
+			n += Inline313(i)
 		case 314:
-			n += Minimal314(i)
+			n += Inline314(i)
 		case 315:
-			n += Minimal315(i)
+			n += Inline315(i)
 		case 316:
-			n += Minimal316(i)
+			n += Inline316(i)
 		case 317:
-			n += Minimal317(i)
+			n += Inline317(i)
 		case 318:
-			n += Minimal318(i)
+			n += Inline318(i)
 		case 319:
-			n += Minimal319(i)
+			n += Inline319(i)
 		case 320:
-			n += Minimal320(i)
+			n += Inline320(i)
 		case 321:
-			n += Minimal321(i)
+			n += Inline321(i)
 		case 322:
-			n += Minimal322(i)
+			n += Inline322(i)
 		case 323:
-			n += Minimal323(i)
+			n += Inline323(i)
 		case 324:
-			n += Minimal324(i)
+			n += Inline324(i)
 		case 325:
-			n += Minimal325(i)
+			n += Inline325(i)
 		case 326:
-			n += Minimal326(i)
+			n += Inline326(i)
 		case 327:
-			n += Minimal327(i)
+			n += Inline327(i)
 		case 328:
-			n += Minimal328(i)
+			n += Inline328(i)
 		case 329:
-			n += Minimal329(i)
+			n += Inline329(i)
 		case 330:
-			n += Minimal330(i)
+			n += Inline330(i)
 		case 331:
-			n += Minimal331(i)
+			n += Inline331(i)
 		case 332:
-			n += Minimal332(i)
+			n += Inline332(i)
 		case 333:
-			n += Minimal333(i)
+			n += Inline333(i)
 		case 334:
-			n += Minimal334(i)
+			n += Inline334(i)
 		case 335:
-			n += Minimal335(i)
+			n += Inline335(i)
 		case 336:
-			n += Minimal336(i)
+			n += Inline336(i)
 		case 337:
-			n += Minimal337(i)
+			n += Inline337(i)
 		case 338:
-			n += Minimal338(i)
+			n += Inline338(i)
 		case 339:
-			n += Minimal339(i)
+			n += Inline339(i)
 		case 340:
-			n += Minimal340(i)
+			n += Inline340(i)
 		case 341:
-			n += Minimal341(i)
+			n += Inline341(i)
 		case 342:
-			n += Minimal342(i)
+			n += Inline342(i)
 		case 343:
-			n += Minimal343(i)
+			n += Inline343(i)
 		case 344:
-			n += Minimal344(i)
+			n += Inline344(i)
 		case 345:
-			n += Minimal345(i)
+			n += Inline345(i)
 		case 346:
-			n += Minimal346(i)
+			n += Inline346(i)
 		case 347:
-			n += Minimal347(i)
+			n += Inline347(i)
 		case 348:
-			n += Minimal348(i)
+			n += Inline348(i)
 		case 349:
-			n += Minimal349(i)
+			n += Inline349(i)
 		case 350:
-			n += Minimal350(i)
+			n += Inline350(i)
 		case 351:
-			n += Minimal351(i)
+			n += Inline351(i)
 		case 352:
-			n += Minimal352(i)
+			n += Inline352(i)
 		case 353:
-			n += Minimal353(i)
+			n += Inline353(i)
 		case 354:
-			n += Minimal354(i)
+			n += Inline354(i)
 		case 355:
-			n += Minimal355(i)
+			n += Inline355(i)
 		case 356:
-			n += Minimal356(i)
+			n += Inline356(i)
 		case 357:
-			n += Minimal357(i)
+			n += Inline357(i)
 		case 358:
-			n += Minimal358(i)
+			n += Inline358(i)
 		case 359:
-			n += Minimal359(i)
+			n += Inline359(i)
 		case 360:
-			n += Minimal360(i)
+			n += Inline360(i)
 		case 361:
-			n += Minimal361(i)
+			n += Inline361(i)
 		case 362:
-			n += Minimal362(i)
+			n += Inline362(i)
 		case 363:
-			n += Minimal363(i)
+			n += Inline363(i)
 		case 364:
-			n += Minimal364(i)
+			n += Inline364(i)
 		case 365:
-			n += Minimal365(i)
+			n += Inline365(i)
 		case 366:
-			n += Minimal366(i)
+			n += Inline366(i)
 		case 367:
-			n += Minimal367(i)
+			n += Inline367(i)
 		case 368:
-			n += Minimal368(i)
+			n += Inline368(i)
 		case 369:
-			n += Minimal369(i)
+			n += Inline369(i)
 		case 370:
-			n += Minimal370(i)
+			n += Inline370(i)
 		case 371:
-			n += Minimal371(i)
+			n += Inline371(i)
 		case 372:
-			n += Minimal372(i)
+			n += Inline372(i)
 		case 373:
-			n += Minimal373(i)
+			n += Inline373(i)
 		case 374:
-			n += Minimal374(i)
+			n += Inline374(i)
 		case 375:
-			n += Minimal375(i)
+			n += Inline375(i)
 		case 376:
-			n += Minimal376(i)
+			n += Inline376(i)
 		case 377:
-			n += Minimal377(i)
+			n += Inline377(i)
 		case 378:
-			n += Minimal378(i)
+			n += Inline378(i)
 		case 379:
-			n += Minimal379(i)
+			n += Inline379(i)
 		case 380:
-			n += Minimal380(i)
+			n += Inline380(i)
 		case 381:
-			n += Minimal381(i)
+			n += Inline381(i)
 		case 382:
-			n += Minimal382(i)
+			n += Inline382(i)
 		case 383:
-			n += Minimal383(i)
+			n += Inline383(i)
 		case 384:
-			n += Minimal384(i)
+			n += Inline384(i)
 		case 385:
-			n += Minimal385(i)
+			n += Inline385(i)
 		case 386:
-			n += Minimal386(i)
+			n += Inline386(i)
 		case 387:
-			n += Minimal387(i)
+			n += Inline387(i)
 		case 388:
-			n += Minimal388(i)
+			n += Inline388(i)
 		case 389:
-			n += Minimal389(i)
+			n += Inline389(i)
 		case 390:
-			n += Minimal390(i)
+			n += Inline390(i)
 		case 391:
-			n += Minimal391(i)
+			n += Inline391(i)
 		case 392:
-			n += Minimal392(i)
+			n += Inline392(i)
 		case 393:
-			n += Minimal393(i)
+			n += Inline393(i)
 		case 394:
-			n += Minimal394(i)
+			n += Inline394(i)
 		case 395:
-			n += Minimal395(i)
+			n += Inline395(i)
 		case 396:
-			n += Minimal396(i)
+			n += Inline396(i)
 		case 397:
-			n += Minimal397(i)
+			n += Inline397(i)
 		case 398:
-			n += Minimal398(i)
+			n += Inline398(i)
 		case 399:
-			n += Minimal399(i)
+			n += Inline399(i)
 		case 400:
-			n += Minimal400(i)
+			n += Inline400(i)
 		case 401:
-			n += Minimal401(i)
+			n += Inline401(i)
 		case 402:
-			n += Minimal402(i)
+			n += Inline402(i)
 		case 403:
-			n += Minimal403(i)
+			n += Inline403(i)
 		case 404:
-			n += Minimal404(i)
+			n += Inline404(i)
 		case 405:
-			n += Minimal405(i)
+			n += Inline405(i)
 		case 406:
-			n += Minimal406(i)
+			n += Inline406(i)
 		case 407:
-			n += Minimal407(i)
+			n += Inline407(i)
 		case 408:
-			n += Minimal408(i)
+			n += Inline408(i)
 		case 409:
-			n += Minimal409(i)
+			n += Inline409(i)
 		case 410:
-			n += Minimal410(i)
+			n += Inline410(i)
 		case 411:
-			n += Minimal411(i)
+			n += Inline411(i)
 		case 412:
-			n += Minimal412(i)
+			n += Inline412(i)
 		case 413:
-			n += Minimal413(i)
+			n += Inline413(i)
 		case 414:
-			n += Minimal414(i)
+			n += Inline414(i)
 		case 415:
-			n += Minimal415(i)
+			n += Inline415(i)
 		case 416:
-			n += Minimal416(i)
+			n += Inline416(i)
 		case 417:
-			n += Minimal417(i)
+			n += Inline417(i)
 		case 418:
-			n += Minimal418(i)
+			n += Inline418(i)
 		case 419:
-			n += Minimal419(i)
+			n += Inline419(i)
 		case 420:
-			n += Minimal420(i)
+			n += Inline420(i)
 		case 421:
-			n += Minimal421(i)
+			n += Inline421(i)
 		case 422:
-			n += Minimal422(i)
+			n += Inline422(i)
 		case 423:
-			n += Minimal423(i)
+			n += Inline423(i)
 		case 424:
-			n += Minimal424(i)
+			n += Inline424(i)
 		case 425:
-			n += Minimal425(i)
+			n += Inline425(i)
 		case 426:
-			n += Minimal426(i)
+			n += Inline426(i)
 		case 427:
-			n += Minimal427(i)
+			n += Inline427(i)
 		case 428:
-			n += Minimal428(i)
+			n += Inline428(i)
 		case 429:
-			n += Minimal429(i)
+			n += Inline429(i)
 		case 430:
-			n += Minimal430(i)
+			n += Inline430(i)
 		case 431:
-			n += Minimal431(i)
+			n += Inline431(i)
 		case 432:
-			n += Minimal432(i)
+			n += Inline432(i)
 		case 433:
-			n += Minimal433(i)
+			n += Inline433(i)
 		case 434:
-			n += Minimal434(i)
+			n += Inline434(i)
 		case 435:
-			n += Minimal435(i)
+			n += Inline435(i)
 		case 436:
-			n += Minimal436(i)
+			n += Inline436(i)
 		case 437:
-			n += Minimal437(i)
+			n += Inline437(i)
 		case 438:
-			n += Minimal438(i)
+			n += Inline438(i)
 		case 439:
-			n += Minimal439(i)
+			n += Inline439(i)
 		case 440:
-			n += Minimal440(i)
+			n += Inline440(i)
 		case 441:
-			n += Minimal441(i)
+			n += Inline441(i)
 		case 442:
-			n += Minimal442(i)
+			n += Inline442(i)
 		case 443:
-			n += Minimal443(i)
+			n += Inline443(i)
 		case 444:
-			n += Minimal444(i)
+			n += Inline444(i)
 		case 445:
-			n += Minimal445(i)
+			n += Inline445(i)
 		case 446:
-			n += Minimal446(i)
+			n += Inline446(i)
 		case 447:
-			n += Minimal447(i)
+			n += Inline447(i)
 		case 448:
-			n += Minimal448(i)
+			n += Inline448(i)
 		case 449:
-			n += Minimal449(i)
+			n += Inline449(i)
 		case 450:
-			n += Minimal450(i)
+			n += Inline450(i)
 		case 451:
-			n += Minimal451(i)
+			n += Inline451(i)
 		case 452:
-			n += Minimal452(i)
+			n += Inline452(i)
 		case 453:
-			n += Minimal453(i)
+			n += Inline453(i)
 		case 454:
-			n += Minimal454(i)
+			n += Inline454(i)
 		case 455:
-			n += Minimal455(i)
+			n += Inline455(i)
 		case 456:
-			n += Minimal456(i)
+			n += Inline456(i)
 		case 457:
-			n += Minimal457(i)
+			n += Inline457(i)
 		case 458:
-			n += Minimal458(i)
+			n += Inline458(i)
 		case 459:
-			n += Minimal459(i)
+			n += Inline459(i)
 		case 460:
-			n += Minimal460(i)
+			n += Inline460(i)
 		case 461:
-			n += Minimal461(i)
+			n += Inline461(i)
 		case 462:
-			n += Minimal462(i)
+			n += Inline462(i)
 		case 463:
-			n += Minimal463(i)
+			n += Inline463(i)
 		case 464:
-			n += Minimal464(i)
+			n += Inline464(i)
 		case 465:
-			n += Minimal465(i)
+			n += Inline465(i)
 		case 466:
-			n += Minimal466(i)
+			n += Inline466(i)
 		case 467:
-			n += Minimal467(i)
+			n += Inline467(i)
 		case 468:
-			n += Minimal468(i)
+			n += Inline468(i)
 		case 469:
-			n += Minimal469(i)
+			n += Inline469(i)
 		case 470:
-			n += Minimal470(i)
+			n += Inline470(i)
 		case 471:
-			n += Minimal471(i)
+			n += Inline471(i)
 		case 472:
-			n += Minimal472(i)
+			n += Inline472(i)
 		case 473:
-			n += Minimal473(i)
+			n += Inline473(i)
 		case 474:
-			n += Minimal474(i)
+			n += Inline474(i)
 		case 475:
-			n += Minimal475(i)
+			n += Inline475(i)
 		case 476:
-			n += Minimal476(i)
+			n += Inline476(i)
 		case 477:
-			n += Minimal477(i)
+			n += Inline477(i)
 		case 478:
-			n += Minimal478(i)
+			n += Inline478(i)
 		case 479:
-			n += Minimal479(i)
+			n += Inline479(i)
 		case 480:
-			n += Minimal480(i)
+			n += Inline480(i)
 		case 481:
-			n += Minimal481(i)
+			n += Inline481(i)
 		case 482:
-			n += Minimal482(i)
+			n += Inline482(i)
 		case 483:
-			n += Minimal483(i)
+			n += Inline483(i)
 		case 484:
-			n += Minimal484(i)
+			n += Inline484(i)
 		case 485:
-			n += Minimal485(i)
+			n += Inline485(i)
 		case 486:
-			n += Minimal486(i)
+			n += Inline486(i)
 		case 487:
-			n += Minimal487(i)
+			n += Inline487(i)
 		case 488:
-			n += Minimal488(i)
+			n += Inline488(i)
 		case 489:
-			n += Minimal489(i)
+			n += Inline489(i)
 		case 490:
-			n += Minimal490(i)
+			n += Inline490(i)
 		case 491:
-			n += Minimal491(i)
+			n += Inline491(i)
 		case 492:
-			n += Minimal492(i)
+			n += Inline492(i)
 		case 493:
-			n += Minimal493(i)
+			n += Inline493(i)
 		case 494:
-			n += Minimal494(i)
+			n += Inline494(i)
 		case 495:
-			n += Minimal495(i)
+			n += Inline495(i)
 		case 496:
-			n += Minimal496(i)
+			n += Inline496(i)
 		case 497:
-			n += Minimal497(i)
+			n += Inline497(i)
 		case 498:
-			n += Minimal498(i)
+			n += Inline498(i)
 		case 499:
-			n += Minimal499(i)
+			n += Inline499(i)
 		case 500:
-			n += Minimal500(i)
+			n += Inline500(i)
 		case 501:
-			n += Minimal501(i)
+			n += Inline501(i)
 		case 502:
-			n += Minimal502(i)
+			n += Inline502(i)
 		case 503:
-			n += Minimal503(i)
+			n += Inline503(i)
 		case 504:
-			n += Minimal504(i)
+			n += Inline504(i)
 		case 505:
-			n += Minimal505(i)
+			n += Inline505(i)
 		case 506:
-			n += Minimal506(i)
+			n += Inline506(i)
 		case 507:
-			n += Minimal507(i)
+			n += Inline507(i)
 		case 508:
-			n += Minimal508(i)
+			n += Inline508(i)
 		case 509:
-			n += Minimal509(i)
+			n += Inline509(i)
 		case 510:
-			n += Minimal510(i)
+			n += Inline510(i)
 		case 511:
-			n += Minimal511(i)
+			n += Inline511(i)
 		}
 	}
 
@@ -9340,11 +9340,11 @@ func BenchmarkModerateCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapMinimalFunc512(b *testing.B) {
+func BenchmarkModerateCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[ascInputs[i%len(ascInputs)]%512](i)
+		n += InlineFuncs[ascInputs[i%len(ascInputs)]%512](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
@@ -9353,1035 +9353,1035 @@ func BenchmarkModerateCacheFriendlinessMapMinimalFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
 		switch randInputs[i%len(randInputs)] % 512 {
 		case 0:
-			n += Minimal0(i)
+			n += Inline0(i)
 		case 1:
-			n += Minimal1(i)
+			n += Inline1(i)
 		case 2:
-			n += Minimal2(i)
+			n += Inline2(i)
 		case 3:
-			n += Minimal3(i)
+			n += Inline3(i)
 		case 4:
-			n += Minimal4(i)
+			n += Inline4(i)
 		case 5:
-			n += Minimal5(i)
+			n += Inline5(i)
 		case 6:
-			n += Minimal6(i)
+			n += Inline6(i)
 		case 7:
-			n += Minimal7(i)
+			n += Inline7(i)
 		case 8:
-			n += Minimal8(i)
+			n += Inline8(i)
 		case 9:
-			n += Minimal9(i)
+			n += Inline9(i)
 		case 10:
-			n += Minimal10(i)
+			n += Inline10(i)
 		case 11:
-			n += Minimal11(i)
+			n += Inline11(i)
 		case 12:
-			n += Minimal12(i)
+			n += Inline12(i)
 		case 13:
-			n += Minimal13(i)
+			n += Inline13(i)
 		case 14:
-			n += Minimal14(i)
+			n += Inline14(i)
 		case 15:
-			n += Minimal15(i)
+			n += Inline15(i)
 		case 16:
-			n += Minimal16(i)
+			n += Inline16(i)
 		case 17:
-			n += Minimal17(i)
+			n += Inline17(i)
 		case 18:
-			n += Minimal18(i)
+			n += Inline18(i)
 		case 19:
-			n += Minimal19(i)
+			n += Inline19(i)
 		case 20:
-			n += Minimal20(i)
+			n += Inline20(i)
 		case 21:
-			n += Minimal21(i)
+			n += Inline21(i)
 		case 22:
-			n += Minimal22(i)
+			n += Inline22(i)
 		case 23:
-			n += Minimal23(i)
+			n += Inline23(i)
 		case 24:
-			n += Minimal24(i)
+			n += Inline24(i)
 		case 25:
-			n += Minimal25(i)
+			n += Inline25(i)
 		case 26:
-			n += Minimal26(i)
+			n += Inline26(i)
 		case 27:
-			n += Minimal27(i)
+			n += Inline27(i)
 		case 28:
-			n += Minimal28(i)
+			n += Inline28(i)
 		case 29:
-			n += Minimal29(i)
+			n += Inline29(i)
 		case 30:
-			n += Minimal30(i)
+			n += Inline30(i)
 		case 31:
-			n += Minimal31(i)
+			n += Inline31(i)
 		case 32:
-			n += Minimal32(i)
+			n += Inline32(i)
 		case 33:
-			n += Minimal33(i)
+			n += Inline33(i)
 		case 34:
-			n += Minimal34(i)
+			n += Inline34(i)
 		case 35:
-			n += Minimal35(i)
+			n += Inline35(i)
 		case 36:
-			n += Minimal36(i)
+			n += Inline36(i)
 		case 37:
-			n += Minimal37(i)
+			n += Inline37(i)
 		case 38:
-			n += Minimal38(i)
+			n += Inline38(i)
 		case 39:
-			n += Minimal39(i)
+			n += Inline39(i)
 		case 40:
-			n += Minimal40(i)
+			n += Inline40(i)
 		case 41:
-			n += Minimal41(i)
+			n += Inline41(i)
 		case 42:
-			n += Minimal42(i)
+			n += Inline42(i)
 		case 43:
-			n += Minimal43(i)
+			n += Inline43(i)
 		case 44:
-			n += Minimal44(i)
+			n += Inline44(i)
 		case 45:
-			n += Minimal45(i)
+			n += Inline45(i)
 		case 46:
-			n += Minimal46(i)
+			n += Inline46(i)
 		case 47:
-			n += Minimal47(i)
+			n += Inline47(i)
 		case 48:
-			n += Minimal48(i)
+			n += Inline48(i)
 		case 49:
-			n += Minimal49(i)
+			n += Inline49(i)
 		case 50:
-			n += Minimal50(i)
+			n += Inline50(i)
 		case 51:
-			n += Minimal51(i)
+			n += Inline51(i)
 		case 52:
-			n += Minimal52(i)
+			n += Inline52(i)
 		case 53:
-			n += Minimal53(i)
+			n += Inline53(i)
 		case 54:
-			n += Minimal54(i)
+			n += Inline54(i)
 		case 55:
-			n += Minimal55(i)
+			n += Inline55(i)
 		case 56:
-			n += Minimal56(i)
+			n += Inline56(i)
 		case 57:
-			n += Minimal57(i)
+			n += Inline57(i)
 		case 58:
-			n += Minimal58(i)
+			n += Inline58(i)
 		case 59:
-			n += Minimal59(i)
+			n += Inline59(i)
 		case 60:
-			n += Minimal60(i)
+			n += Inline60(i)
 		case 61:
-			n += Minimal61(i)
+			n += Inline61(i)
 		case 62:
-			n += Minimal62(i)
+			n += Inline62(i)
 		case 63:
-			n += Minimal63(i)
+			n += Inline63(i)
 		case 64:
-			n += Minimal64(i)
+			n += Inline64(i)
 		case 65:
-			n += Minimal65(i)
+			n += Inline65(i)
 		case 66:
-			n += Minimal66(i)
+			n += Inline66(i)
 		case 67:
-			n += Minimal67(i)
+			n += Inline67(i)
 		case 68:
-			n += Minimal68(i)
+			n += Inline68(i)
 		case 69:
-			n += Minimal69(i)
+			n += Inline69(i)
 		case 70:
-			n += Minimal70(i)
+			n += Inline70(i)
 		case 71:
-			n += Minimal71(i)
+			n += Inline71(i)
 		case 72:
-			n += Minimal72(i)
+			n += Inline72(i)
 		case 73:
-			n += Minimal73(i)
+			n += Inline73(i)
 		case 74:
-			n += Minimal74(i)
+			n += Inline74(i)
 		case 75:
-			n += Minimal75(i)
+			n += Inline75(i)
 		case 76:
-			n += Minimal76(i)
+			n += Inline76(i)
 		case 77:
-			n += Minimal77(i)
+			n += Inline77(i)
 		case 78:
-			n += Minimal78(i)
+			n += Inline78(i)
 		case 79:
-			n += Minimal79(i)
+			n += Inline79(i)
 		case 80:
-			n += Minimal80(i)
+			n += Inline80(i)
 		case 81:
-			n += Minimal81(i)
+			n += Inline81(i)
 		case 82:
-			n += Minimal82(i)
+			n += Inline82(i)
 		case 83:
-			n += Minimal83(i)
+			n += Inline83(i)
 		case 84:
-			n += Minimal84(i)
+			n += Inline84(i)
 		case 85:
-			n += Minimal85(i)
+			n += Inline85(i)
 		case 86:
-			n += Minimal86(i)
+			n += Inline86(i)
 		case 87:
-			n += Minimal87(i)
+			n += Inline87(i)
 		case 88:
-			n += Minimal88(i)
+			n += Inline88(i)
 		case 89:
-			n += Minimal89(i)
+			n += Inline89(i)
 		case 90:
-			n += Minimal90(i)
+			n += Inline90(i)
 		case 91:
-			n += Minimal91(i)
+			n += Inline91(i)
 		case 92:
-			n += Minimal92(i)
+			n += Inline92(i)
 		case 93:
-			n += Minimal93(i)
+			n += Inline93(i)
 		case 94:
-			n += Minimal94(i)
+			n += Inline94(i)
 		case 95:
-			n += Minimal95(i)
+			n += Inline95(i)
 		case 96:
-			n += Minimal96(i)
+			n += Inline96(i)
 		case 97:
-			n += Minimal97(i)
+			n += Inline97(i)
 		case 98:
-			n += Minimal98(i)
+			n += Inline98(i)
 		case 99:
-			n += Minimal99(i)
+			n += Inline99(i)
 		case 100:
-			n += Minimal100(i)
+			n += Inline100(i)
 		case 101:
-			n += Minimal101(i)
+			n += Inline101(i)
 		case 102:
-			n += Minimal102(i)
+			n += Inline102(i)
 		case 103:
-			n += Minimal103(i)
+			n += Inline103(i)
 		case 104:
-			n += Minimal104(i)
+			n += Inline104(i)
 		case 105:
-			n += Minimal105(i)
+			n += Inline105(i)
 		case 106:
-			n += Minimal106(i)
+			n += Inline106(i)
 		case 107:
-			n += Minimal107(i)
+			n += Inline107(i)
 		case 108:
-			n += Minimal108(i)
+			n += Inline108(i)
 		case 109:
-			n += Minimal109(i)
+			n += Inline109(i)
 		case 110:
-			n += Minimal110(i)
+			n += Inline110(i)
 		case 111:
-			n += Minimal111(i)
+			n += Inline111(i)
 		case 112:
-			n += Minimal112(i)
+			n += Inline112(i)
 		case 113:
-			n += Minimal113(i)
+			n += Inline113(i)
 		case 114:
-			n += Minimal114(i)
+			n += Inline114(i)
 		case 115:
-			n += Minimal115(i)
+			n += Inline115(i)
 		case 116:
-			n += Minimal116(i)
+			n += Inline116(i)
 		case 117:
-			n += Minimal117(i)
+			n += Inline117(i)
 		case 118:
-			n += Minimal118(i)
+			n += Inline118(i)
 		case 119:
-			n += Minimal119(i)
+			n += Inline119(i)
 		case 120:
-			n += Minimal120(i)
+			n += Inline120(i)
 		case 121:
-			n += Minimal121(i)
+			n += Inline121(i)
 		case 122:
-			n += Minimal122(i)
+			n += Inline122(i)
 		case 123:
-			n += Minimal123(i)
+			n += Inline123(i)
 		case 124:
-			n += Minimal124(i)
+			n += Inline124(i)
 		case 125:
-			n += Minimal125(i)
+			n += Inline125(i)
 		case 126:
-			n += Minimal126(i)
+			n += Inline126(i)
 		case 127:
-			n += Minimal127(i)
+			n += Inline127(i)
 		case 128:
-			n += Minimal128(i)
+			n += Inline128(i)
 		case 129:
-			n += Minimal129(i)
+			n += Inline129(i)
 		case 130:
-			n += Minimal130(i)
+			n += Inline130(i)
 		case 131:
-			n += Minimal131(i)
+			n += Inline131(i)
 		case 132:
-			n += Minimal132(i)
+			n += Inline132(i)
 		case 133:
-			n += Minimal133(i)
+			n += Inline133(i)
 		case 134:
-			n += Minimal134(i)
+			n += Inline134(i)
 		case 135:
-			n += Minimal135(i)
+			n += Inline135(i)
 		case 136:
-			n += Minimal136(i)
+			n += Inline136(i)
 		case 137:
-			n += Minimal137(i)
+			n += Inline137(i)
 		case 138:
-			n += Minimal138(i)
+			n += Inline138(i)
 		case 139:
-			n += Minimal139(i)
+			n += Inline139(i)
 		case 140:
-			n += Minimal140(i)
+			n += Inline140(i)
 		case 141:
-			n += Minimal141(i)
+			n += Inline141(i)
 		case 142:
-			n += Minimal142(i)
+			n += Inline142(i)
 		case 143:
-			n += Minimal143(i)
+			n += Inline143(i)
 		case 144:
-			n += Minimal144(i)
+			n += Inline144(i)
 		case 145:
-			n += Minimal145(i)
+			n += Inline145(i)
 		case 146:
-			n += Minimal146(i)
+			n += Inline146(i)
 		case 147:
-			n += Minimal147(i)
+			n += Inline147(i)
 		case 148:
-			n += Minimal148(i)
+			n += Inline148(i)
 		case 149:
-			n += Minimal149(i)
+			n += Inline149(i)
 		case 150:
-			n += Minimal150(i)
+			n += Inline150(i)
 		case 151:
-			n += Minimal151(i)
+			n += Inline151(i)
 		case 152:
-			n += Minimal152(i)
+			n += Inline152(i)
 		case 153:
-			n += Minimal153(i)
+			n += Inline153(i)
 		case 154:
-			n += Minimal154(i)
+			n += Inline154(i)
 		case 155:
-			n += Minimal155(i)
+			n += Inline155(i)
 		case 156:
-			n += Minimal156(i)
+			n += Inline156(i)
 		case 157:
-			n += Minimal157(i)
+			n += Inline157(i)
 		case 158:
-			n += Minimal158(i)
+			n += Inline158(i)
 		case 159:
-			n += Minimal159(i)
+			n += Inline159(i)
 		case 160:
-			n += Minimal160(i)
+			n += Inline160(i)
 		case 161:
-			n += Minimal161(i)
+			n += Inline161(i)
 		case 162:
-			n += Minimal162(i)
+			n += Inline162(i)
 		case 163:
-			n += Minimal163(i)
+			n += Inline163(i)
 		case 164:
-			n += Minimal164(i)
+			n += Inline164(i)
 		case 165:
-			n += Minimal165(i)
+			n += Inline165(i)
 		case 166:
-			n += Minimal166(i)
+			n += Inline166(i)
 		case 167:
-			n += Minimal167(i)
+			n += Inline167(i)
 		case 168:
-			n += Minimal168(i)
+			n += Inline168(i)
 		case 169:
-			n += Minimal169(i)
+			n += Inline169(i)
 		case 170:
-			n += Minimal170(i)
+			n += Inline170(i)
 		case 171:
-			n += Minimal171(i)
+			n += Inline171(i)
 		case 172:
-			n += Minimal172(i)
+			n += Inline172(i)
 		case 173:
-			n += Minimal173(i)
+			n += Inline173(i)
 		case 174:
-			n += Minimal174(i)
+			n += Inline174(i)
 		case 175:
-			n += Minimal175(i)
+			n += Inline175(i)
 		case 176:
-			n += Minimal176(i)
+			n += Inline176(i)
 		case 177:
-			n += Minimal177(i)
+			n += Inline177(i)
 		case 178:
-			n += Minimal178(i)
+			n += Inline178(i)
 		case 179:
-			n += Minimal179(i)
+			n += Inline179(i)
 		case 180:
-			n += Minimal180(i)
+			n += Inline180(i)
 		case 181:
-			n += Minimal181(i)
+			n += Inline181(i)
 		case 182:
-			n += Minimal182(i)
+			n += Inline182(i)
 		case 183:
-			n += Minimal183(i)
+			n += Inline183(i)
 		case 184:
-			n += Minimal184(i)
+			n += Inline184(i)
 		case 185:
-			n += Minimal185(i)
+			n += Inline185(i)
 		case 186:
-			n += Minimal186(i)
+			n += Inline186(i)
 		case 187:
-			n += Minimal187(i)
+			n += Inline187(i)
 		case 188:
-			n += Minimal188(i)
+			n += Inline188(i)
 		case 189:
-			n += Minimal189(i)
+			n += Inline189(i)
 		case 190:
-			n += Minimal190(i)
+			n += Inline190(i)
 		case 191:
-			n += Minimal191(i)
+			n += Inline191(i)
 		case 192:
-			n += Minimal192(i)
+			n += Inline192(i)
 		case 193:
-			n += Minimal193(i)
+			n += Inline193(i)
 		case 194:
-			n += Minimal194(i)
+			n += Inline194(i)
 		case 195:
-			n += Minimal195(i)
+			n += Inline195(i)
 		case 196:
-			n += Minimal196(i)
+			n += Inline196(i)
 		case 197:
-			n += Minimal197(i)
+			n += Inline197(i)
 		case 198:
-			n += Minimal198(i)
+			n += Inline198(i)
 		case 199:
-			n += Minimal199(i)
+			n += Inline199(i)
 		case 200:
-			n += Minimal200(i)
+			n += Inline200(i)
 		case 201:
-			n += Minimal201(i)
+			n += Inline201(i)
 		case 202:
-			n += Minimal202(i)
+			n += Inline202(i)
 		case 203:
-			n += Minimal203(i)
+			n += Inline203(i)
 		case 204:
-			n += Minimal204(i)
+			n += Inline204(i)
 		case 205:
-			n += Minimal205(i)
+			n += Inline205(i)
 		case 206:
-			n += Minimal206(i)
+			n += Inline206(i)
 		case 207:
-			n += Minimal207(i)
+			n += Inline207(i)
 		case 208:
-			n += Minimal208(i)
+			n += Inline208(i)
 		case 209:
-			n += Minimal209(i)
+			n += Inline209(i)
 		case 210:
-			n += Minimal210(i)
+			n += Inline210(i)
 		case 211:
-			n += Minimal211(i)
+			n += Inline211(i)
 		case 212:
-			n += Minimal212(i)
+			n += Inline212(i)
 		case 213:
-			n += Minimal213(i)
+			n += Inline213(i)
 		case 214:
-			n += Minimal214(i)
+			n += Inline214(i)
 		case 215:
-			n += Minimal215(i)
+			n += Inline215(i)
 		case 216:
-			n += Minimal216(i)
+			n += Inline216(i)
 		case 217:
-			n += Minimal217(i)
+			n += Inline217(i)
 		case 218:
-			n += Minimal218(i)
+			n += Inline218(i)
 		case 219:
-			n += Minimal219(i)
+			n += Inline219(i)
 		case 220:
-			n += Minimal220(i)
+			n += Inline220(i)
 		case 221:
-			n += Minimal221(i)
+			n += Inline221(i)
 		case 222:
-			n += Minimal222(i)
+			n += Inline222(i)
 		case 223:
-			n += Minimal223(i)
+			n += Inline223(i)
 		case 224:
-			n += Minimal224(i)
+			n += Inline224(i)
 		case 225:
-			n += Minimal225(i)
+			n += Inline225(i)
 		case 226:
-			n += Minimal226(i)
+			n += Inline226(i)
 		case 227:
-			n += Minimal227(i)
+			n += Inline227(i)
 		case 228:
-			n += Minimal228(i)
+			n += Inline228(i)
 		case 229:
-			n += Minimal229(i)
+			n += Inline229(i)
 		case 230:
-			n += Minimal230(i)
+			n += Inline230(i)
 		case 231:
-			n += Minimal231(i)
+			n += Inline231(i)
 		case 232:
-			n += Minimal232(i)
+			n += Inline232(i)
 		case 233:
-			n += Minimal233(i)
+			n += Inline233(i)
 		case 234:
-			n += Minimal234(i)
+			n += Inline234(i)
 		case 235:
-			n += Minimal235(i)
+			n += Inline235(i)
 		case 236:
-			n += Minimal236(i)
+			n += Inline236(i)
 		case 237:
-			n += Minimal237(i)
+			n += Inline237(i)
 		case 238:
-			n += Minimal238(i)
+			n += Inline238(i)
 		case 239:
-			n += Minimal239(i)
+			n += Inline239(i)
 		case 240:
-			n += Minimal240(i)
+			n += Inline240(i)
 		case 241:
-			n += Minimal241(i)
+			n += Inline241(i)
 		case 242:
-			n += Minimal242(i)
+			n += Inline242(i)
 		case 243:
-			n += Minimal243(i)
+			n += Inline243(i)
 		case 244:
-			n += Minimal244(i)
+			n += Inline244(i)
 		case 245:
-			n += Minimal245(i)
+			n += Inline245(i)
 		case 246:
-			n += Minimal246(i)
+			n += Inline246(i)
 		case 247:
-			n += Minimal247(i)
+			n += Inline247(i)
 		case 248:
-			n += Minimal248(i)
+			n += Inline248(i)
 		case 249:
-			n += Minimal249(i)
+			n += Inline249(i)
 		case 250:
-			n += Minimal250(i)
+			n += Inline250(i)
 		case 251:
-			n += Minimal251(i)
+			n += Inline251(i)
 		case 252:
-			n += Minimal252(i)
+			n += Inline252(i)
 		case 253:
-			n += Minimal253(i)
+			n += Inline253(i)
 		case 254:
-			n += Minimal254(i)
+			n += Inline254(i)
 		case 255:
-			n += Minimal255(i)
+			n += Inline255(i)
 		case 256:
-			n += Minimal256(i)
+			n += Inline256(i)
 		case 257:
-			n += Minimal257(i)
+			n += Inline257(i)
 		case 258:
-			n += Minimal258(i)
+			n += Inline258(i)
 		case 259:
-			n += Minimal259(i)
+			n += Inline259(i)
 		case 260:
-			n += Minimal260(i)
+			n += Inline260(i)
 		case 261:
-			n += Minimal261(i)
+			n += Inline261(i)
 		case 262:
-			n += Minimal262(i)
+			n += Inline262(i)
 		case 263:
-			n += Minimal263(i)
+			n += Inline263(i)
 		case 264:
-			n += Minimal264(i)
+			n += Inline264(i)
 		case 265:
-			n += Minimal265(i)
+			n += Inline265(i)
 		case 266:
-			n += Minimal266(i)
+			n += Inline266(i)
 		case 267:
-			n += Minimal267(i)
+			n += Inline267(i)
 		case 268:
-			n += Minimal268(i)
+			n += Inline268(i)
 		case 269:
-			n += Minimal269(i)
+			n += Inline269(i)
 		case 270:
-			n += Minimal270(i)
+			n += Inline270(i)
 		case 271:
-			n += Minimal271(i)
+			n += Inline271(i)
 		case 272:
-			n += Minimal272(i)
+			n += Inline272(i)
 		case 273:
-			n += Minimal273(i)
+			n += Inline273(i)
 		case 274:
-			n += Minimal274(i)
+			n += Inline274(i)
 		case 275:
-			n += Minimal275(i)
+			n += Inline275(i)
 		case 276:
-			n += Minimal276(i)
+			n += Inline276(i)
 		case 277:
-			n += Minimal277(i)
+			n += Inline277(i)
 		case 278:
-			n += Minimal278(i)
+			n += Inline278(i)
 		case 279:
-			n += Minimal279(i)
+			n += Inline279(i)
 		case 280:
-			n += Minimal280(i)
+			n += Inline280(i)
 		case 281:
-			n += Minimal281(i)
+			n += Inline281(i)
 		case 282:
-			n += Minimal282(i)
+			n += Inline282(i)
 		case 283:
-			n += Minimal283(i)
+			n += Inline283(i)
 		case 284:
-			n += Minimal284(i)
+			n += Inline284(i)
 		case 285:
-			n += Minimal285(i)
+			n += Inline285(i)
 		case 286:
-			n += Minimal286(i)
+			n += Inline286(i)
 		case 287:
-			n += Minimal287(i)
+			n += Inline287(i)
 		case 288:
-			n += Minimal288(i)
+			n += Inline288(i)
 		case 289:
-			n += Minimal289(i)
+			n += Inline289(i)
 		case 290:
-			n += Minimal290(i)
+			n += Inline290(i)
 		case 291:
-			n += Minimal291(i)
+			n += Inline291(i)
 		case 292:
-			n += Minimal292(i)
+			n += Inline292(i)
 		case 293:
-			n += Minimal293(i)
+			n += Inline293(i)
 		case 294:
-			n += Minimal294(i)
+			n += Inline294(i)
 		case 295:
-			n += Minimal295(i)
+			n += Inline295(i)
 		case 296:
-			n += Minimal296(i)
+			n += Inline296(i)
 		case 297:
-			n += Minimal297(i)
+			n += Inline297(i)
 		case 298:
-			n += Minimal298(i)
+			n += Inline298(i)
 		case 299:
-			n += Minimal299(i)
+			n += Inline299(i)
 		case 300:
-			n += Minimal300(i)
+			n += Inline300(i)
 		case 301:
-			n += Minimal301(i)
+			n += Inline301(i)
 		case 302:
-			n += Minimal302(i)
+			n += Inline302(i)
 		case 303:
-			n += Minimal303(i)
+			n += Inline303(i)
 		case 304:
-			n += Minimal304(i)
+			n += Inline304(i)
 		case 305:
-			n += Minimal305(i)
+			n += Inline305(i)
 		case 306:
-			n += Minimal306(i)
+			n += Inline306(i)
 		case 307:
-			n += Minimal307(i)
+			n += Inline307(i)
 		case 308:
-			n += Minimal308(i)
+			n += Inline308(i)
 		case 309:
-			n += Minimal309(i)
+			n += Inline309(i)
 		case 310:
-			n += Minimal310(i)
+			n += Inline310(i)
 		case 311:
-			n += Minimal311(i)
+			n += Inline311(i)
 		case 312:
-			n += Minimal312(i)
+			n += Inline312(i)
 		case 313:
-			n += Minimal313(i)
+			n += Inline313(i)
 		case 314:
-			n += Minimal314(i)
+			n += Inline314(i)
 		case 315:
-			n += Minimal315(i)
+			n += Inline315(i)
 		case 316:
-			n += Minimal316(i)
+			n += Inline316(i)
 		case 317:
-			n += Minimal317(i)
+			n += Inline317(i)
 		case 318:
-			n += Minimal318(i)
+			n += Inline318(i)
 		case 319:
-			n += Minimal319(i)
+			n += Inline319(i)
 		case 320:
-			n += Minimal320(i)
+			n += Inline320(i)
 		case 321:
-			n += Minimal321(i)
+			n += Inline321(i)
 		case 322:
-			n += Minimal322(i)
+			n += Inline322(i)
 		case 323:
-			n += Minimal323(i)
+			n += Inline323(i)
 		case 324:
-			n += Minimal324(i)
+			n += Inline324(i)
 		case 325:
-			n += Minimal325(i)
+			n += Inline325(i)
 		case 326:
-			n += Minimal326(i)
+			n += Inline326(i)
 		case 327:
-			n += Minimal327(i)
+			n += Inline327(i)
 		case 328:
-			n += Minimal328(i)
+			n += Inline328(i)
 		case 329:
-			n += Minimal329(i)
+			n += Inline329(i)
 		case 330:
-			n += Minimal330(i)
+			n += Inline330(i)
 		case 331:
-			n += Minimal331(i)
+			n += Inline331(i)
 		case 332:
-			n += Minimal332(i)
+			n += Inline332(i)
 		case 333:
-			n += Minimal333(i)
+			n += Inline333(i)
 		case 334:
-			n += Minimal334(i)
+			n += Inline334(i)
 		case 335:
-			n += Minimal335(i)
+			n += Inline335(i)
 		case 336:
-			n += Minimal336(i)
+			n += Inline336(i)
 		case 337:
-			n += Minimal337(i)
+			n += Inline337(i)
 		case 338:
-			n += Minimal338(i)
+			n += Inline338(i)
 		case 339:
-			n += Minimal339(i)
+			n += Inline339(i)
 		case 340:
-			n += Minimal340(i)
+			n += Inline340(i)
 		case 341:
-			n += Minimal341(i)
+			n += Inline341(i)
 		case 342:
-			n += Minimal342(i)
+			n += Inline342(i)
 		case 343:
-			n += Minimal343(i)
+			n += Inline343(i)
 		case 344:
-			n += Minimal344(i)
+			n += Inline344(i)
 		case 345:
-			n += Minimal345(i)
+			n += Inline345(i)
 		case 346:
-			n += Minimal346(i)
+			n += Inline346(i)
 		case 347:
-			n += Minimal347(i)
+			n += Inline347(i)
 		case 348:
-			n += Minimal348(i)
+			n += Inline348(i)
 		case 349:
-			n += Minimal349(i)
+			n += Inline349(i)
 		case 350:
-			n += Minimal350(i)
+			n += Inline350(i)
 		case 351:
-			n += Minimal351(i)
+			n += Inline351(i)
 		case 352:
-			n += Minimal352(i)
+			n += Inline352(i)
 		case 353:
-			n += Minimal353(i)
+			n += Inline353(i)
 		case 354:
-			n += Minimal354(i)
+			n += Inline354(i)
 		case 355:
-			n += Minimal355(i)
+			n += Inline355(i)
 		case 356:
-			n += Minimal356(i)
+			n += Inline356(i)
 		case 357:
-			n += Minimal357(i)
+			n += Inline357(i)
 		case 358:
-			n += Minimal358(i)
+			n += Inline358(i)
 		case 359:
-			n += Minimal359(i)
+			n += Inline359(i)
 		case 360:
-			n += Minimal360(i)
+			n += Inline360(i)
 		case 361:
-			n += Minimal361(i)
+			n += Inline361(i)
 		case 362:
-			n += Minimal362(i)
+			n += Inline362(i)
 		case 363:
-			n += Minimal363(i)
+			n += Inline363(i)
 		case 364:
-			n += Minimal364(i)
+			n += Inline364(i)
 		case 365:
-			n += Minimal365(i)
+			n += Inline365(i)
 		case 366:
-			n += Minimal366(i)
+			n += Inline366(i)
 		case 367:
-			n += Minimal367(i)
+			n += Inline367(i)
 		case 368:
-			n += Minimal368(i)
+			n += Inline368(i)
 		case 369:
-			n += Minimal369(i)
+			n += Inline369(i)
 		case 370:
-			n += Minimal370(i)
+			n += Inline370(i)
 		case 371:
-			n += Minimal371(i)
+			n += Inline371(i)
 		case 372:
-			n += Minimal372(i)
+			n += Inline372(i)
 		case 373:
-			n += Minimal373(i)
+			n += Inline373(i)
 		case 374:
-			n += Minimal374(i)
+			n += Inline374(i)
 		case 375:
-			n += Minimal375(i)
+			n += Inline375(i)
 		case 376:
-			n += Minimal376(i)
+			n += Inline376(i)
 		case 377:
-			n += Minimal377(i)
+			n += Inline377(i)
 		case 378:
-			n += Minimal378(i)
+			n += Inline378(i)
 		case 379:
-			n += Minimal379(i)
+			n += Inline379(i)
 		case 380:
-			n += Minimal380(i)
+			n += Inline380(i)
 		case 381:
-			n += Minimal381(i)
+			n += Inline381(i)
 		case 382:
-			n += Minimal382(i)
+			n += Inline382(i)
 		case 383:
-			n += Minimal383(i)
+			n += Inline383(i)
 		case 384:
-			n += Minimal384(i)
+			n += Inline384(i)
 		case 385:
-			n += Minimal385(i)
+			n += Inline385(i)
 		case 386:
-			n += Minimal386(i)
+			n += Inline386(i)
 		case 387:
-			n += Minimal387(i)
+			n += Inline387(i)
 		case 388:
-			n += Minimal388(i)
+			n += Inline388(i)
 		case 389:
-			n += Minimal389(i)
+			n += Inline389(i)
 		case 390:
-			n += Minimal390(i)
+			n += Inline390(i)
 		case 391:
-			n += Minimal391(i)
+			n += Inline391(i)
 		case 392:
-			n += Minimal392(i)
+			n += Inline392(i)
 		case 393:
-			n += Minimal393(i)
+			n += Inline393(i)
 		case 394:
-			n += Minimal394(i)
+			n += Inline394(i)
 		case 395:
-			n += Minimal395(i)
+			n += Inline395(i)
 		case 396:
-			n += Minimal396(i)
+			n += Inline396(i)
 		case 397:
-			n += Minimal397(i)
+			n += Inline397(i)
 		case 398:
-			n += Minimal398(i)
+			n += Inline398(i)
 		case 399:
-			n += Minimal399(i)
+			n += Inline399(i)
 		case 400:
-			n += Minimal400(i)
+			n += Inline400(i)
 		case 401:
-			n += Minimal401(i)
+			n += Inline401(i)
 		case 402:
-			n += Minimal402(i)
+			n += Inline402(i)
 		case 403:
-			n += Minimal403(i)
+			n += Inline403(i)
 		case 404:
-			n += Minimal404(i)
+			n += Inline404(i)
 		case 405:
-			n += Minimal405(i)
+			n += Inline405(i)
 		case 406:
-			n += Minimal406(i)
+			n += Inline406(i)
 		case 407:
-			n += Minimal407(i)
+			n += Inline407(i)
 		case 408:
-			n += Minimal408(i)
+			n += Inline408(i)
 		case 409:
-			n += Minimal409(i)
+			n += Inline409(i)
 		case 410:
-			n += Minimal410(i)
+			n += Inline410(i)
 		case 411:
-			n += Minimal411(i)
+			n += Inline411(i)
 		case 412:
-			n += Minimal412(i)
+			n += Inline412(i)
 		case 413:
-			n += Minimal413(i)
+			n += Inline413(i)
 		case 414:
-			n += Minimal414(i)
+			n += Inline414(i)
 		case 415:
-			n += Minimal415(i)
+			n += Inline415(i)
 		case 416:
-			n += Minimal416(i)
+			n += Inline416(i)
 		case 417:
-			n += Minimal417(i)
+			n += Inline417(i)
 		case 418:
-			n += Minimal418(i)
+			n += Inline418(i)
 		case 419:
-			n += Minimal419(i)
+			n += Inline419(i)
 		case 420:
-			n += Minimal420(i)
+			n += Inline420(i)
 		case 421:
-			n += Minimal421(i)
+			n += Inline421(i)
 		case 422:
-			n += Minimal422(i)
+			n += Inline422(i)
 		case 423:
-			n += Minimal423(i)
+			n += Inline423(i)
 		case 424:
-			n += Minimal424(i)
+			n += Inline424(i)
 		case 425:
-			n += Minimal425(i)
+			n += Inline425(i)
 		case 426:
-			n += Minimal426(i)
+			n += Inline426(i)
 		case 427:
-			n += Minimal427(i)
+			n += Inline427(i)
 		case 428:
-			n += Minimal428(i)
+			n += Inline428(i)
 		case 429:
-			n += Minimal429(i)
+			n += Inline429(i)
 		case 430:
-			n += Minimal430(i)
+			n += Inline430(i)
 		case 431:
-			n += Minimal431(i)
+			n += Inline431(i)
 		case 432:
-			n += Minimal432(i)
+			n += Inline432(i)
 		case 433:
-			n += Minimal433(i)
+			n += Inline433(i)
 		case 434:
-			n += Minimal434(i)
+			n += Inline434(i)
 		case 435:
-			n += Minimal435(i)
+			n += Inline435(i)
 		case 436:
-			n += Minimal436(i)
+			n += Inline436(i)
 		case 437:
-			n += Minimal437(i)
+			n += Inline437(i)
 		case 438:
-			n += Minimal438(i)
+			n += Inline438(i)
 		case 439:
-			n += Minimal439(i)
+			n += Inline439(i)
 		case 440:
-			n += Minimal440(i)
+			n += Inline440(i)
 		case 441:
-			n += Minimal441(i)
+			n += Inline441(i)
 		case 442:
-			n += Minimal442(i)
+			n += Inline442(i)
 		case 443:
-			n += Minimal443(i)
+			n += Inline443(i)
 		case 444:
-			n += Minimal444(i)
+			n += Inline444(i)
 		case 445:
-			n += Minimal445(i)
+			n += Inline445(i)
 		case 446:
-			n += Minimal446(i)
+			n += Inline446(i)
 		case 447:
-			n += Minimal447(i)
+			n += Inline447(i)
 		case 448:
-			n += Minimal448(i)
+			n += Inline448(i)
 		case 449:
-			n += Minimal449(i)
+			n += Inline449(i)
 		case 450:
-			n += Minimal450(i)
+			n += Inline450(i)
 		case 451:
-			n += Minimal451(i)
+			n += Inline451(i)
 		case 452:
-			n += Minimal452(i)
+			n += Inline452(i)
 		case 453:
-			n += Minimal453(i)
+			n += Inline453(i)
 		case 454:
-			n += Minimal454(i)
+			n += Inline454(i)
 		case 455:
-			n += Minimal455(i)
+			n += Inline455(i)
 		case 456:
-			n += Minimal456(i)
+			n += Inline456(i)
 		case 457:
-			n += Minimal457(i)
+			n += Inline457(i)
 		case 458:
-			n += Minimal458(i)
+			n += Inline458(i)
 		case 459:
-			n += Minimal459(i)
+			n += Inline459(i)
 		case 460:
-			n += Minimal460(i)
+			n += Inline460(i)
 		case 461:
-			n += Minimal461(i)
+			n += Inline461(i)
 		case 462:
-			n += Minimal462(i)
+			n += Inline462(i)
 		case 463:
-			n += Minimal463(i)
+			n += Inline463(i)
 		case 464:
-			n += Minimal464(i)
+			n += Inline464(i)
 		case 465:
-			n += Minimal465(i)
+			n += Inline465(i)
 		case 466:
-			n += Minimal466(i)
+			n += Inline466(i)
 		case 467:
-			n += Minimal467(i)
+			n += Inline467(i)
 		case 468:
-			n += Minimal468(i)
+			n += Inline468(i)
 		case 469:
-			n += Minimal469(i)
+			n += Inline469(i)
 		case 470:
-			n += Minimal470(i)
+			n += Inline470(i)
 		case 471:
-			n += Minimal471(i)
+			n += Inline471(i)
 		case 472:
-			n += Minimal472(i)
+			n += Inline472(i)
 		case 473:
-			n += Minimal473(i)
+			n += Inline473(i)
 		case 474:
-			n += Minimal474(i)
+			n += Inline474(i)
 		case 475:
-			n += Minimal475(i)
+			n += Inline475(i)
 		case 476:
-			n += Minimal476(i)
+			n += Inline476(i)
 		case 477:
-			n += Minimal477(i)
+			n += Inline477(i)
 		case 478:
-			n += Minimal478(i)
+			n += Inline478(i)
 		case 479:
-			n += Minimal479(i)
+			n += Inline479(i)
 		case 480:
-			n += Minimal480(i)
+			n += Inline480(i)
 		case 481:
-			n += Minimal481(i)
+			n += Inline481(i)
 		case 482:
-			n += Minimal482(i)
+			n += Inline482(i)
 		case 483:
-			n += Minimal483(i)
+			n += Inline483(i)
 		case 484:
-			n += Minimal484(i)
+			n += Inline484(i)
 		case 485:
-			n += Minimal485(i)
+			n += Inline485(i)
 		case 486:
-			n += Minimal486(i)
+			n += Inline486(i)
 		case 487:
-			n += Minimal487(i)
+			n += Inline487(i)
 		case 488:
-			n += Minimal488(i)
+			n += Inline488(i)
 		case 489:
-			n += Minimal489(i)
+			n += Inline489(i)
 		case 490:
-			n += Minimal490(i)
+			n += Inline490(i)
 		case 491:
-			n += Minimal491(i)
+			n += Inline491(i)
 		case 492:
-			n += Minimal492(i)
+			n += Inline492(i)
 		case 493:
-			n += Minimal493(i)
+			n += Inline493(i)
 		case 494:
-			n += Minimal494(i)
+			n += Inline494(i)
 		case 495:
-			n += Minimal495(i)
+			n += Inline495(i)
 		case 496:
-			n += Minimal496(i)
+			n += Inline496(i)
 		case 497:
-			n += Minimal497(i)
+			n += Inline497(i)
 		case 498:
-			n += Minimal498(i)
+			n += Inline498(i)
 		case 499:
-			n += Minimal499(i)
+			n += Inline499(i)
 		case 500:
-			n += Minimal500(i)
+			n += Inline500(i)
 		case 501:
-			n += Minimal501(i)
+			n += Inline501(i)
 		case 502:
-			n += Minimal502(i)
+			n += Inline502(i)
 		case 503:
-			n += Minimal503(i)
+			n += Inline503(i)
 		case 504:
-			n += Minimal504(i)
+			n += Inline504(i)
 		case 505:
-			n += Minimal505(i)
+			n += Inline505(i)
 		case 506:
-			n += Minimal506(i)
+			n += Inline506(i)
 		case 507:
-			n += Minimal507(i)
+			n += Inline507(i)
 		case 508:
-			n += Minimal508(i)
+			n += Inline508(i)
 		case 509:
-			n += Minimal509(i)
+			n += Inline509(i)
 		case 510:
-			n += Minimal510(i)
+			n += Inline510(i)
 		case 511:
-			n += Minimal511(i)
+			n += Inline511(i)
 		}
 	}
 
@@ -10391,11 +10391,11 @@ func BenchmarkPoorCacheFriendlinessSwitchMinimalFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapMinimalFunc512(b *testing.B) {
+func BenchmarkPoorCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
-		n += MinimalFuncs[randInputs[i%len(randInputs)]%512](i)
+		n += InlineFuncs[randInputs[i%len(randInputs)]%512](i)
 	}
 
 	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
