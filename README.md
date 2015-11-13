@@ -37,8 +37,8 @@ The `switch` statement may benefit from inlining simple functions. This benchmar
 The cache friendliness any algorithm can dramatically alter its performance characteristics. This benchmark includes 3 levels of cache-friendliness.
 
 * The optimal cache-friendliness level directly uses the benchmark loop's index as the branch discriminator. This loops through branches in a predictable manner (e.g. `i % 4` for a case with 4 branches).
-* The moderate cache-friendliness level uses the benchmark loop's index to look up the branch to take in procomputed slice. This incurs a memory read that may displace some of the cache. This slice is simply an ascending list of numbers, so the branches are followed in a predictable manner (e.g. `ascInputs[i%len(ascInputs)] % 4` for a case with 4 branches).
-* The poor cache-friendliness level uses the benchmark loop's index to look up the branch to take in procomputed slice. This incurs a memory read that may displace some of the cache. This slice is a randomized list of numbers, so branches are followed in an unpredictable manner (e.g. `randInputs[i%len(randInputs)] % 4` for a case with 4 branches).
+* The moderate cache-friendliness level uses the benchmark loop's index to look up the branch to take in pre-computed slice. This incurs a memory read that may displace some of the cache. This slice is simply an ascending list of numbers, so the branches are followed in a predictable manner (e.g. `ascInputs[i%len(ascInputs)] % 4` for a case with 4 branches).
+* The poor cache-friendliness level uses the benchmark loop's index to look up the branch to take in pre-computed slice. This incurs a memory read that may displace some of the cache. This slice is a randomized list of numbers, so branches are followed in an unpredictable manner (e.g. `randInputs[i%len(randInputs)] % 4` for a case with 4 branches).
 
 ## Running the Benchmarks
 
