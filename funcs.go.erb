@@ -1,0 +1,35 @@
+package go_map_vs_switch
+
+var MinimalFuncs []func(int) int
+<% 512.times do |n| %>
+func Minimal<%= n %>(n int) int {
+  if n % 2 == 0 {
+    return n
+  } else {
+    return 0
+  }
+}
+<% end %>
+
+var NoInlineFuncs []func(int) int
+<% 512.times do |n| %>
+func NoInline<%= n %>(n int) int {
+  if n < 0 {
+    panic("can't happen - but should ensure this function is not inlined")
+  } else if n % 2 == 0 {
+    return n
+  } else {
+    return 0
+  }
+}
+<% end %>
+
+func init() {
+  <% 512.times do |n| -%>
+    MinimalFuncs = append(MinimalFuncs, Minimal<%= n %>)
+  <% end -%>
+
+  <% 512.times do |n| -%>
+    NoInlineFuncs = append(NoInlineFuncs, NoInline<%= n %>)
+  <% end -%>
+}

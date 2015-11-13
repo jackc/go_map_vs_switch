@@ -1,0 +1,63 @@
+package go_map_vs_switch
+
+import (
+  "math/rand"
+  "os"
+	"testing"
+)
+
+var randInputs []int
+var ascInputs []int
+
+func TestMain(m *testing.M) {
+  for i := 0; i < 4096; i++ {
+    randInputs = append(randInputs, rand.Int())
+  }
+
+  for i := 0; i < 4096; i++ {
+    ascInputs = append(ascInputs, i)
+  }
+
+  os.Exit(m.Run())
+}
+
+<% [4, 8, 16, 32, 64, 128, 256, 512].each do |erbN| %>
+  <% ["Minimal", "NoInline"].each do |fn| %>
+    <% [
+      ["Optimal", "i % #{erbN}"],
+      ["Moderate", "ascInputs[i % len(ascInputs)] % #{erbN}"],
+      ["Poor", "randInputs[i % len(randInputs)] % #{erbN}"]
+    ].each do |fn_cache, input| %>
+      func Benchmark<%= fn_cache %>CacheFriendlinessSwitch<%= fn %>Func<%= erbN %>(b *testing.B) {
+      	var n int
+
+      	for i := 0; i < b.N; i++ {
+      		switch <%= input %> {
+          <% erbN.times do |erbI| -%>
+      		case <%= erbI %>:
+      			n += <%= fn %><%= erbI %>(i)
+          <% end -%>
+      		}
+      	}
+
+      	// n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
+      	if n < 0 {
+      		b.Fatal("can't happen")
+      	}
+      }
+
+      func Benchmark<%= fn_cache %>CacheFriendlinessMap<%= fn %>Func<%= erbN %>(b *testing.B) {
+        var n int
+
+        for i := 0; i < b.N; i++ {
+          n += <%= fn %>Funcs[<%= input %>](i)
+        }
+
+        // n will never be < 0, but checking n should ensure that the entire benchmark loop can't be optimized away.
+        if n < 0 {
+          b.Fatal("can't happen")
+        }
+      }
+    <% end %>
+  <% end %>
+<% end %>
