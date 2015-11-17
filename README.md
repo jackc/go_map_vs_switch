@@ -3,7 +3,7 @@
 This benchmark measures the performance of branching with a switch calling a function vs using a map of functions. For example:
 
 ```go
-// Given f is []func()
+// Given f is map[int]func()
 f[n](i)
 ```
 
