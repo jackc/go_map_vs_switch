@@ -21,7 +21,7 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -43,7 +43,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc4(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -56,7 +56,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -78,7 +78,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc4(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -91,7 +91,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -113,7 +113,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc4(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -126,7 +126,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -148,7 +148,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -161,7 +161,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -183,7 +183,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -196,7 +196,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -218,7 +218,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc4(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -231,7 +231,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc4(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -261,7 +261,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc8(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -274,7 +274,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -304,7 +304,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc8(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -317,7 +317,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -347,7 +347,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc8(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -360,7 +360,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -390,7 +390,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -403,7 +403,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -433,7 +433,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -446,7 +446,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -476,7 +476,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc8(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -489,7 +489,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc8(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -535,7 +535,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc16(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -548,7 +548,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -594,7 +594,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc16(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -607,7 +607,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -653,7 +653,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc16(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -666,7 +666,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -712,7 +712,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -725,7 +725,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -771,7 +771,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -784,7 +784,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -830,7 +830,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc16(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -843,7 +843,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc16(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -921,7 +921,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc32(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -934,7 +934,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1012,7 +1012,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc32(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1025,7 +1025,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1103,7 +1103,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc32(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1116,7 +1116,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1194,7 +1194,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1207,7 +1207,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1285,7 +1285,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1298,7 +1298,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1376,7 +1376,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc32(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1389,7 +1389,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc32(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1531,7 +1531,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc64(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1544,7 +1544,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1686,7 +1686,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc64(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1699,7 +1699,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1841,7 +1841,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc64(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1854,7 +1854,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -1996,7 +1996,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2009,7 +2009,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2151,7 +2151,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2164,7 +2164,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2306,7 +2306,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc64(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2319,7 +2319,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc64(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2589,7 +2589,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc128(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2602,7 +2602,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2872,7 +2872,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc128(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -2885,7 +2885,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3155,7 +3155,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc128(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3168,7 +3168,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3438,7 +3438,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3451,7 +3451,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3721,7 +3721,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -3734,7 +3734,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -4004,7 +4004,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc128(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -4017,7 +4017,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc128(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -4543,7 +4543,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc256(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -4556,7 +4556,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -5082,7 +5082,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc256(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -5095,7 +5095,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -5621,7 +5621,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc256(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -5634,7 +5634,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -6160,7 +6160,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -6173,7 +6173,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -6699,7 +6699,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -6712,7 +6712,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -7238,7 +7238,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc256(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -7251,7 +7251,7 @@ func BenchmarkPoorCacheFriendlinessMapNoInlineFunc256(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
+func BenchmarkPredictableComputedSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -8289,7 +8289,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapInlineFunc512(b *testing.B) {
+func BenchmarkPredictableComputedMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -8302,7 +8302,7 @@ func BenchmarkOptimalCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
+func BenchmarkPredictableLookupSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -9340,7 +9340,7 @@ func BenchmarkModerateCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapInlineFunc512(b *testing.B) {
+func BenchmarkPredictableLookupMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -9353,7 +9353,7 @@ func BenchmarkModerateCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -10391,7 +10391,7 @@ func BenchmarkPoorCacheFriendlinessSwitchInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapInlineFunc512(b *testing.B) {
+func BenchmarkUnpredictableLookupMapInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -10404,7 +10404,7 @@ func BenchmarkPoorCacheFriendlinessMapInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
+func BenchmarkPredictableComputedSwitchNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -11442,7 +11442,7 @@ func BenchmarkOptimalCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc512(b *testing.B) {
+func BenchmarkPredictableComputedMapNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -11455,7 +11455,7 @@ func BenchmarkOptimalCacheFriendlinessMapNoInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
+func BenchmarkPredictableLookupSwitchNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -12493,7 +12493,7 @@ func BenchmarkModerateCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkModerateCacheFriendlinessMapNoInlineFunc512(b *testing.B) {
+func BenchmarkPredictableLookupMapNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -12506,7 +12506,7 @@ func BenchmarkModerateCacheFriendlinessMapNoInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
+func BenchmarkUnpredictableLookupSwitchNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {
@@ -13544,7 +13544,7 @@ func BenchmarkPoorCacheFriendlinessSwitchNoInlineFunc512(b *testing.B) {
 	}
 }
 
-func BenchmarkPoorCacheFriendlinessMapNoInlineFunc512(b *testing.B) {
+func BenchmarkUnpredictableLookupMapNoInlineFunc512(b *testing.B) {
 	var n int
 
 	for i := 0; i < b.N; i++ {

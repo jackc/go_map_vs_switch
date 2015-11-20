@@ -24,11 +24,11 @@ func TestMain(m *testing.M) {
 <% [4, 8, 16, 32, 64, 128, 256, 512].each do |erbN| %>
   <% ["Inline", "NoInline"].each do |fn| %>
     <% [
-      ["Optimal", "i % #{erbN}"],
-      ["Moderate", "ascInputs[i % len(ascInputs)] % #{erbN}"],
-      ["Poor", "randInputs[i % len(randInputs)] % #{erbN}"]
-    ].each do |fn_cache, input| %>
-      func Benchmark<%= fn_cache %>CacheFriendlinessSwitch<%= fn %>Func<%= erbN %>(b *testing.B) {
+      ["PredictableComputed", "i % #{erbN}"],
+      ["PredictableLookup", "ascInputs[i % len(ascInputs)] % #{erbN}"],
+      ["UnpredictableLookup", "randInputs[i % len(randInputs)] % #{erbN}"]
+    ].each do |branch_strat, input| %>
+      func Benchmark<%= branch_strat %>Switch<%= fn %>Func<%= erbN %>(b *testing.B) {
       	var n int
 
       	for i := 0; i < b.N; i++ {
@@ -46,7 +46,7 @@ func TestMain(m *testing.M) {
       	}
       }
 
-      func Benchmark<%= fn_cache %>CacheFriendlinessMap<%= fn %>Func<%= erbN %>(b *testing.B) {
+      func Benchmark<%= branch_strat %>Map<%= fn %>Func<%= erbN %>(b *testing.B) {
         var n int
 
         for i := 0; i < b.N; i++ {
